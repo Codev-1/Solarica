@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solarica Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-solar-panel"></i> Solarica Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#dashboard" class="nav-link active" data-page="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#products" class="nav-link" data-page="products"><i class="fas fa-box"></i> Products</a></li>
+                    <li><a href="#images" class="nav-link" data-page="images"><i class="fas fa-images"></i> Images</a></li>
+                    <li><a href="#inquiries" class="nav-link" data-page="inquiries"><i class="fas fa-envelope"></i> Inquiries</a></li>
+                    <li><a href="#content" class="nav-link" data-page="content"><i class="fas fa-file-alt"></i> Content</a></li>
+                    <li><a href="#settings" class="nav-link" data-page="settings"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../index.html" class="btn btn-outline"><i class="fas fa-home"></i> View Site</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="page-title">Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <span>Admin</span>
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content" id="page-content">
+                <!-- Dashboard Page -->
+                <div class="page" id="dashboard-page">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-products">0</h3>
+                                <p>Total Products</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-images">0</h3>
+                                <p>Total Images</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-inquiries">0</h3>
+                                <p>New Inquiries</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="total-visitors">0</h3>
+                                <p>Visitors Today</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="card">
+                            <h3>Recent Inquiries</h3>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Message</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="recent-inquiries">
+                                        <tr>
+                                            <td colspan="4" class="text-center">No inquiries yet</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Quick Actions</h3>
+                            <div class="quick-actions">
+                                <button class="btn btn-primary" onclick="navigateToPage('products')">
+                                    <i class="fas fa-plus"></i> Add Product
+                                </button>
+                                <button class="btn btn-secondary" onclick="navigateToPage('images')">
+                                    <i class="fas fa-upload"></i> Upload Images
+                                </button>
+                                <button class="btn btn-info" onclick="navigateToPage('inquiries')">
+                                    <i class="fas fa-envelope"></i> View Inquiries
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Page -->
+                <div class="page hidden" id="products-page">
+                    <div class="page-header">
+                        <h2>Product Management</h2>
+                        <button class="btn btn-primary" onclick="openProductModal()">
+                            <i class="fas fa-plus"></i> Add New Product
+                        </button>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="products-table">
+                                    <tr>
+                                        <td colspan="6" class="text-center">Loading products...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Images Page -->
+                <div class="page hidden" id="images-page">
+                    <div class="page-header">
+                        <h2>Image Management</h2>
+                        <button class="btn btn-primary" onclick="openImageUploadModal()">
+                            <i class="fas fa-upload"></i> Upload Images
+                        </button>
+                    </div>
+                    
+                    <div class="image-categories">
+                        <div class="category-tabs">
+                            <button class="tab-btn active" data-category="all">All Images</button>
+                            <button class="tab-btn" data-category="AClights">AC Lights</button>
+                            <button class="tab-btn" data-category="decorativelights">Decorative Lights</button>
+                            <button class="tab-btn" data-category="flood lights">Flood Lights</button>
+                            <button class="tab-btn" data-category="gardenlights">Garden Lights</button>
+                            <button class="tab-btn" data-category="image_solarlights">Solar Lights</button>
+                        </div>
+                        
+                        <div class="image-grid" id="image-grid">
+                            <div class="text-center">Loading images...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiries Page -->
+                <div class="page hidden" id="inquiries-page">
+                    <div class="page-header">
+                        <h2>Contact Inquiries</h2>
+                        <div class="filter-buttons">
+                            <button class="btn btn-sm active" data-status="all">All</button>
+                            <button class="btn btn-sm" data-status="new">New</button>
+                            <button class="btn btn-sm" data-status="read">Read</button>
+                            <button class="btn btn-sm" data-status="replied">Replied</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Subject</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="inquiries-table">
+                                    <tr>
+                                        <td colspan="8" class="text-center">Loading inquiries...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Page -->
+                <div class="page hidden" id="content-page">
+                    <div class="page-header">
+                        <h2>Content Management</h2>
+                    </div>
+                    
+                    <div class="content-sections">
+                        <div class="card">
+                            <h3>Home Page Content</h3>
+                            <div class="form-group">
+                                <label>Hero Title</label>
+                                <input type="text" class="form-control" id="hero-title" placeholder="Enter hero title">
+                            </div>
+                            <div class="form-group">
+                                <label>Hero Subtitle</label>
+                                <textarea class="form-control" id="hero-subtitle" placeholder="Enter hero subtitle"></textarea>
+                            </div>
+                            <button class="btn btn-primary" onclick="saveContent('home')">Save Changes</button>
+                        </div>
+
+                        <div class="card">
+                            <h3>About Page Content</h3>
+                            <div class="form-group">
+                                <label>Company Description</label>
+                                <textarea class="form-control" id="about-description" placeholder="Enter company description"></textarea>
+                            </div>
+                            <button class="btn btn-primary" onclick="saveContent('about')">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Page -->
+                <div class="page hidden" id="settings-page">
+                    <div class="page-header">
+                        <h2>Settings</h2>
+                    </div>
+                    
+                    <div class="settings-grid">
+                        <div class="card">
+                            <h3>General Settings</h3>
+                            <div class="form-group">
+                                <label>Site Title</label>
+                                <input type="text" class="form-control" id="site-title" value="Solarica">
+                            </div>
+                            <div class="form-group">
+                                <label>Contact Email</label>
+                                <input type="email" class="form-control" id="contact-email" value="info@solarica.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control" id="phone-number" value="+918956189167">
+                            </div>
+                            <button class="btn btn-primary" onclick="saveSettings()">Save Settings</button>
+                        </div>
+
+                        <div class="card">
+                            <h3>Social Media Links</h3>
+                            <div class="form-group">
+                                <label>Facebook</label>
+                                <input type="url" class="form-control" id="facebook-url" placeholder="https://facebook.com/...">
+                            </div>
+                            <div class="form-group">
+                                <label>Twitter</label>
+                                <input type="url" class="form-control" id="twitter-url" placeholder="https://twitter.com/...">
+                            </div>
+                            <div class="form-group">
+                                <label>Instagram</label>
+                                <input type="url" class="form-control" id="instagram-url" placeholder="https://instagram.com/...">
+                            </div>
+                            <button class="btn btn-primary" onclick="saveSettings()">Save Settings</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="product-modal-title">Add New Product</h3>
+                <button class="close-btn" onclick="closeProductModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="product-form">
+                    <div class="form-group">
+                        <label>Product Name</label>
+                        <input type="text" class="form-control" id="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select class="form-control" id="product-category" required>
+                            <option value="">Select Category</option>
+                            <option value="solar-panels">Solar Panels</option>
+                            <option value="solar-lights">Solar Lights</option>
+                            <option value="solar-inverters">Solar Inverters</option>
+                            <option value="solar-pumps">Solar Pumps</option>
+                            <option value="solar-heaters">Solar Heaters</option>
+                            <option value="ac-lights">AC Lights</option>
+                            <option value="decorative-lights">Decorative Lights</option>
+                            <option value="flood-lights">Flood Lights</option>
+                            <option value="garden-lights">Garden Lights</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="number" class="form-control" id="product-price" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" id="product-description" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Specifications</label>
+                        <textarea class="form-control" id="product-specifications" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Product Image</label>
+                        <input type="file" class="form-control" id="product-image" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select class="form-control" id="product-status">
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeProductModal()">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveProduct()">Save Product</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Upload Modal -->
+    <div class="modal" id="image-upload-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Upload Images</h3>
+                <button class="close-btn" onclick="closeImageUploadModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Select Category</label>
+                    <select class="form-control" id="image-category">
+                        <option value="AClights">AC Lights</option>
+                        <option value="decorativelights">Decorative Lights</option>
+                        <option value="flood lights">Flood Lights</option>
+                        <option value="gardenlights">Garden Lights</option>
+                        <option value="image_solarlights">Solar Lights</option>
+                        <option value="images">General Images</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Select Images</label>
+                    <input type="file" class="form-control" id="image-files" multiple accept="image/*">
+                    <div class="image-preview" id="image-preview"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeImageUploadModal()">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="uploadImages()">Upload Images</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Solarica Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../images/logoo.png" alt="Solarica Logo" class="admin-logo">
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="products.html" class="nav-link"><i class="fas fa-box"></i> Products</a></li>
+                <li><a href="images.html" class="nav-link"><i class="fas fa-images"></i> Images</a></li>
+                <li><a href="inquiries.html" class="nav-link"><i class="fas fa-envelope"></i> Inquiries</a></li>
+                <li><a href="content.html" class="nav-link"><i class="fas fa-file-alt"></i> Content</a></li>
+                <li><a href="settings.html" class="nav-link active"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../index.html" class="btn btn-outline"><i class="fas fa-home"></i> View Site</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Settings</h1>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <!-- General Settings -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>General Settings</h3>
+                </div>
+                <div class="card-body">
+                    <form id="general-settings-form">
+                        <div class="form-group">
+                            <label for="site-title">Site Title</label>
+                            <input type="text" id="site-title" class="form-control" placeholder="Enter site title">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Contact Email</label>
+                            <input type="email" id="contact-email" class="form-control" placeholder="Enter contact email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" id="phone-number" class="form-control" placeholder="Enter phone number">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="saveSettings()">
+                            <i class="fas fa-save"></i> Save Settings
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Social Media Settings -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Social Media Settings</h3>
+                </div>
+                <div class="card-body">
+                    <form id="social-settings-form">
+                        <div class="form-group">
+                            <label for="facebook-url">Facebook URL</label>
+                            <input type="url" id="facebook-url" class="form-control" placeholder="Enter Facebook URL">
+                        </div>
+                        <div class="form-group">
+                            <label for="twitter-url">Twitter URL</label>
+                            <input type="url" id="twitter-url" class="form-control" placeholder="Enter Twitter URL">
+                        </div>
+                        <div class="form-group">
+                            <label for="instagram-url">Instagram URL</label>
+                            <input type="url" id="instagram-url" class="form-control" placeholder="Enter Instagram URL">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="saveSocialSettings()">
+                            <i class="fas fa-save"></i> Save Social Settings
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- SEO Settings -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>SEO Settings</h3>
+                </div>
+                <div class="card-body">
+                    <form id="seo-settings-form">
+                        <div class="form-group">
+                            <label for="meta-title">Meta Title</label>
+                            <input type="text" id="meta-title" class="form-control" placeholder="Enter meta title">
+                        </div>
+                        <div class="form-group">
+                            <label for="meta-description">Meta Description</label>
+                            <textarea id="meta-description" class="form-control" rows="3" placeholder="Enter meta description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="meta-keywords">Meta Keywords</label>
+                            <input type="text" id="meta-keywords" class="form-control" placeholder="Enter meta keywords (comma separated)">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="saveSEOSettings()">
+                            <i class="fas fa-save"></i> Save SEO Settings
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

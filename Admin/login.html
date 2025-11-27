@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Solarica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="auth.js"></script>
+    <style>
+        /* Simple Login Page Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .login-box {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 0;
+            width: 100%;
+            max-width: 700px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .login-box-left {
+            flex: 1;
+            padding: 30px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #e9ecef;
+        }
+
+        .login-box-right {
+            flex: 1.5;
+            padding: 30px;
+        }
+
+        .login-logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-header h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .login-header p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #0d9488;
+            box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #0d9488;
+        }
+
+        .forgot-link {
+            color: #0d9488;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-link:hover {
+            color: #0f766e;
+            text-decoration: underline;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(13, 148, 136, 0.3);
+        }
+
+        .alert {
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+            font-size: 0.9rem;
+        }
+
+        .alert-error {
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c33;
+        }
+
+        .alert-success {
+            background: #efe;
+            border: 1px solid #cfc;
+            color: #3c3;
+        }
+
+        @media (max-width: 768px) {
+            .login-box {
+                flex-direction: column;
+                max-width: 400px;
+            }
+
+            .login-box-left {
+                border-right: none;
+                border-bottom: 1px solid #e9ecef;
+                padding: 30px;
+            }
+
+            .login-box-right {
+                padding: 30px 25px;
+            }
+
+            .login-logo img {
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Single Login Box -->
+        <div class="login-box">
+            <!-- Left Side - Logo -->
+            <div class="login-box-left">
+                <div class="login-logo">
+                    <img src="../images/logoo.png" alt="Solarica Logo">
+                </div>
+            </div>
+
+            <!-- Right Side - Login Form -->
+            <div class="login-box-right">
+                <div class="login-header">
+                    <h2>Admin Login</h2>
+                    <p>Enter your credentials to access the dashboard</p>
+                </div>
+
+                <!-- Alert Message -->
+                <div class="alert alert-error" id="alert-message">
+                    Invalid credentials. Please try again.
+                </div>
+
+                <!-- Login Form -->
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" class="form-control" placeholder="admin@solarica.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </button>
+                </form>
+
+                <!-- Create Account Link -->
+                <div style="text-align: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid #e9ecef;">
+                    <p style="color: #6c757d; font-size: 0.9rem; margin-bottom: 8px;">Don't have an account?</p>
+                    <a href="#" id="create-account-link" style="color: #0d9488; text-decoration: none; font-weight: 600; font-size: 0.95rem;">
+                        <i class="fas fa-user-plus"></i> Create Account
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Alert functions
+        function showAlert(message, type = 'error') {
+            const alertEl = document.getElementById('alert-message');
+            alertEl.textContent = message;
+            alertEl.className = `alert alert-${type}`;
+            alertEl.style.display = 'block';
+        }
+
+        function hideAlert() {
+            const alertEl = document.getElementById('alert-message');
+            alertEl.style.display = 'none';
+        }
+
+        // Login form submission
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            
+            // Use AdminAuth class for login
+            const auth = new AdminAuth();
+            if (auth.login(email, password)) {
+                showAlert('Login successful! Redirecting...', 'success');
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 1500);
+            } else {
+                showAlert('Invalid credentials. Please use admin@solarica.com / admin123');
+            }
+        });
+
+        // Forgot password link
+        document.querySelector('.forgot-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            showAlert('Password reset link sent to your email!', 'success');
+        });
+
+        // Create account link
+        document.getElementById('create-account-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'create-account.html';
+        });
+
+        // Hide alert when user starts typing
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('input', hideAlert);
+        });
+    </script>
+</body>
+</html>

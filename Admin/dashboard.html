@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Solarica Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../images/logoo.png" alt="Solarica Logo" class="admin-logo">
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="dashboard.html" class="nav-link active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="products.html" class="nav-link"><i class="fas fa-box"></i> Products</a></li>
+                <li><a href="images.html" class="nav-link"><i class="fas fa-images"></i> Images</a></li>
+                <li><a href="inquiries.html" class="nav-link"><i class="fas fa-envelope"></i> Inquiries</a></li>
+                <li><a href="content.html" class="nav-link"><i class="fas fa-file-alt"></i> Content</a></li>
+                <li><a href="settings.html" class="nav-link"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../index.html" class="btn btn-outline"><i class="fas fa-home"></i> View Site</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Dashboard</h1>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-products">0</h3>
+                        <p>Total Products</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-images">0</h3>
+                        <p>Total Images</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-inquiries">0</h3>
+                        <p>New Inquiries</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-visitors">0</h3>
+                        <p>Visitors Today</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Inquiries -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Recent Inquiries</h3>
+                    <a href="inquiries.html" class="btn btn-sm btn-primary">View All</a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Message</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recent-inquiries">
+                                <tr>
+                                    <td colspan="4" class="text-center">Loading...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Quick Actions</h3>
+                </div>
+                <div class="card-body">
+                    <div class="quick-actions">
+                        <a href="products.html" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add Product
+                        </a>
+                        <a href="images.html" class="btn btn-info">
+                            <i class="fas fa-upload"></i> Upload Images
+                        </a>
+                        <a href="inquiries.html" class="btn btn-success">
+                            <i class="fas fa-reply"></i> Reply to Inquiries
+                        </a>
+                        <a href="settings.html" class="btn btn-warning">
+                            <i class="fas fa-cog"></i> Update Settings
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

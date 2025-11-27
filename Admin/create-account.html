@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Solarica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="auth.js"></script>
+    <style>
+        /* Create Account Page Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .create-account-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .create-account-box {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 0;
+            width: 100%;
+            max-width: 700px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .create-account-box-left {
+            flex: 1;
+            padding: 30px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid #e9ecef;
+        }
+
+        .create-account-box-right {
+            flex: 1.5;
+            padding: 30px;
+        }
+
+        .create-account-logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .create-account-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .create-account-header h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .create-account-header p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #0d9488;
+            box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #0d9488;
+            margin-top: 2px;
+        }
+
+        .checkbox-group label {
+            font-size: 0.85rem;
+            color: #6c757d;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
+        .btn-create-account {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-create-account:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(13, 148, 136, 0.3);
+        }
+
+        .alert {
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+            font-size: 0.9rem;
+        }
+
+        .alert-error {
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c33;
+        }
+
+        .alert-success {
+            background: #efe;
+            border: 1px solid #cfc;
+            color: #3c3;
+        }
+
+        @media (max-width: 768px) {
+            .create-account-box {
+                flex-direction: column;
+                max-width: 400px;
+            }
+
+            .create-account-box-left {
+                border-right: none;
+                border-bottom: 1px solid #e9ecef;
+                padding: 30px;
+            }
+
+            .create-account-box-right {
+                padding: 30px 25px;
+            }
+
+            .create-account-logo img {
+                max-width: 150px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="create-account-container">
+        <!-- Single Create Account Box -->
+        <div class="create-account-box">
+            <!-- Left Side - Logo -->
+            <div class="create-account-box-left">
+                <div class="create-account-logo">
+                    <img src="../images/logoo.png" alt="Solarica Logo">
+                </div>
+            </div>
+
+            <!-- Right Side - Create Account Form -->
+            <div class="create-account-box-right">
+                <div class="create-account-header">
+                    <h2>Create Account</h2>
+                    <p>Join Solarica Admin Panel</p>
+                </div>
+
+                <!-- Alert Message -->
+                <div class="alert alert-error" id="alert-message">
+                    Please fill in all required fields.
+                </div>
+
+                <!-- Create Account Form -->
+                <form id="create-account-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" class="form-control" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" class="form-control" placeholder="Doe" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="create-email">Email Address</label>
+                        <input type="email" id="create-email" class="form-control" placeholder="admin@solarica.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="create-password">Password</label>
+                        <input type="password" id="create-password" class="form-control" placeholder="Create a strong password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" class="form-control" placeholder="Confirm your password" required>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree-terms" required>
+                        <label for="agree-terms">
+                            I agree to the Terms of Service and Privacy Policy. I understand that account creation requires administrator approval.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-create-account">
+                        <i class="fas fa-user-plus"></i> Create Account
+                    </button>
+                </form>
+
+                <!-- Back to Login Link -->
+                <div style="text-align: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid #e9ecef;">
+                    <p style="color: #6c757d; font-size: 0.9rem; margin-bottom: 8px;">Already have an account?</p>
+                    <a href="login.html" style="color: #0d9488; text-decoration: none; font-weight: 600; font-size: 0.95rem;">
+                        <i class="fas fa-sign-in-alt"></i> Back to Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Alert functions
+        function showAlert(message, type = 'error') {
+            const alertEl = document.getElementById('alert-message');
+            alertEl.textContent = message;
+            alertEl.className = `alert alert-${type}`;
+            alertEl.style.display = 'block';
+        }
+
+        function hideAlert() {
+            const alertEl = document.getElementById('alert-message');
+            alertEl.style.display = 'none';
+        }
+
+        // Create account form submission
+        document.getElementById('create-account-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const email = document.getElementById('create-email').value;
+            const password = document.getElementById('create-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const agreeTerms = document.getElementById('agree-terms').checked;
+
+            // Validation
+            if (!firstName || !lastName || !email || !password || !confirmPassword) {
+                showAlert('Please fill in all required fields.');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                showAlert('Passwords do not match.');
+                return;
+            }
+
+            if (password.length < 6) {
+                showAlert('Password must be at least 6 characters long.');
+                return;
+            }
+
+            if (!agreeTerms) {
+                showAlert('Please agree to the Terms of Service and Privacy Policy.');
+                return;
+            }
+
+            // Show success message
+            showAlert('Account created successfully! Your request is pending administrator approval. You will be redirected to login.', 'success');
+            
+            // Disable form
+            document.getElementById('create-account-form').querySelector('button[type="submit"]').disabled = true;
+            
+            // Redirect to login after 3 seconds
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 3000);
+        });
+
+        // Hide alert when user starts typing
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('input', hideAlert);
+        });
+
+        // Password confirmation validation
+        document.getElementById('confirm-password').addEventListener('input', (e) => {
+            const password = document.getElementById('create-password').value;
+            const confirmPassword = e.target.value;
+            
+            if (confirmPassword && password !== confirmPassword) {
+                e.target.style.borderColor = '#dc3545';
+            } else if (confirmPassword && password === confirmPassword) {
+                e.target.style.borderColor = '#28a745';
+            } else {
+                e.target.style.borderColor = '#e9ecef';
+            }
+        });
+    </script>
+</body>
+</html>

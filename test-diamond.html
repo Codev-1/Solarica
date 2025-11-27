@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Photo Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            background: #f5f5f5;
+        }
+        
+        .test-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .director-photo-card {
+            flex: 0 0 280px;
+            background: transparent;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .director-photo-separate {
+            width: 320px;
+            height: 320px;
+            position: relative;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6, #0ea5e9);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 30px rgba(96, 165, 250, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            filter: drop-shadow(0 8px 16px rgba(96, 165, 250, 0.2));
+        }
+
+        .director-photo-separate img,
+        .director-photo-separate .placeholder-img {
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            object-fit: cover;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            display: block;
+            border-radius: 0;
+        }
+        
+        .placeholder-img {
+            background: linear-gradient(45deg, #ddd, #bbb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diamond Photo Frame Test</h1>
+    <p>Testing the new diamond-shaped photo frames with magenta gradient background:</p>
+    
+    <div class="test-container">
+        <div class="director-photo-card">
+            <div class="director-photo-separate">
+                <div class="placeholder-img">
+                    Director Photo<br>Placeholder
+                </div>
+            </div>
+        </div>
+        
+        <div class="director-photo-card">
+            <div class="director-photo-separate">
+                <div class="placeholder-img">
+                    Another Director<br>Photo Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <p><strong>Features:</strong></p>
+    <ul>
+        <li>Diamond/rhombus shape using CSS clip-path</li>
+        <li>Magenta to purple gradient background</li>
+        <li>Hover effects with scale and color change</li>
+        <li>Responsive design</li>
+    </ul>
+</body>
+</html>

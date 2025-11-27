@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content - Solarica Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../images/logoo.png" alt="Solarica Logo" class="admin-logo">
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="products.html" class="nav-link"><i class="fas fa-box"></i> Products</a></li>
+                <li><a href="images.html" class="nav-link"><i class="fas fa-images"></i> Images</a></li>
+                <li><a href="inquiries.html" class="nav-link"><i class="fas fa-envelope"></i> Inquiries</a></li>
+                <li><a href="content.html" class="nav-link active"><i class="fas fa-file-alt"></i> Content</a></li>
+                <li><a href="settings.html" class="nav-link"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../index.html" class="btn btn-outline"><i class="fas fa-home"></i> View Site</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Content Management</h1>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <!-- Home Page Content -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Home Page Content</h3>
+                </div>
+                <div class="card-body">
+                    <form id="home-content-form">
+                        <div class="form-group">
+                            <label for="hero-title">Hero Title</label>
+                            <input type="text" id="hero-title" class="form-control" placeholder="Enter hero title">
+                        </div>
+                        <div class="form-group">
+                            <label for="hero-subtitle">Hero Subtitle</label>
+                            <textarea id="hero-subtitle" class="form-control" rows="2" placeholder="Enter hero subtitle"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="saveContent('home')">
+                            <i class="fas fa-save"></i> Save Home Content
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- About Page Content -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>About Page Content</h3>
+                </div>
+                <div class="card-body">
+                    <form id="about-content-form">
+                        <div class="form-group">
+                            <label for="about-description">About Description</label>
+                            <textarea id="about-description" class="form-control" rows="5" placeholder="Enter about us description"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="saveContent('about')">
+                            <i class="fas fa-save"></i> Save About Content
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Company Information -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Company Information</h3>
+                </div>
+                <div class="card-body">
+                    <form id="company-info-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" class="form-control" placeholder="Enter company name">
+                            </div>
+                            <div class="form-group">
+                                <label for="company-tagline">Tagline</label>
+                                <input type="text" id="company-tagline" class="form-control" placeholder="Enter company tagline">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company-description">Company Description</label>
+                            <textarea id="company-description" class="form-control" rows="4" placeholder="Enter company description"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="saveCompanyInfo()">
+                            <i class="fas fa-save"></i> Save Company Info
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="content.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiries - Solarica Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../images/logoo.png" alt="Solarica Logo" class="admin-logo">
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="products.html" class="nav-link"><i class="fas fa-box"></i> Products</a></li>
+                <li><a href="images.html" class="nav-link"><i class="fas fa-images"></i> Images</a></li>
+                <li><a href="inquiries.html" class="nav-link active"><i class="fas fa-envelope"></i> Inquiries</a></li>
+                <li><a href="content.html" class="nav-link"><i class="fas fa-file-alt"></i> Content</a></li>
+                <li><a href="settings.html" class="nav-link"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../index.html" class="btn btn-outline"><i class="fas fa-home"></i> View Site</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Inquiries</h1>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <!-- Filter Buttons -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="filter-buttons">
+                        <button class="btn btn-primary active" data-status="all">All Inquiries</button>
+                        <button class="btn btn-warning" data-status="new">New</button>
+                        <button class="btn btn-info" data-status="read">Read</button>
+                        <button class="btn btn-success" data-status="replied">Replied</button>
+                        <button class="btn btn-secondary" data-status="closed">Closed</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inquiries Table -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Subject</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="inquiries-table">
+                                <tr>
+                                    <td colspan="8" class="text-center">Loading...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="inquiries.js"></script>
+</body>
+</html>
