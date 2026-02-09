@@ -631,15 +631,15 @@ const productData = {
     },
     // Decorative Lights (201-206)
     201: {
-        title: "Solar Fairy String Light 20W",
-        description: "Beautiful fairy string lights with warm white LEDs perfect for creating magical outdoor ambiance.",
-        image: "images/decorative-1.jpg",
+        title: "Solar String Light 10M",
+        description: "Beautiful string lights with warm white LEDs perfect for creating magical outdoor ambiance.",
+        image: "decorativelights/l1.jpg",
         category: "Solar Decorative Lights",
         applications: ["Garden decoration", "Party lighting", "Wedding decoration", "Festival lighting"],
         specifications: {
-            "Power": "20W LED",
-            "Length": "20 meters",
-            "LEDs": "200 Fairy lights",
+            "Power": "12W LED",
+            "Length": "10 meters",
+            "LEDs": "50 Fairy lights",
             "Color": "Warm White",
             "Modes": "8 Flash modes"
         },
@@ -648,18 +648,18 @@ const productData = {
             "Installation": "₹400",
             "Warranty": "2 Years"
         },
-        features: ["Fairy lights", "Multiple modes", "Long length", "Magical ambiance"]
+        features: ["String lights", "Multiple modes", "Long length", "Magical ambiance"]
     },
     202: {
-        title: "Solar Curtain Light 25W",
+        title: "Solar Fairy Light 20M",
         description: "Elegant curtain-style decorative lights perfect for backdrop decoration and outdoor events.",
-        image: "images/decorative-2.jpg",
+        image: "decorativelights/l2.jpg",
         category: "Solar Decorative Lights",
         applications: ["Backdrop decoration", "Wedding events", "Party decoration", "Outdoor celebrations"],
         specifications: {
-            "Power": "25W LED",
+            "Power": "8W LED",
             "Size": "3m x 3m",
-            "LEDs": "300 LED lights",
+            "LEDs": "200 LED lights",
             "Pattern": "Curtain style",
             "Control": "Remote control"
         },
@@ -668,20 +668,20 @@ const productData = {
             "Installation": "₹600",
             "Warranty": "2 Years"
         },
-        features: ["Curtain design", "Remote control", "Large coverage", "Event decoration"]
+        features: ["Fairy design", "Remote control", "Large coverage", "Event decoration"]
     },
     203: {
-        title: "Solar Net Light 18W",
-        description: "Net-style decorative lights perfect for covering large areas with uniform lighting distribution.",
-        image: "images/decorative-3.jpg",
+        title: "Solar Curtain Light 15W",
+        description: "Curtain-style decorative lights perfect for covering large areas with uniform lighting distribution.",
+        image: "decorativelights/scurt.jpg",
         category: "Solar Decorative Lights",
         applications: ["Large area coverage", "Bush decoration", "Wall decoration", "Uniform lighting"],
         specifications: {
-            "Power": "18W LED",
+            "Power": "15W LED",
             "Size": "2m x 1.5m",
-            "LEDs": "144 LED lights",
-            "Pattern": "Net mesh",
-            "IP Rating": "IP65"
+            "LEDs": "300 LED lights",
+            "Pattern": "Cutain mesh",
+            "IP Rating": "Waterproof"
         },
         pricing: {
             "Base Price": "₹3,200",
@@ -691,13 +691,13 @@ const productData = {
         features: ["Net pattern", "Large coverage", "Uniform lighting", "Weather resistant"]
     },
     204: {
-        title: "Solar Icicle Light 22W",
-        description: "Icicle-style hanging lights perfect for roof edges and creating winter wonderland effects.",
-        image: "images/decorative-4.jpg",
+        title: "Solar Net Light 22W",
+        description: "Net-style hanging lights perfect for roof edges and creating winter wonderland effects.",
+        image: "decorativelights/snet.jpg",
         category: "Solar Decorative Lights",
         applications: ["Roof decoration", "Winter themes", "Holiday lighting", "Hanging decoration"],
         specifications: {
-            "Power": "22W LED",
+            "Power": "10W LED",
             "Length": "5 meters",
             "Drops": "20 Icicle drops",
             "Style": "Hanging icicles",
@@ -711,13 +711,13 @@ const productData = {
         features: ["Icicle design", "Hanging style", "Winter effect", "Roof decoration"]
     },
     205: {
-        title: "Solar Butterfly Light 8W",
+        title: "Solar ICICLE Light 18W",
         description: "Colorful butterfly-shaped decorative lights that add whimsical charm to any garden space.",
-        image: "images/decorative-5.jpg",
+        image: "decorativelights/icicle.jpg",
         category: "Solar Decorative Lights",
         applications: ["Garden decoration", "Children's areas", "Whimsical lighting", "Nature themes"],
         specifications: {
-            "Power": "8W LED",
+            "Power": "18W LED",
             "Design": "Butterfly shapes",
             "Colors": "Multi-color",
             "Quantity": "12 butterflies",
@@ -731,14 +731,14 @@ const productData = {
         features: ["Butterfly design", "Color changing", "Whimsical charm", "Garden decoration"]
     },
     206: {
-        title: "Solar Flower Light 10W",
+        title: "Solar Motif Lights 25W",
         description: "Beautiful flower-shaped lights that bloom with color, perfect for garden and patio decoration.",
-        image: "images/decorative-6.jpg",
+        image: "decorativelights/motif.jpg",
         category: "Solar Decorative Lights",
         applications: ["Garden decoration", "Patio lighting", "Flower bed accent", "Decorative lighting"],
         specifications: {
-            "Power": "10W LED",
-            "Design": "Flower shapes",
+            "Power": "25W LED",
+            "Design": "Custom Motifs",
             "Colors": "RGB colors",
             "Quantity": "8 flowers",
             "Effect": "Blooming effect"
@@ -876,7 +876,7 @@ const productData = {
     401: {
         title: "Solar Submersible Pump 3HP",
         description: "High-efficiency solar submersible pump for agricultural irrigation with MPPT controller.",
-        image: "images/pump-1.jpg",
+        image: "spump/1.png",
         category: "Solar Water Pumps",
         applications: ["Agriculture irrigation", "Well water pumping", "Farm irrigation", "Rural water supply"],
         specifications: {
@@ -896,7 +896,7 @@ const productData = {
     402: {
         title: "Solar Surface Pump 5HP",
         description: "Reliable surface pump for domestic water supply needs with easy maintenance.",
-        image: "images/pump-2.jpg",
+        image: "spump/2.png",
         category: "Solar Water Pumps",
         applications: ["Domestic use", "Water supply", "Tank filling", "Irrigation systems"],
         specifications: {
@@ -916,7 +916,7 @@ const productData = {
     403: {
         title: "Solar Borewell Pump 7HP",
         description: "Heavy-duty borewell pump for industrial applications with robust construction.",
-        image: "images/pump-3.jpg",
+        image: "spump/3.png",
         category: "Solar Water Pumps",
         applications: ["Industrial use", "Borewell pumping", "Heavy duty", "Commercial use"],
         specifications: {
@@ -936,7 +936,7 @@ const productData = {
     404: {
         title: "Solar Centrifugal Pump 2HP",
         description: "Compact centrifugal pump for residential water supply with energy efficient design.",
-        image: "images/pump-4.jpg",
+        image: "spump/4.png",
         category: "Solar Water Pumps",
         applications: ["Residential use", "Water supply", "Compact design", "Energy efficient"],
         specifications: {
@@ -956,7 +956,7 @@ const productData = {
     405: {
         title: "Solar Deep Well Pump 10HP",
         description: "High-power deep well pump for large-scale water extraction and irrigation systems.",
-        image: "images/pump-5.jpg",
+        image: "spump/5.png",
         category: "Solar Water Pumps",
         applications: ["Deep well", "Large scale", "Irrigation", "Commercial use"],
         specifications: {
@@ -976,7 +976,7 @@ const productData = {
     406: {
         title: "Solar Pool Pump 1HP",
         description: "Specialized pool pump for swimming pool filtration and water circulation systems.",
-        image: "images/pump-6.jpg",
+        image: "spump/6.png",
         category: "Solar Water Pumps",
         applications: ["Pool filtration", "Water circulation", "Swimming pools", "Spa systems"],
         specifications: {
@@ -997,7 +997,7 @@ const productData = {
     501: {
         title: "Solar Water Heater 200L",
         description: "High-efficiency solar water heater for residential use with flat plate collector technology.",
-        image: "images/heater-1.jpg",
+        image: "heater/1.jpg",
         category: "Solar Water Heater",
         applications: ["Residential use", "Hot water supply", "Bathroom heating", "Kitchen use"],
         specifications: {
@@ -1017,7 +1017,7 @@ const productData = {
     502: {
         title: "Solar Water Heater 300L",
         description: "Premium evacuated tube solar water heater for large families with superior heat retention.",
-        image: "images/heater-2.jpg",
+        image: "heater/2.jpg",
         category: "Solar Water Heater",
         applications: ["Large families", "Commercial use", "Hotels", "Guest houses"],
         specifications: {
@@ -1037,7 +1037,7 @@ const productData = {
     503: {
         title: "Solar Water Heater 500L",
         description: "Commercial grade solar water heater for hotels and institutions with ground mount installation.",
-        image: "images/heater-3.jpg",
+        image: "heater/3.jpg",
         category: "Solar Water Heater",
         applications: ["Hotels", "Institutions", "Commercial use", "Large buildings"],
         specifications: {
@@ -1057,7 +1057,7 @@ const productData = {
     504: {
         title: "Compact Solar Heater 150L",
         description: "Compact thermosiphon solar water heater for small homes with easy wall mount installation.",
-        image: "images/heater-4.jpg",
+        image: "heater/4.jpg",
         category: "Solar Water Heater",
         applications: ["Small homes", "Apartments", "Compact spaces", "Wall mounting"],
         specifications: {
@@ -1077,7 +1077,7 @@ const productData = {
     505: {
         title: "Solar Water Heater 400L",
         description: "High-performance evacuated tube heater for medium-sized buildings with excellent efficiency.",
-        image: "images/heater-5.jpg",
+        image: "heater/5.jpg",
         category: "Solar Water Heater",
         applications: ["Medium buildings", "Guest houses", "Hostels", "Commercial use"],
         specifications: {
@@ -1097,7 +1097,7 @@ const productData = {
     506: {
         title: "Solar Water Heater 100L",
         description: "Budget-friendly solar water heater for small families with reliable flat plate technology.",
-        image: "images/heater-6.jpg",
+        image: "heater/6.jpg",
         category: "Solar Water Heater",
         applications: ["Small families", "Budget homes", "Basic needs", "Starter homes"],
         specifications: {
@@ -1118,7 +1118,7 @@ const productData = {
     601: {
         title: "Solar String Inverter 5KW",
         description: "High-efficiency string inverter for residential solar installations with MPPT technology.",
-        image: "images/inverter-1.jpg",
+        image: "inverter/1.png",
         category: "Solar Inverter",
         applications: ["Residential solar", "Home systems", "Small commercial", "Grid-tie systems"],
         specifications: {
@@ -1138,7 +1138,7 @@ const productData = {
     602: {
         title: "Solar Hybrid Inverter 10KW",
         description: "Advanced hybrid inverter with battery backup capability for commercial applications.",
-        image: "images/inverter-2.jpg",
+        image: "inverter/2.png",
         category: "Solar Inverter",
         applications: ["Commercial use", "Hybrid systems", "Battery backup", "Grid-tie with storage"],
         specifications: {
@@ -1158,7 +1158,7 @@ const productData = {
     603: {
         title: "Solar Micro Inverter 300W",
         description: "Panel-level micro inverter for maximum energy harvest with individual panel optimization.",
-        image: "images/inverter-3.jpg",
+        image: "inverter/3.png",
         category: "Solar Inverter",
         applications: ["Panel level", "Maximum harvest", "Individual optimization", "High performance"],
         specifications: {
@@ -1178,7 +1178,7 @@ const productData = {
     604: {
         title: "Solar String Inverter 20KW",
         description: "Industrial grade string inverter for large-scale installations with three-phase output.",
-        image: "images/inverter-4.jpg",
+        image: "inverter/4.png",
         category: "Solar Inverter",
         applications: ["Industrial use", "Large scale", "Three phase", "Heavy duty"],
         specifications: {
@@ -1198,7 +1198,7 @@ const productData = {
     605: {
         title: "Solar Hybrid Inverter 3KW",
         description: "Compact hybrid inverter with advanced MPPT technology for small residential systems.",
-        image: "images/inverter-5.jpg",
+        image: "inverter/5.png",
         category: "Solar Inverter",
         applications: ["Small residential", "Hybrid system", "MPPT technology", "Smart control"],
         specifications: {
@@ -1218,7 +1218,7 @@ const productData = {
     606: {
         title: "Solar String Inverter 50KW",
         description: "High-power string inverter for commercial solar projects with monitoring capabilities.",
-        image: "images/inverter-6.jpg",
+        image: "inverter/6.png",
         category: "Solar Inverter",
         applications: ["Commercial projects", "High power", "Monitoring", "Large installations"],
         specifications: {
@@ -1279,7 +1279,7 @@ const productData = {
     703: {
         title: "Bifacial Solar Panel 500W",
         description: "Advanced bifacial solar panel for utility-scale installations with dual-sided energy generation.",
-        image: "images/panel-3.jpg",
+        image: "panel/s1.jpg",
         category: "Solar Panels",
         applications: ["Utility scale", "Bifacial technology", "Dual sided", "High efficiency"],
         specifications: {
@@ -1299,7 +1299,7 @@ const productData = {
     704: {
         title: "Monocrystalline Solar Panel 300W",
         description: "Compact monocrystalline panel perfect for small rooftops with excellent efficiency.",
-        image: "images/panel-4.jpg",
+        image: "panel/s2.jpg",
         category: "Solar Panels",
         applications: ["Small rooftops", "Compact size", "Residential use", "Space efficient"],
         specifications: {
@@ -1319,7 +1319,7 @@ const productData = {
     705: {
         title: "High Efficiency Solar Panel 600W",
         description: "High-power solar panel for large commercial installations with maximum energy output.",
-        image: "images/panel-5.jpg",
+        image: "panel/s3.jpg",
         category: "Solar Panels",
         applications: ["Large commercial", "High power", "Maximum output", "Commercial grade"],
         specifications: {
@@ -1339,7 +1339,7 @@ const productData = {
     706: {
         title: "Flexible Solar Panel 200W",
         description: "Flexible solar panel for curved surfaces and mobile applications with lightweight design.",
-        image: "images/panel-6.jpg",
+        image: "panel/s4.jpg",
         category: "Solar Panels",
         applications: ["Curved surfaces", "Mobile applications", "Lightweight", "Flexible design"],
         specifications: {
@@ -1360,7 +1360,7 @@ const productData = {
     801: {
         title: "LED Bulb 9W",
         description: "Energy-efficient LED bulb for home and office use with cool white light and long lifespan.",
-        image: "images/aclight-1.jpg",
+        image: "AClights/1.png",
         category: "AC Lights",
         applications: ["Home lighting", "Office use", "General lighting", "Energy saving"],
         specifications: {
@@ -1380,7 +1380,7 @@ const productData = {
     802: {
         title: "CFL Bulb 20W",
         description: "Compact fluorescent lamp with warm white light, perfect for general home lighting applications.",
-        image: "images/aclight-2.jpg",
+        image: "AClights/2.png",
         category: "AC Lights",
         applications: ["Home lighting", "General use", "Warm lighting", "Budget lighting"],
         specifications: {
@@ -1400,7 +1400,7 @@ const productData = {
     803: {
         title: "LED Tube Light 18W",
         description: "LED tube light for commercial and industrial applications with flicker-free operation.",
-        image: "images/aclight-3.jpg",
+        image: "AClights/3.png",
         category: "AC Lights",
         applications: ["Commercial use", "Industrial use", "Office lighting", "Flicker free"],
         specifications: {
@@ -1420,7 +1420,7 @@ const productData = {
     804: {
         title: "Outdoor LED Light 30W",
         description: "Waterproof LED light for outdoor applications with motion sensor and weather resistance.",
-        image: "images/aclight-4.jpg",
+        image: "AClights/4.png",
         category: "AC Lights",
         applications: ["Outdoor use", "Motion sensor", "Waterproof", "Weather resistant"],
         specifications: {
@@ -1440,7 +1440,7 @@ const productData = {
     805: {
         title: "Smart LED Bulb 12W",
         description: "Smart LED bulb with WiFi control and color changing capabilities for modern homes.",
-        image: "images/aclight-5.jpg",
+        image: "AClights/5.png",
         category: "AC Lights",
         applications: ["Smart home", "WiFi control", "Color changing", "App control"],
         specifications: {
@@ -1460,7 +1460,7 @@ const productData = {
     806: {
         title: "High Bay LED 50W",
         description: "High bay LED light for warehouses and factories with high brightness and heat resistance.",
-        image: "images/aclight-6.jpg",
+        image: "AClights/6.png",
         category: "AC Lights",
         applications: ["Warehouses", "Factories", "High brightness", "Heat resistant"],
         specifications: {
@@ -1481,7 +1481,7 @@ const productData = {
     901: {
         title: "LED Ceiling Light 24W",
         description: "Modern LED ceiling light perfect for living rooms with dimmable warm white illumination.",
-        image: "images/homelight-1.jpg",
+        image: "home/h1.png",
         category: "Home Lights",
         applications: ["Living room", "Bedroom", "Dining room", "General lighting"],
         specifications: {
@@ -1501,7 +1501,7 @@ const productData = {
     902: {
         title: "Pendant Light 15W",
         description: "Stylish pendant light ideal for kitchen islands with adjustable height and modern design.",
-        image: "images/homelight-2.jpg",
+        image: "home/h2.png",
         category: "Home Lights",
         applications: ["Kitchen island", "Dining area", "Pendant lighting", "Modern decor"],
         specifications: {
@@ -1521,7 +1521,7 @@ const productData = {
     903: {
         title: "Wall Sconce 12W",
         description: "Elegant wall sconce for bedroom ambient lighting with soft light and touch control.",
-        image: "images/homelight-3.jpg",
+        image: "home/h3.png",
         category: "Home Lights",
         applications: ["Bedroom", "Ambient lighting", "Wall mount", "Touch control"],
         specifications: {
@@ -1541,7 +1541,7 @@ const productData = {
     904: {
         title: "Table Lamp 8W",
         description: "Portable LED table lamp with USB charging capability for study and work areas.",
-        image: "images/homelight-4.jpg",
+        image: "home/h4.png",
         category: "Home Lights",
         applications: ["Study area", "Work desk", "Portable use", "USB charging"],
         specifications: {
@@ -1561,7 +1561,7 @@ const productData = {
     905: {
         title: "Bathroom Light 18W",
         description: "Waterproof ceiling light designed for bathrooms with IP65 rating and cool white light.",
-        image: "images/homelight-5.jpg",
+        image: "home/h5.png",
         category: "Home Lights",
         applications: ["Bathroom", "Waterproof", "Ceiling mount", "Cool white"],
         specifications: {
@@ -1581,7 +1581,7 @@ const productData = {
     906: {
         title: "Chandelier 36W",
         description: "Luxury LED chandelier for elegant living spaces with crystal design and remote control.",
-        image: "images/homelight-6.jpg",
+        image: "home/h6.png",
         category: "Home Lights",
         applications: ["Living room", "Elegant spaces", "Crystal design", "Remote control"],
         specifications: {
@@ -1597,8 +1597,2275 @@ const productData = {
             "Warranty": "3 Years"
         },
         features: ["Crystal design", "Remote control", "Luxury style", "Living room use"]
-    }
+    },
+
+
+    //poles
+    10: {
+  title: "9 Meter Octagonal Street Light Pole",
+  category: "Street Light Pole",
+  description: "9 meter octagonal pole designed for residential streets...",
+  image: "fabtech/pole/3.png",
+
+  specifications: {
+    "Height": "9 Meter",
+    "Material": "Hot Dip Galvanized Steel",
+    "Thickness": "3 mm",
+    "Top Diameter": "70 mm",
+    "Bottom Diameter": "130 mm",
+    "Finish": "Zinc Coated",
+    "Foundation": "M20 Concrete",
+    "Wind Resistance": "Up to 150 km/h",
+    "Warranty": "10 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "10 Years"
+  },
+
+  applications: [
+    "Residential roads",
+    "Society streets",
+    "Parks & walkways",
+    "Campus areas"
+  ]
+},
+
+    11: {
+  title: "8 Meter Double Arm Street Light Solar Pole",
+  category: "Solar Pole",
+  description:
+    "8 meter solar street light pole with solar panel mounting arm. Suitable for highways and main roads.",
+  image: "fabtech/pole/5.webp",
+
+  specifications: {
+    "Height": "8 Meter",
+    "Material": "Hot Dip Galvanized Steel",
+    "Thickness": "3.5 mm",
+    "Top Diameter": "75 mm",
+    "Bottom Diameter": "150 mm",
+    "Finish": "Powder Coated",
+    "Foundation": "M25 Concrete",
+    "Wind Resistance": "Up to 160 km/h",
+    "Warranty": "12 Years",
+    "Type": "Solar",
+    "Installation": "Foundation Mounted"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "12 Years"
+  },
+
+  gallery: [
+    "image_poles/pole8m.png",
+    "image_poles/pole8m_2.png"
+  ],
+
+  applications: [
+    "Highways",
+    "Main roads",
+    "Industrial zones",
+    "Smart city projects"
+  ]
+},
+
+14: {
+  title: "6 Meter Decorative Street Pole",
+  category: "Decorative Pole",
+  description:
+    "Elegant decorative pole for city beautification projects, gardens, and promenades.",
+  image: "fabtech/pole/4.png",
+
+  specifications: {
+    "Height": "6 Meter",
+    "Material": "Mild Steel with Casting",
+    "Thickness": "4 mm",
+    "Top Diameter": "80 mm",
+    "Bottom Diameter": "170 mm",
+    "Finish": "Black Powder Coat",
+    "Foundation": "M30 Concrete",
+    "Wind Resistance": "Up to 140 km/h",
+    "Warranty": "8 Years",
+    "Type": "Decorative",
+    "Installation": "Foundation Mounted"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "8 Years"
+  },
+
+  gallery: [
+    "image_poles/pole9m.png",
+    "image_poles/pole9m_2.png"
+  ],
+
+  applications: [
+    "City streets",
+    "Gardens & parks",
+    "Boulevards",
+    "Tourist zones"
+  ]
+},
+
+12: {
+  title: "12 Meter High Mast Pole",
+  category: "High Mast Pole",
+  description:
+    "Heavy-duty high mast pole for large open areas and industrial lighting requirements.",
+  image: "fabtech/pole/8.png",
+
+  specifications: {
+    "Height": "12 Meter",
+    "Material": "Hot Dip Galvanized Steel",
+    "Thickness": "5 mm",
+    "Top Diameter": "90 mm",
+    "Bottom Diameter": "210 mm",
+    "Finish": "Zinc + Powder Coat",
+    "Foundation": "M35 Concrete",
+    "Wind Resistance": "Up to 180 km/h",
+    "Warranty": "15 Years",
+    "Type": "High Mast",
+    "Installation": "Foundation Mounted"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "15 Years"
+  },
+
+  gallery: [
+    "image_poles/pole12m.png",
+    "image_poles/pole12m_2.png"
+  ],
+
+  applications: [
+    "Industrial yards",
+    "Ports",
+    "Highways",
+    "Large campuses"
+  ]
+},
+
+13: {
+  title: "3 Meter Garden Light Pole",
+  category: "Garden Pole",
+  description:
+    "Compact garden light pole ideal for pathways, landscapes, and residential gardens.",
+  image: "fabtech/pole/7.webp",
+
+  specifications: {
+    "Height": "3 Meter",
+    "Material": "Powder Coated MS",
+    "Thickness": "2.5 mm",
+    "Top Diameter": "60 mm",
+    "Bottom Diameter": "110 mm",
+    "Finish": "Black Matte",
+    "Foundation": "M20 Concrete",
+    "Wind Resistance": "Up to 120 km/h",
+    "Warranty": "5 Years",
+    "Type": "Garden",
+    "Installation": "Foundation Mounted"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "5 Years"
+  },
+
+  gallery: [
+    "image_poles/pole5m.png",
+    "image_poles/pole5m_2.png"
+  ],
+
+  applications: [
+    "Gardens",
+    "Walkways",
+    "Parks",
+    "Residential areas"
+  ]
+},
+
+    //Accessories
+
+21: {
+  title: "Single Arm Bracket",
+  category: "Light Accessory",
+  description:
+    "Single arm mounting bracket designed for secure installation of street lights on poles. Built with high-strength GI steel for long outdoor life.",
+  image: "fabtech/accessories/1.jpeg",
+
+  specifications: {
+    "Length": "450 mm",
+    "Material": "Hot Dip Galvanized Steel",
+    "Thickness": "3 mm",
+    "Finish": "Powder Coated",
+    "Mounting": "Clamp / Weld",
+    "Warranty": "5 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Not Required",
+    "Delivery": "Pan India",
+    "Warranty": "5 Years"
+  },
+
+  applications: [
+    "Street Poles",
+    "Solar Poles",
+    "Road Lighting"
+  ]
+},
+
+22: {
+  title: "Double Arm Bracket",
+  category: "Light Accessory",
+  description:
+    "Heavy-duty double arm bracket for mounting two luminaires on wide roads and highways.",
+  image: "fabtech/accessories/2.jpeg",
+
+  specifications: {
+    "Length": "2 x 450 mm",
+    "Material": "Mild Steel",
+    "Thickness": "4 mm",
+    "Finish": "Powder Coated",
+    "Mounting": "Weld / Clamp",
+    "Warranty": "5 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Not Required",
+    "Delivery": "Pan India",
+    "Warranty": "5 Years"
+  },
+
+  applications: [
+    "Highways",
+    "Main Roads",
+    "Industrial Roads"
+  ]
+},
+
+23: {
+  title: "Pole Base Plate",
+  category: "Foundation Accessory",
+  description:
+    "Laser-cut heavy-duty base plate used for fixing poles on concrete foundations.",
+  image: "fabtech/accessories/3.jpeg",
+
+  specifications: {
+    "Size": "300 x 300 mm",
+    "Thickness": "12 mm",
+    "Bolt Holes": "4 Nos",
+    "Finish": "Zinc Coated",
+    "Compatibility": "3m – 12m Poles",
+    "Warranty": "3 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Included with Foundation",
+    "Delivery": "Pan India",
+    "Warranty": "3 Years"
+  },
+
+  applications: [
+    "Street Poles",
+    "High Mast Poles",
+    "Industrial Poles"
+  ]
+},
+
+24: {
+  title: "High Mast Accessories Set",
+  category: "High Mast Accessory",
+  description:
+    "Complete high mast accessory set designed for secure installation and long-term stability of high mast lighting systems in industrial and infrastructure projects.",
+  image: "fabtech/accessories/4.png",
+
+  specifications: {
+    "Components": "Bolts, Clamps, Brackets & Fittings",
+    "Material": "Hot Dip Galvanized Steel",
+    "Finish": "Corrosion Resistant Coating",
+    "Compatibility": "12m – 30m High Mast Poles",
+    "Load Rating": "Heavy Duty",
+    "Outdoor Grade": "Yes",
+    "Weather Resistance": "High",
+    "Life Span": "15 Years",
+    "Warranty": "5 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Optional / Site Based",
+    "Delivery": "Pan India",
+    "Warranty": "5 Years"
+  },
+
+  applications: [
+    "High Mast Lighting Systems",
+    "Highways & Flyovers",
+    "Stadiums & Grounds",
+    "Ports & Industrial Yards"
+  ]
+},
+
+25: {
+  title: "Solar Light Accessories Kit",
+  category: "Solar Light Accessory",
+  description:
+    "Complete accessory kit for solar street lights, including connectors, cable glands, mounting fittings, and protection components for safe and reliable outdoor installation.",
+  image: "fabtech/accessories/5.png",
+
+  specifications: {
+    "Components": "Cable Glands, Connectors, Mounting Clamps, Fuses",
+    "Material": "UV-Stabilized Plastic & Aluminum",
+    "Ingress Protection": "IP65 Rated",
+    "Operating Temperature": "-10°C to 60°C",
+    "Compatibility": "All Solar Street & Garden Lights",
+    "Outdoor Grade": "Yes",
+    "Weather Resistance": "High",
+    "Life Span": "8 Years",
+    "Warranty": "2 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "With Solar Light Setup",
+    "Delivery": "Pan India",
+    "Warranty": "2 Years"
+  },
+
+  applications: [
+    "Solar Street Lights",
+    "Garden Solar Lights",
+    "Campus Lighting",
+    "Rural & Highway Projects"
+  ]
+},
+
+26: {
+  title: "Outdoor Battery Box for Solar Lights",
+  category: "Electrical Accessory",
+  description:
+    "Weatherproof battery enclosure designed to safely house solar batteries for street lights and garden lights, protecting them from rain, dust, heat, and tampering.",
+  image: "fabtech/accessories/6.png",
+
+  specifications: {
+    "Enclosure Type": "Outdoor Battery Box",
+    "Material": "Powder Coated GI / Aluminum",
+    "Ingress Protection": "IP65",
+    "Locking System": "Key Lock",
+    "Ventilation": "Heat Dissipation Slots",
+    "Mounting": "Pole / Wall Mounted",
+    "Finish": "Matte Black / Grey",
+    "Capacity": "Single or Dual Battery",
+    "Weather Resistance": "High",
+    "Warranty": "2 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Pole / Wall Mounted",
+    "Delivery": "Pan India",
+    "Warranty": "2 Years"
+  },
+
+  applications: [
+    "Solar Street Lights",
+    "Garden Lights",
+    "High Mast Poles",
+    "Decorative Poles"
+  ]
+},
+
+27: {
+  title: "Solar Light Assembly Unit",
+  category: "Electrical Accessory",
+  description:
+    "Complete solar light assembly unit designed for quick and reliable installation of solar street and garden lights. Includes pre-wired components, mounting hardware, and weather-resistant housing for long-term outdoor performance.",
+  image: "fabtech/accessories/7.png",
+
+  specifications: {
+    "Assembly Type": "Solar Light Assembly",
+    "Material": "Powder Coated GI / Aluminum",
+    "Ingress Protection": "IP65",
+    "Wiring": "Pre-Wired Harness",
+    "Mounting": "Pole / Arm Mounted",
+    "Finish": "Matte Black / Grey",
+    "Compatibility": "All Standard Solar Lights",
+    "Installation": "Plug & Play",
+    "Weather Resistance": "High",
+    "Warranty": "2 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Pole Mounted",
+    "Delivery": "Pan India",
+    "Warranty": "2 Years"
+  },
+
+  applications: [
+    "Solar Street Lights",
+    "Garden Lights",
+    "High Mast Poles",
+    "Decorative Poles"
+  ]
+},
+
+
+
+    31: {
+  title: "Solar Street Light Control Panel",
+  category: "Control Panel",
+  description:
+    "Automatic control panel for solar street light systems with smart charging and protection.",
+  image: "fabtech/control/1.png",
+
+  specifications: {
+    "Panel Type": "Solar Street Light Controller",
+    "Material": "GI Steel Enclosure",
+    "Usage": "Street Lighting",
+    "Features": "Auto ON/OFF, Overcharge Protection, Weatherproof",
+    "Technology": "PWM Based",
+    "Protection": "Overcharge, Deep Discharge",
+    "Ingress Rating": "Outdoor Grade",
+    "Warranty": "2 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Panel Mounted",
+    "Delivery": "Pan India",
+    "Warranty": "2 Years"
+  },
+
+  applications: [
+    "Solar Street Lights",
+    "Village Roads",
+    "Parks & Pathways"
+  ]
+},
+
+32: {
+  title: "Hybrid Solar Controller Panel",
+  category: "Control Panel",
+  description:
+    "Hybrid controller panel for solar and grid power with intelligent battery management.",
+  image: "fabtech/control/2.jpg",
+
+  specifications: {
+    "Panel Type": "Hybrid Solar Controller",
+    "Material": "Mild Steel Enclosure",
+    "Usage": "Industrial & Commercial",
+    "Features": "Hybrid Mode, Battery Management, LCD Display",
+    "Technology": "Solar + Grid",
+    "Display": "LCD Status Panel",
+    "Protection": "Overload & Short Circuit",
+    "Warranty": "2 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Wall Mounted",
+    "Delivery": "Pan India",
+    "Warranty": "2 Years"
+  },
+
+  applications: [
+    "Industrial Campuses",
+    "Commercial Buildings",
+    "Hybrid Lighting Systems"
+  ]
+},
+
+33: {
+  title: "PWM Solar Charge Controller Box",
+  category: "Control Panel",
+  description:
+    "Compact PWM charge controller box for garden and small solar lighting systems.",
+  image: "fabtech/control/3.jpeg",
+
+  specifications: {
+    "Panel Type": "PWM Solar Controller",
+    "Material": "Aluminum Enclosure",
+    "Usage": "Garden & Decorative Lighting",
+    "Technology": "PWM Charging",
+    "Size": "Compact",
+    "Ingress Rating": "IP65",
+    "Mounting": "Wall / Pole",
+    "Warranty": "1 Year"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Wall / Pole Mounted",
+    "Delivery": "Pan India",
+    "Warranty": "1 Year"
+  },
+
+  applications: [
+    "Garden Lights",
+    "Pathway Lighting",
+    "Small Solar Systems"
+  ]
+},
+
+34: {
+  title: "MPPT Solar Control Panel",
+  category: "Control Panel",
+  description:
+    "High-efficiency MPPT based solar control panel for professional street light projects.",
+  image: "fabtech/control/4.jpeg",
+
+  specifications: {
+    "Panel Type": "MPPT Solar Controller",
+    "Material": "Mild Steel Enclosure",
+    "Usage": "Street Lighting",
+    "Technology": "MPPT",
+    "Efficiency": "High Conversion Rate",
+    "Display": "Smart Digital Display",
+    "Protection": "Surge & Overload",
+    "Warranty": "3 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Pole / Wall Mounted",
+    "Delivery": "Pan India",
+    "Warranty": "3 Years"
+  },
+
+  applications: [
+    "City Roads",
+    "Highways",
+    "Smart City Projects"
+  ]
+},
+
+35: {
+  title: "All-in-One Solar Controller Unit",
+  category: "Control Panel",
+  description:
+    "Integrated solar controller unit with battery management and dusk-to-dawn automation.",
+  image: "fabtech/control/5.jpeg",
+
+  specifications: {
+    "Panel Type": "All-in-One Solar Controller",
+    "Material": "Aluminum Enclosure",
+    "Usage": "Street & Garden Lighting",
+    "Features": "Plug & Play, Auto Dusk-Dawn",
+    "Battery Management": "Integrated BMS",
+    "Operation": "Automatic",
+    "Mounting": "Inside Pole / Panel",
+    "Warranty": "2 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Inside Pole / Panel",
+    "Delivery": "Pan India",
+    "Warranty": "2 Years"
+  },
+
+  applications: [
+    "Solar Street Lights",
+    "Garden Lights",
+    "Compact Solar Systems"
+  ]
+},
+
+36: {
+  title: "Industrial Lighting Control Panel",
+  category: "Control Panel",
+  description:
+    "Heavy-duty industrial control panel for large outdoor and infrastructure lighting systems.",
+  image: "fabtech/control/6.jpeg",
+
+  specifications: {
+    "Panel Type": "Industrial Lighting Panel",
+    "Material": "Mild Steel Heavy-Duty Enclosure",
+    "Usage": "Industrial Lighting",
+    "Features": "Surge Protection, Heavy Duty Design",
+    "Protection": "MCB, Surge Arrestor",
+    "Build": "Industrial Grade",
+    "Mounting": "Floor / Wall Mounted",
+    "Warranty": "3 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Floor / Wall Mounted",
+    "Delivery": "Pan India",
+    "Warranty": "3 Years"
+  },
+
+  applications: [
+    "Factories",
+    "Warehouses",
+    "Ports & Yards",
+    "Infrastructure Projects"
+  ]
+},
+
+ 41: {
+  title: "Solar Home Lighting Kit",
+  category: "Solar Home System",
+  description:
+    "Complete solar home lighting kit with panel, battery, controller, and LED lamps for basic home illumination.",
+  image: "fabtech/home_product/1.jpg",
+
+  specifications: {
+    "System Type": "Off-Grid Solar Home Kit",
+    "Solar Panel": "40W Polycrystalline",
+    "Battery": "12V 20Ah",
+    "Controller": "PWM Charge Controller",
+    "Output": "4 LED Lamps + USB",
+    "Backup Time": "6–8 Hours",
+    "Mounting": "Wall / Roof",
+    "Warranty": "1 Year"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Wall Mounted",
+    "Delivery": "Pan India",
+    "Warranty": "1 Year"
+  },
+
+  applications: [
+    "Rural Homes",
+    "Shops",
+    "Huts",
+    "Temporary Shelters"
+  ]
+},
+
+42: {
+  title: "Solar Inverter for Home",
+  category: "Solar Home System",
+  description:
+    "High-efficiency solar inverter for home backup and off-grid solar applications.",
+  image: "fabtech/home_product/2.jpeg",
+
+  specifications: {
+    "Inverter Type": "Pure Sine Wave",
+    "Capacity": "850 VA",
+    "Input Voltage": "12V DC",
+    "Output Voltage": "230V AC",
+    "Efficiency": "Up to 90%",
+    "Compatibility": "Solar & Grid",
+    "Protection": "Overload, Short Circuit",
+    "Warranty": "2 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Wall Mounted",
+    "Delivery": "Pan India",
+    "Warranty": "2 Years"
+  },
+
+  applications: [
+    "Homes",
+    "Small Offices",
+    "Shops",
+    "Backup Power"
+  ]
+},
+
+43: {
+  title: "Solar Power Pack for Homes",
+  category: "Solar Home System",
+  description:
+    "Compact solar power pack with built-in battery and inverter for home energy needs.",
+  image: "fabtech/home_product/3.webp",
+
+  specifications: {
+    "System Type": "All-in-One Power Pack",
+    "Battery Type": "Lithium",
+    "Capacity": "500 Wh",
+    "Output Ports": "AC + DC + USB",
+    "Charging": "Solar & Grid",
+    "Portability": "Portable Unit",
+    "Display": "Digital Indicator",
+    "Warranty": "1 Year"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Plug & Play",
+    "Delivery": "Pan India",
+    "Warranty": "1 Year"
+  },
+
+  applications: [
+    "Homes",
+    "Camping",
+    "Emergency Backup",
+    "Mobile Offices"
+  ]
+},
+
+44: {
+  title: "Rooftop Solar Panel – 150W",
+  category: "Solar Home System",
+  description:
+    "High-efficiency 150W rooftop solar panel for residential power generation.",
+  image: "fabtech/home_product/4.jpeg",
+
+  specifications: {
+    "Panel Type": "Polycrystalline",
+    "Rated Power": "150W",
+    "Voltage": "18–20V",
+    "Frame": "Anodized Aluminum",
+    "Glass": "Tempered",
+    "Efficiency": "High Output",
+    "Mounting": "Rooftop",
+    "Warranty": "25 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Rooftop Mounted",
+    "Delivery": "Pan India",
+    "Warranty": "25 Years"
+  },
+
+  applications: [
+    "Homes",
+    "Apartments",
+    "Small Offices",
+    "Cabins"
+  ]
+},
+
+45: {
+  title: "Solar Fan System",
+  category: "Solar Home System",
+  description:
+    "Energy-efficient solar fan system for ventilation and cooling in off-grid areas.",
+  image: "fabtech/home_product/5.png",
+
+  specifications: {
+    "Fan Type": "DC Solar Fan",
+    "Power": "25W",
+    "Speed Control": "3 Levels",
+    "Operation": "Direct Solar + Battery",
+    "Diameter": "16 Inch",
+    "Mounting": "Ceiling / Wall",
+    "Noise Level": "Low",
+    "Warranty": "1 Year"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Ceiling / Wall",
+    "Delivery": "Pan India",
+    "Warranty": "1 Year"
+  },
+
+  applications: [
+    "Homes",
+    "Schools",
+    "Shops",
+    "Rural Areas"
+  ]
+},
+
+46: {
+  title: "Solar Mobile Charging Station",
+  category: "Solar Home System",
+  description:
+    "Compact solar charging station for mobile phones and small electronic devices.",
+  image: "fabtech/home_product/6.webp",
+
+  specifications: {
+    "System Type": "Solar Charging Unit",
+    "Panel Power": "10W",
+    "Output Ports": "USB x 4",
+    "Battery": "Built-in",
+    "Charging Mode": "Solar + USB",
+    "Portability": "Portable",
+    "Usage": "Indoor / Outdoor",
+    "Warranty": "1 Year"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Tabletop / Wall",
+    "Delivery": "Pan India",
+    "Warranty": "1 Year"
+  },
+
+  applications: [
+    "Homes",
+    "Shops",
+    "Public Areas",
+    "Emergency Use"
+  ]
+},
+51: {
+  title: "Rooftop Solar Structure – Residential",
+  category: "Solar Structures",
+  description: "Compact rooftop solar mounting structure designed for residential installations with high wind resistance and long life.",
+  image: "fabtech/structure/1.png",
+
+  specifications: {
+    "Structure Type": "Rooftop",
+    "Material": "GI Steel",
+    "Design": "Tilted Frame",
+    "Coating": "Hot Dip Galvanized",
+    "Wind Load": "Up to 150 km/h",
+    "Panel Support": "1–4 Panels",
+    "Installation": "Roof Mounted",
+    "Corrosion Resistance": "High",
+    "Life Span": "25 Years",
+    "Warranty": "10 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "10 Years"
+  },
+
+  applications: [
+    "Residential rooftops",
+    "Small homes",
+    "Villas",
+    "Urban houses"
+  ]
+},
+
+52: {
+  title: "Rooftop Solar Structure – Commercial",
+  category: "Solar Structures",
+  description: "Lightweight aluminum rooftop mounting structure ideal for commercial buildings and large rooftops.",
+  image: "fabtech/structure/6.jpg",
+
+  specifications: {
+    "Structure Type": "Rooftop",
+    "Material": "Aluminum",
+    "Design": "Low Load Frame",
+    "Coating": "Anodized",
+    "Weight": "Lightweight",
+    "Wind Load": "Up to 140 km/h",
+    "Installation": "Bolt Mounted",
+    "Corrosion Resistance": "Excellent",
+    "Life Span": "25 Years",
+    "Warranty": "12 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "12 Years"
+  },
+
+  applications: [
+    "Commercial rooftops",
+    "Office buildings",
+    "Shopping complexes",
+    "Institutions"
+  ]
+},
+
+53: {
+  title: "Long Railing Structure",
+  category: "Solar Fabrication Works",
+  description: "Heavy-duty long railing structure designed for industrial sites, solar plants, rooftops, and boundary protection with high strength and durability.",
+  image: "fabtech/structure/2.png",
+
+  specifications: {
+    "Structure Type": "Long Railing",
+    "Material": "GI / Mild Steel",
+    "Design": "Straight & Modular",
+    "Coating": "Hot Dip Galvanized / Powder Coated",
+    "Height Options": "900 mm – 1500 mm",
+    "Post Spacing": "1.5 – 2.5 Meter",
+    "Wind Load": "Up to 150 km/h",
+    "Corrosion Resistance": "High",
+    "Installation": "Base Plate / Embedded",
+    "Life Span": "25 Years",
+    "Warranty": "10 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "10 Years"
+  },
+
+  applications: [
+    "Solar power plants",
+    "Industrial premises",
+    "Rooftops & terraces",
+    "Highways & boundaries",
+    "Factories & warehouses"
+  ]
+},
+
+54: {
+  title: "Short Mono Rail Structure",
+  category: "Solar Fabrication Works",
+  description: "Compact mono rail structure designed for short-span solar installations, ideal for rooftops and small ground-mounted systems with precise panel alignment.",
+  image: "fabtech/structure/3.png",
+
+  specifications: {
+    "Structure Type": "Short Mono Rail",
+    "Material": "GI Steel / Aluminum",
+    "Design": "Single Rail Support",
+    "Coating": "Hot Dip Galvanized / Anodized",
+    "Rail Length": "600 mm – 1200 mm",
+    "Mounting": "Roof / Ground Base",
+    "Wind Load": "Up to 140 km/h",
+    "Panel Compatibility": "All Standard PV Modules",
+    "Corrosion Resistance": "High",
+    "Life Span": "20 Years",
+    "Warranty": "8 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "8 Years"
+  },
+
+  applications: [
+    "Residential rooftops",
+    "Small commercial systems",
+    "Terrace installations",
+    "Garden solar setups",
+    "Compact ground mounts"
+  ]
+},
+
+
+55: {
+  title: "Solar Carport Structure",
+  category: "Solar Structures",
+  description: "Solar carport structure providing parking shade while generating clean solar energy.",
+  image: "fabtech/structure/7.jpg",
+
+  specifications: {
+    "Structure Type": "Carport",
+    "Material": "GI Steel",
+    "Design": "Parking Shade",
+    "Coating": "Powder + Galvanized",
+    "Vehicle Capacity": "2–20 Cars",
+    "Wind Load": "Up to 150 km/h",
+    "Drainage": "Rainwater Channel",
+    "Dual Use": "Parking + Power",
+    "Life Span": "25 Years",
+    "Warranty": "12 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "12 Years"
+  },
+
+  applications: [
+    "Parking areas",
+    "Commercial buildings",
+    "Malls",
+    "IT parks"
+  ]
+},
+
+56: {
+  title: "Commercial Solar Shed Structure",
+  category: "Solar Structures",
+  description: "Large-span Commercial solar shed structure for factories and warehouses with high load capacity.",
+  image: "fabtech/structure/5.png",
+
+  specifications: {
+    "Structure Type": "Commercial Shed",
+    "Material": "GI Steel",
+    "Span": "Large Area Coverage",
+    "Coating": "HDG + Paint",
+    "Wind Load": "Up to 180 km/h",
+    "Load Capacity": "Heavy Duty",
+    "Mounting": "Column Based",
+    "Weather Resistance": "High",
+    "Life Span": "30 Years",
+    "Warranty": "15 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "15 Years"
+  },
+
+  applications: [
+    "Factories",
+    "Warehouses",
+    "Commercial yards",
+    "Large campuses"
+  ]
+},
+
+61: {
+  title: "Industrial Fabrication Work",
+  category: "Industrial Works",
+  description: "Custom industrial fabrication services for heavy-duty and large-scale applications.",
+  image: "fabtech/industrial/1.webp",
+
+  specifications: {
+    "Work Type": "Industrial Fabrication",
+    "Material": "Mild Steel",
+    "Design": "Custom Engineering",
+    "Strength": "Heavy Duty",
+    "Finish": "As Required",
+    "Precision": "High",
+    "Load Capacity": "Industrial Grade",
+    "Fabrication Method": "Welding & Cutting",
+    "Life Span": "20+ Years",
+    "Warranty": "Project Based"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per project",
+    "Delivery": "Pan India",
+    "Warranty": "Project Based"
+  },
+
+  applications: [
+    "Factories",
+    "Industrial plants",
+    "Heavy machinery bases",
+    "Custom metal works"
+  ]
+},
+
+62: {
+  title: "Warehouse Shed Structure",
+  category: "Industrial Works",
+  description: "Pre-engineered shed structures for warehouses and factories with long life and wide span.",
+  image: "fabtech/industrial/2.jpg",
+
+  specifications: {
+    "Structure Type": "Warehouse Shed",
+    "Material": "GI Steel",
+    "Span": "Large Area",
+    "Coating": "Hot Dip Galvanized",
+    "Wind Load": "Up to 160 km/h",
+    "Roof Type": "Metal Sheet",
+    "Mounting": "Column Based",
+    "Weather Resistance": "High",
+    "Life Span": "30 Years",
+    "Warranty": "15 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "15 Years"
+  },
+
+  applications: [
+    "Warehouses",
+    "Factories",
+    "Industrial yards",
+    "Storage units"
+  ]
+},
+
+63: {
+  title: "Solar Plant Installation Work",
+  category: "Industrial Works",
+  description: "Complete turnkey solar plant installation with expert team and fast execution.",
+  image: "fabtech/industrial/3.webp",
+
+  specifications: {
+    "Service Type": "Solar Installation",
+    "Execution": "Turnkey Project",
+    "Team": "Certified Engineers",
+    "Project Scale": "Small to Large Plants",
+    "Mounting": "Rooftop & Ground",
+    "Electrical Work": "Included",
+    "Safety Standards": "Industrial Grade",
+    "Timeline": "Fast Execution",
+    "Support": "End-to-End",
+    "Warranty": "Project Based"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Included",
+    "Delivery": "Pan India",
+    "Warranty": "Project Based"
+  },
+
+  applications: [
+    "Solar power plants",
+    "Industrial rooftops",
+    "Open land projects",
+    "Commercial solar sites"
+  ]
+},
+
+64: {
+  title: "Industrial Pipe Fabrication",
+  category: "Industrial Works",
+  description: "Precision pipe fabrication for industrial and utility projects with high pressure tolerance.",
+  image: "fabtech/industrial/4.jpg",
+
+  specifications: {
+    "Work Type": "Pipe Fabrication",
+    "Material": "Mild Steel",
+    "Process": "Bending & Welding",
+    "Accuracy": "High Precision",
+    "Pressure Rating": "High",
+    "Finish": "Industrial Grade",
+    "Customization": "Available",
+    "Application Type": "Utility & Process",
+    "Life Span": "20 Years",
+    "Warranty": "Project Based"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per scope",
+    "Delivery": "Pan India",
+    "Warranty": "Project Based"
+  },
+
+  applications: [
+    "Industrial pipelines",
+    "Utility projects",
+    "Process plants",
+    "Infrastructure works"
+  ]
+},
+
+65: {
+  title: "Metal Roofing Structure",
+  category: "Industrial Works",
+  description: "Industrial roofing and metal structure solutions with lightweight and weatherproof design.",
+  image: "fabtech/industrial/5.jpeg",
+
+  specifications: {
+    "Structure Type": "Metal Roofing",
+    "Material": "Aluminum",
+    "Weight": "Lightweight",
+    "Weather Resistance": "High",
+    "Design": "Custom Layout",
+    "Coating": "Protective Finish",
+    "Drainage": "Integrated",
+    "Mounting": "Frame Based",
+    "Life Span": "25 Years",
+    "Warranty": "12 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "12 Years"
+  },
+
+  applications: [
+    "Industrial sheds",
+    "Factories",
+    "Workshops",
+    "Commercial buildings"
+  ]
+},
+
+66: {
+  title: "Electrical Panel Installation",
+  category: "Industrial Works",
+  description: "Professional electrical panel and system installation with certified industrial standards.",
+  image: "fabtech/industrial/6.jpeg",
+
+  specifications: {
+    "Service Type": "Electrical Installation",
+    "Panel Type": "Industrial Grade",
+    "Wiring": "Safe & Certified",
+    "Compliance": "IS Standards",
+    "Testing": "Included",
+    "Protection": "Surge & Short-Circuit",
+    "Mounting": "Wall / Floor",
+    "Safety Level": "High",
+    "Life Span": "Project Based",
+    "Warranty": "Service Warranty"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Included",
+    "Delivery": "Pan India",
+    "Warranty": "Service Warranty"
+  },
+
+  applications: [
+    "Factories",
+    "Industrial plants",
+    "Power rooms",
+    "Commercial buildings"
+  ]
+},
+
+71: {
+  title: "Solar Ground Mount Structure",
+  category: "Solar Fabrication",
+  description: "Heavy-duty ground mount structure for large solar plants and open-field installations.",
+  image: "image_solarfab/ground.png",
+
+  specifications: {
+    "Structure Type": "Ground Mount",
+    "Material": "Hot Dip Galvanized Steel",
+    "Design": "Fixed Tilt",
+    "Coating": "HDG Finish",
+    "Wind Load": "Up to 170 km/h",
+    "Load Capacity": "Heavy Duty",
+    "Mounting": "Foundation Based",
+    "Corrosion Resistance": "High",
+    "Life Span": "25 Years",
+    "Warranty": "10 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "10 Years"
+  },
+
+  applications: [
+    "Solar power plants",
+    "Open land projects",
+    "Industrial solar parks",
+    "Large campuses"
+  ]
+},
+
+72: {
+  title: "Rooftop Solar Mounting Frame",
+  category: "Solar Fabrication",
+  description: "Lightweight aluminum mounting frame for residential and commercial rooftop solar installations.",
+  image: "image_solarfab/rooftop.png",
+
+  specifications: {
+    "Structure Type": "Rooftop Mount",
+    "Material": "Aluminum",
+    "Design": "Modular Frame",
+    "Coating": "Anodized",
+    "Wind Load": "Up to 140 km/h",
+    "Load Capacity": "Medium Duty",
+    "Mounting": "Roof Anchored",
+    "Corrosion Resistance": "Excellent",
+    "Life Span": "20 Years",
+    "Warranty": "8 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Roof Dependent",
+    "Delivery": "Pan India",
+    "Warranty": "8 Years"
+  },
+
+  applications: [
+    "Homes",
+    "Commercial rooftops",
+    "Apartments",
+    "Institutions"
+  ]
+},
+
+73: {
+  title: "Pole Mount Solar Structure",
+  category: "Solar Fabrication",
+  description: "Single pole-mounted solar structure for street lights and standalone solar systems.",
+  image: "image_solarfab/pole.png",
+
+  specifications: {
+    "Structure Type": "Pole Mount",
+    "Material": "GI Steel",
+    "Design": "Single Pole",
+    "Coating": "HDG",
+    "Wind Load": "Up to 150 km/h",
+    "Load Capacity": "Medium Duty",
+    "Mounting": "Pole Top",
+    "Weather Resistance": "High",
+    "Life Span": "18 Years",
+    "Warranty": "7 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Foundation Based",
+    "Delivery": "Pan India",
+    "Warranty": "7 Years"
+  },
+
+  applications: [
+    "Solar street lights",
+    "Rural lighting",
+    "Remote locations",
+    "Standalone systems"
+  ]
+},
+
+74: {
+  title: "Solar Carport Structure",
+  category: "Solar Fabrication",
+  description: "Dual-purpose solar carport structure providing parking shade and solar power generation.",
+  image: "image_solarfab/carport.png",
+
+  specifications: {
+    "Structure Type": "Carport",
+    "Material": "Mild Steel",
+    "Design": "Custom Layout",
+    "Coating": "Paint + HDG",
+    "Wind Load": "Up to 160 km/h",
+    "Load Capacity": "Heavy Duty",
+    "Mounting": "Column Based",
+    "Weather Resistance": "High",
+    "Life Span": "25 Years",
+    "Warranty": "12 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Site Specific",
+    "Delivery": "Pan India",
+    "Warranty": "12 Years"
+  },
+
+  applications: [
+    "Parking areas",
+    "Commercial buildings",
+    "Campuses",
+    "Shopping complexes"
+  ]
+},
+
+75: {
+  title: "Custom Solar Frame Fabrication",
+  category: "Solar Fabrication",
+  description: "Project-specific custom solar frames engineered for unique site conditions and layouts.",
+  image: "image_solarfab/custom.png",
+
+  specifications: {
+    "Structure Type": "Custom Frame",
+    "Material": "Mild Steel",
+    "Design": "Project Specific",
+    "Coating": "As Required",
+    "Wind Load": "As Per Design",
+    "Load Capacity": "Custom",
+    "Mounting": "As Per Site",
+    "Fabrication": "Precision Built",
+    "Life Span": "20 Years",
+    "Warranty": "10 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Project Based",
+    "Delivery": "Pan India",
+    "Warranty": "10 Years"
+  },
+
+  applications: [
+    "Custom solar projects",
+    "R&D installations",
+    "Special structures",
+    "Non-standard sites"
+  ]
+},
+
+76: {
+  title: "Floating Solar Structure",
+  category: "Solar Fabrication",
+  description: "Floating solar mounting structure designed for lakes, ponds, and water reservoirs.",
+  image: "image_solarfab/floating.png",
+
+  specifications: {
+    "Structure Type": "Floating Mount",
+    "Material": "Aluminum + HDPE",
+    "Design": "Modular Floating",
+    "Coating": "Corrosion Resistant",
+    "Wind Load": "Up to 130 km/h",
+    "Load Capacity": "Medium Duty",
+    "Mounting": "Water Anchored",
+    "UV Resistance": "High",
+    "Life Span": "20 Years",
+    "Warranty": "8 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Water Body Specific",
+    "Delivery": "Pan India",
+    "Warranty": "8 Years"
+  },
+
+  applications: [
+    "Lakes",
+    "Ponds",
+    "Reservoirs",
+    "Water treatment plants"
+  ]
+},
+
+
+  81: {
+    title: "Home EV Charger – 3.3kW",
+    category: "EV Charging Station",
+    description: "Compact AC charger designed for home electric vehicle charging with built-in safety and smart protection.",
+    image: "greenwheel/station/1.jpeg",
+
+    specifications: {
+      "Charger Type": "AC Charger",
+      "Power Output": "3.3 kW",
+      "Mounting": "Wall Mount",
+      "Input Voltage": "230V AC",
+      "Protection": "Over Current, Over Voltage",
+      "Connector": "Type 2",
+      "Usage": "Residential",
+      "Weather Rating": "IP54",
+      "Life Span": "10 Years",
+      "Warranty": "2 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Optional",
+      "Delivery": "Pan India",
+      "Warranty": "2 Years"
+    },
+
+    applications: [
+      "Homes",
+      "Apartments",
+      "Private garages",
+      "Residential parking"
+    ]
+  },
+
+  82: {
+    title: "Home EV Charger – 7.4kW",
+    category: "EV Charging Station",
+    description: "High-speed AC charger for residential EV users with WiFi connectivity and smart monitoring.",
+    image: "greenwheel/station/2.jpeg",
+
+    specifications: {
+      "Charger Type": "AC Charger",
+      "Power Output": "7.4 kW",
+      "Connectivity": "WiFi Enabled",
+      "Mounting": "Wall Mount",
+      "Connector": "Type 2",
+      "Input Voltage": "230V AC",
+      "Safety": "Earth Leakage, Surge Protection",
+      "Usage": "Residential",
+      "Life Span": "12 Years",
+      "Warranty": "3 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "As per site",
+      "Delivery": "Pan India",
+      "Warranty": "3 Years"
+    },
+
+    applications: [
+      "Homes",
+      "Villas",
+      "Residential societies",
+      "Private parking"
+    ]
+  },
+
+  83: {
+    title: "Commercial EV Charger – 22kW",
+    category: "EV Charging Station",
+    description: "Commercial-grade AC charging station for offices and parking areas with RFID access control.",
+    image: "greenwheel/station/3.jpg",
+
+    specifications: {
+      "Charger Type": "AC Charger",
+      "Power Output": "22 kW",
+      "Access Control": "RFID",
+      "Mounting": "Wall / Pole Mount",
+      "Connector": "Type 2",
+      "Input Voltage": "415V AC",
+      "Protection": "Overload, Surge",
+      "Usage": "Commercial",
+      "Life Span": "15 Years",
+      "Warranty": "3 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Commercial Setup",
+      "Delivery": "Pan India",
+      "Warranty": "3 Years"
+    },
+
+    applications: [
+      "Office buildings",
+      "Commercial parking",
+      "Shopping malls",
+      "IT parks"
+    ]
+  },
+
+  84: {
+    title: "DC Fast Charger – 30kW",
+    category: "EV Charging Station",
+    description: "DC fast charging station for highways and public areas with touchscreen interface.",
+    image: "greenwheel/station/4.webp",
+
+    specifications: {
+      "Charger Type": "DC Fast Charger",
+      "Power Output": "30 kW",
+      "Display": "Touch Screen",
+      "Connector": "CCS / GB-T",
+      "Input Voltage": "415V AC",
+      "Cooling": "Forced Air",
+      "Usage": "Public",
+      "OCPP Support": "Yes",
+      "Life Span": "15 Years",
+      "Warranty": "3 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Site Based",
+      "Delivery": "Pan India",
+      "Warranty": "3 Years"
+    },
+
+    applications: [
+      "Highways",
+      "Fuel stations",
+      "Public charging hubs",
+      "Transport depots"
+    ]
+  },
+
+  85: {
+    title: "DC Ultra Fast Charger – 60kW",
+    category: "EV Charging Station",
+    description: "High-capacity DC charger for commercial EV hubs with dual gun and OCPP compatibility.",
+    image: "greenwheel/station/5.avif",
+
+    specifications: {
+      "Charger Type": "DC Fast Charger",
+      "Power Output": "60 kW",
+      "Connector": "Dual Gun (CCS)",
+      "Display": "Smart Display",
+      "Input Voltage": "415V AC",
+      "OCPP": "Enabled",
+      "Usage": "Commercial / Public",
+      "Cooling": "Intelligent Cooling",
+      "Life Span": "18 Years",
+      "Warranty": "3 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Turnkey",
+      "Delivery": "Pan India",
+      "Warranty": "3 Years"
+    },
+
+    applications: [
+      "EV hubs",
+      "Bus depots",
+      "Commercial parking",
+      "Highway stations"
+    ]
+  },
+
+  86: {
+    title: "Portable EV Charging Unit",
+    category: "EV Charging Station",
+    description: "Portable EV charging unit for travel and emergency use with plug-and-play operation.",
+    image: "greenwheel/station/6.webp",
+
+    specifications: {
+      "Charger Type": "Portable",
+      "Power Output": "3.3 kW",
+      "Operation": "Plug & Play",
+      "Connector": "Universal",
+      "Input Voltage": "230V AC",
+      "Weight": "Lightweight",
+      "Usage": "Home / Travel",
+      "Safety": "Overheat Protection",
+      "Life Span": "8 Years",
+      "Warranty": "1 Year"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Not Required",
+      "Delivery": "Pan India",
+      "Warranty": "1 Year"
+    },
+
+    applications: [
+      "Emergency charging",
+      "Travel use",
+      "Remote areas",
+      "Backup charging"
+    ]
+  },
+
+
+  91: {
+    title: "Lithium EV Battery – 48V 50Ah",
+    category: "EV Batteries",
+    description: "Compact and lightweight lithium battery designed for electric two-wheelers with fast charging and long cycle life.",
+    image: "greenwheel/ev-battery/1.webp",
+
+    specifications: {
+      "Voltage": "48V",
+      "Capacity": "50Ah",
+      "Chemistry": "LiFePO4",
+      "Cycle Life": "2000+ Cycles",
+      "Charging Time": "3–4 Hours",
+      "Weight": "Lightweight Design",
+      "BMS": "Inbuilt Smart BMS",
+      "Operating Temp": "-10°C to 55°C",
+      "Mounting": "Portable / Vehicle Fit",
+      "Warranty": "3 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Plug & Play",
+      "Delivery": "Pan India",
+      "Warranty": "3 Years"
+    },
+
+    applications: [
+      "Electric scooters",
+      "E-bikes",
+      "Light EVs",
+      "Personal mobility"
+    ]
+  },
+
+  92: {
+    title: "Lithium EV Battery – 60V 60Ah",
+    category: "EV Batteries",
+    description: "High-capacity 60V lithium battery for electric scooters and light commercial EVs with enhanced safety.",
+    image: "greenwheel/ev-battery/2.jpeg",
+
+    specifications: {
+      "Voltage": "60V",
+      "Capacity": "60Ah",
+      "Chemistry": "Lithium Ion",
+      "Cycle Life": "2500+ Cycles",
+      "Charging Time": "4–5 Hours",
+      "Energy Density": "High",
+      "BMS": "Advanced Protection",
+      "Cooling": "Passive Air",
+      "Mounting": "Vehicle Integrated",
+      "Warranty": "3 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Vehicle Fitment",
+      "Delivery": "Pan India",
+      "Warranty": "3 Years"
+    },
+
+    applications: [
+      "Electric scooters",
+      "Delivery EVs",
+      "Fleet vehicles",
+      "Urban transport"
+    ]
+  },
+
+  93: {
+    title: "EV Battery Pack – 72V 80Ah",
+    category: "EV Batteries",
+    description: "High-power EV battery pack for performance vehicles with thermal protection and long range.",
+    image: "greenwheel/ev-battery/3.jpeg",
+
+    specifications: {
+      "Voltage": "72V",
+      "Capacity": "80Ah",
+      "Chemistry": "LiFePO4",
+      "Range Support": "Up to 120 km",
+      "Cycle Life": "3000+ Cycles",
+      "Thermal Protection": "Yes",
+      "Charging Time": "5 Hours",
+      "BMS": "Smart BMS",
+      "Mounting": "Custom Fit",
+      "Warranty": "4 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Custom Fitment",
+      "Delivery": "Pan India",
+      "Warranty": "4 Years"
+    },
+
+    applications: [
+      "High-speed EVs",
+      "Electric bikes",
+      "Performance scooters",
+      "Custom EV builds"
+    ]
+  },
+
+  94: {
+    title: "Commercial EV Battery – 96V",
+    category: "EV Batteries",
+    description: "Industrial-grade 96V battery for e-rickshaws and cargo EVs with heavy-duty performance.",
+    image: "greenwheel/ev-battery/4.webp",
+
+    specifications: {
+      "Voltage": "96V",
+      "Capacity": "100Ah",
+      "Chemistry": "Lithium Ion",
+      "Cycle Life": "3000+ Cycles",
+      "Discharge Rate": "High Current",
+      "Cooling": "Industrial Grade",
+      "BMS": "Multi-Level Protection",
+      "Mounting": "Vehicle Chassis",
+      "Durability": "Heavy Duty",
+      "Warranty": "5 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Vehicle Integration",
+      "Delivery": "Pan India",
+      "Warranty": "5 Years"
+    },
+
+    applications: [
+      "E-rickshaws",
+      "Cargo EVs",
+      "Electric loaders",
+      "Commercial fleets"
+    ]
+  },
+
+  95: {
+    title: "Home Energy Storage Battery – 5kWh",
+    category: "Home Energy Storage",
+    description: "Wall-mounted home battery for solar systems and backup power with silent operation.",
+    image: "greenwheel/ev-battery/6.webp",
+
+    specifications: {
+      "Energy Capacity": "5 kWh",
+      "Voltage": "48V",
+      "Chemistry": "LiFePO4",
+      "Mounting": "Wall Mount",
+      "Cycle Life": "6000+ Cycles",
+      "Inverter Support": "Hybrid / Off-grid",
+      "Noise": "Silent",
+      "Monitoring": "Mobile App",
+      "Safety": "Fire Resistant",
+      "Warranty": "5 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Wall Mount",
+      "Delivery": "Pan India",
+      "Warranty": "5 Years"
+    },
+
+    applications: [
+      "Homes",
+      "Solar rooftops",
+      "Backup systems",
+      "Off-grid houses"
+    ]
+  },
+
+  96: {
+    title: "Portable Power Battery – 1kWh",
+    category: "Portable Energy",
+    description: "Compact portable solar power station for outdoor use, emergency backup, and travel.",
+    image: "greenwheel/ev-battery/7.jpeg",
+
+    specifications: {
+      "Energy Capacity": "1 kWh",
+      "Output Ports": "AC + USB + DC",
+      "Charging": "Solar / AC",
+      "Weight": "Portable",
+      "Display": "Digital LCD",
+      "Noise": "Silent",
+      "Cycle Life": "2000+ Cycles",
+      "Safety": "Overload Protection",
+      "Use Mode": "Indoor / Outdoor",
+      "Warranty": "2 Years"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Installation": "Plug & Play",
+      "Delivery": "Pan India",
+      "Warranty": "2 Years"
+    },
+
+    applications: [
+      "Camping",
+      "Emergency backup",
+      "Outdoor events",
+      "Mobile charging"
+    ]
+  },
+
+
+111: {
+  title: "Home EV Charger 3.3kW",
+  category: "EV Chargers",
+  description: "Compact AC home charger designed for daily EV charging with safety protection and smart monitoring.",
+  image: "greenwheel/ev-charger/1.jpeg",
+
+  specifications: {
+    "Charger Type": "AC Wall Mount",
+    "Power Output": "3.3 kW",
+    "Input Voltage": "230V AC",
+    "Connector": "Type 2",
+    "Mounting": "Wall Mounted",
+    "Protection": "Over Voltage, Short Circuit",
+    "Smart Features": "Mobile App",
+    "IP Rating": "IP54",
+    "Operating Temp": "-20°C to 50°C",
+    "Warranty": "2 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Optional",
+    "Delivery": "Pan India",
+    "Warranty": "2 Years"
+  },
+
+  applications: [
+    "Home garages",
+    "Residential parking",
+    "Personal EV charging"
+  ]
+},
+
+112: {
+  title: "Smart EV Charger 7kW",
+  category: "EV Chargers",
+  description: "High-speed smart wallbox charger with WiFi and OCPP support for modern homes and apartments.",
+  image: "greenwheel/ev-charger/2.webp",
+
+  specifications: {
+    "Charger Type": "AC Smart Wallbox",
+    "Power Output": "7 kW",
+    "Input Voltage": "230V AC",
+    "Connector": "Type 2",
+    "Connectivity": "WiFi / OCPP",
+    "Mounting": "Wall Mounted",
+    "Display": "LED Indicators",
+    "IP Rating": "IP55",
+    "Safety": "RCD, Surge Protection",
+    "Warranty": "3 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "3 Years"
+  },
+
+  applications: [
+    "Homes",
+    "Apartments",
+    "Private parking"
+  ]
+},
+
+113: {
+  title: "Portable EV Charger 3kW",
+  category: "EV Chargers",
+  description: "Lightweight portable EV charger for emergency and travel charging needs.",
+  image: "greenwheel/ev-charger/3.jpeg",
+
+  specifications: {
+    "Charger Type": "Portable AC",
+    "Power Output": "3 kW",
+    "Input Voltage": "230V AC",
+    "Connector": "Type 2",
+    "Cable Length": "5 Meter",
+    "Weight": "Lightweight",
+    "Protection": "Overheat, Overcurrent",
+    "IP Rating": "IP44",
+    "Plug Type": "16A",
+    "Warranty": "1 Year"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Not Required",
+    "Delivery": "Pan India",
+    "Warranty": "1 Year"
+  },
+
+  applications: [
+    "Travel use",
+    "Emergency charging",
+    "Home backup charger"
+  ]
+},
+
+114: {
+  title: "Commercial AC Charger 22kW",
+  category: "EV Chargers",
+  description: "High-capacity AC charger for offices, malls, and parking complexes with RFID access.",
+  image: "greenwheel/ev-charger/4.webp",
+
+  specifications: {
+    "Charger Type": "AC Commercial",
+    "Power Output": "22 kW",
+    "Input Voltage": "415V AC",
+    "Connector": "Type 2 Dual Gun",
+    "Authentication": "RFID",
+    "Mounting": "Wall / Floor",
+    "Communication": "OCPP",
+    "IP Rating": "IP55",
+    "Cooling": "Natural",
+    "Warranty": "3 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "3 Years"
+  },
+
+  applications: [
+    "Office buildings",
+    "Malls",
+    "Commercial parking"
+  ]
+},
+
+115: {
+  title: "DC Fast Charger 30kW",
+  category: "EV Chargers",
+  description: "Public DC fast charger for highways and charging stations with rapid charging capability.",
+  image: "greenwheel/ev-charger/5.jpg",
+
+  specifications: {
+    "Charger Type": "DC Fast Charger",
+    "Power Output": "30 kW",
+    "Input Voltage": "415V AC",
+    "Output Voltage": "200–750V DC",
+    "Connectors": "CCS / CHAdeMO",
+    "Cooling": "Forced Air",
+    "Display": "Touch Screen",
+    "IP Rating": "IP54",
+    "Efficiency": "≥95%",
+    "Warranty": "3 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "As per site",
+    "Delivery": "Pan India",
+    "Warranty": "3 Years"
+  },
+
+  applications: [
+    "Highways",
+    "Public stations",
+    "Fuel pumps"
+  ]
+},
+
+116: {
+  title: "Ultra Fast EV Charger 60kW",
+  category: "EV Chargers",
+  description: "Ultra-fast DC charger for fleet operators and public charging hubs with high throughput.",
+  image: "greenwheel/ev-charger/6.jpeg",
+
+  specifications: {
+    "Charger Type": "DC Ultra Fast",
+    "Power Output": "60 kW",
+    "Input Voltage": "415V AC",
+    "Output Voltage": "200–1000V DC",
+    "Connectors": "CCS Dual",
+    "Cooling": "Liquid / Forced Air",
+    "Communication": "OCPP 1.6",
+    "Display": "7-inch Touch",
+    "IP Rating": "IP54",
+    "Warranty": "5 Years"
+  },
+
+  pricing: {
+    "Base Price": "On Request",
+    "Installation": "Turnkey",
+    "Delivery": "Pan India",
+    "Warranty": "5 Years"
+  },
+
+  applications: [
+    "Fleet charging",
+    "Public charging hubs",
+    "Commercial EV stations"
+  ]
+},
+
+121: {
+    title: "Solar Rooftop AMC – Basic",
+    category: "AMC Services",
+    description: "Basic annual maintenance contract for residential solar rooftop systems, ensuring clean panels and stable performance.",
+    image: "greenwheel/amc/1.jpeg",
+
+    specifications: {
+      "Service Type": "Solar Rooftop AMC",
+      "Coverage Level": "Basic",
+      "Visit Frequency": "1 Time / Year",
+      "Panel Cleaning": "Included",
+      "Inverter Check": "Included",
+      "Performance Review": "Basic",
+      "Response Time": "72 Hours",
+      "System Size": "Up to 5 kW",
+      "Support": "Business Hours",
+      "Warranty": "1 Year"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Billing Cycle": "Annual",
+      "On-Site Visit": "Included",
+      "Spare Parts": "Chargeable",
+      "Coverage Area": "Pan India"
+    },
+
+    applications: [
+      "Residential rooftops",
+      "Small solar homes",
+      "Villas",
+      "Apartments"
+    ]
+  },
+
+  122: {
+    title: "Solar Rooftop AMC – Premium",
+    category: "AMC Services",
+    description: "Premium AMC with proactive maintenance, inverter service, and detailed performance reporting.",
+    image: "greenwheel/amc/2.jpg",
+
+    specifications: {
+      "Service Type": "Solar Rooftop AMC",
+      "Coverage Level": "Premium",
+      "Visit Frequency": "Quarterly",
+      "Panel Cleaning": "Included",
+      "Inverter Service": "Included",
+      "Energy Report": "Detailed",
+      "Remote Monitoring": "Available",
+      "Response Time": "24 Hours",
+      "System Size": "Up to 20 kW",
+      "Warranty": "1 Year"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Billing Cycle": "Annual",
+      "Emergency Visit": "Included",
+      "Spare Parts": "Discounted",
+      "Coverage Area": "Pan India"
+    },
+
+    applications: [
+      "Large homes",
+      "Societies",
+      "Commercial rooftops",
+      "Institutions"
+    ]
+  },
+
+  123: {
+    title: "EV Charger AMC – Standard",
+    category: "AMC Services",
+    description: "Standard maintenance plan for home and commercial EV chargers with safety and firmware updates.",
+    image: "greenwheel/amc/3.jpeg",
+
+    specifications: {
+      "Service Type": "EV Charger AMC",
+      "Coverage Level": "Standard",
+      "Visit Frequency": "Bi-Annual",
+      "Firmware Update": "Included",
+      "Safety Testing": "Included",
+      "Connector Check": "Included",
+      "Response Time": "48 Hours",
+      "Charger Type": "AC / DC",
+      "Support": "Phone + On-site",
+      "Warranty": "1 Year"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Billing Cycle": "Annual",
+      "Remote Support": "Included",
+      "Parts Replacement": "Chargeable",
+      "Coverage Area": "Pan India"
+    },
+
+    applications: [
+      "Home EV chargers",
+      "Office parking",
+      "Commercial buildings",
+      "Apartments"
+    ]
+  },
+
+  124: {
+    title: "EV Charging Station AMC – Premium",
+    category: "AMC Services",
+    description: "Premium AMC for public EV charging stations with 24x7 support and remote monitoring.",
+    image: "greenwheel/amc/4.jpeg",
+
+    specifications: {
+      "Service Type": "EV Station AMC",
+      "Coverage Level": "Premium",
+      "Monitoring": "24x7 Remote",
+      "Preventive Visits": "Quarterly",
+      "Software Updates": "Included",
+      "Uptime SLA": "99%",
+      "Response Time": "12 Hours",
+      "Station Size": "Multi-Gun",
+      "Support": "24x7",
+      "Warranty": "1 Year"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Billing Cycle": "Annual",
+      "Emergency Support": "Included",
+      "Spare Parts": "Priority",
+      "Coverage Area": "Pan India"
+    },
+
+    applications: [
+      "Public charging stations",
+      "Highways",
+      "Malls",
+      "Fuel stations"
+    ]
+  },
+
+  125: {
+    title: "Industrial Electrical AMC",
+    category: "AMC Services",
+    description: "Annual maintenance for industrial electrical systems and control panels ensuring safety and uptime.",
+    image: "greenwheel/amc/5.jpg",
+
+    specifications: {
+      "Service Type": "Industrial Electrical AMC",
+      "Coverage Level": "Standard",
+      "Visit Frequency": "Quarterly",
+      "Panel Maintenance": "Included",
+      "Thermal Scanning": "Included",
+      "Safety Audit": "Included",
+      "Response Time": "24 Hours",
+      "System Type": "LT / HT Panels",
+      "Compliance": "IS Standards",
+      "Warranty": "1 Year"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Billing Cycle": "Annual",
+      "On-Site Support": "Included",
+      "Spare Parts": "Chargeable",
+      "Coverage Area": "Pan India"
+    },
+
+    applications: [
+      "Factories",
+      "Warehouses",
+      "Industrial plants",
+      "Data centers"
+    ]
+  },
+
+  126: {
+    title: "Solar Plant O&M Contract",
+    category: "AMC Services",
+    description: "Complete operation and maintenance service for solar power plants with performance optimization.",
+    image: "greenwheel/amc/6.jpg",
+
+    specifications: {
+      "Service Type": "Solar Plant O&M",
+      "Coverage Level": "Premium",
+      "Monitoring": "24x7 SCADA",
+      "Cleaning Cycle": "Monthly",
+      "Preventive Maintenance": "Included",
+      "Performance Ratio Tracking": "Yes",
+      "Fault Response": "8 Hours",
+      "Plant Size": "100 kW – MW Scale",
+      "Reporting": "Monthly",
+      "Warranty": "1 Year"
+    },
+
+    pricing: {
+      "Base Price": "On Request",
+      "Billing Cycle": "Annual",
+      "On-Site Team": "Optional",
+      "Spare Parts": "As Per Use",
+      "Coverage Area": "Pan India"
+    },
+
+    applications: [
+      "Utility solar plants",
+      "Industrial solar farms",
+      "Ground mount projects",
+      "Large rooftops"
+    ]
+  }
+
+
+
+
+
 };
+
+
+
+
+
 
 let currentProduct = null;
 
@@ -1639,7 +3906,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Load product based on URL parameters
 function loadProductFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
+    const productId = Number(urlParams.get('id'));
     
     console.log('Loading product ID:', productId);
     

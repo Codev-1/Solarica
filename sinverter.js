@@ -6,7 +6,7 @@ const inverterProducts = [
         power: "5KW",
         type: "string",
         application: "residential",
-        image: "images/inverter-1.jpg",
+        image: "inverter/1.png",
         specs: ["5KW Power", "String Inverter", "Residential Use", "High Efficiency"],
         badge: "Popular",
         description: "High-efficiency string inverter for residential solar installations"
@@ -17,7 +17,7 @@ const inverterProducts = [
         power: "10KW",
         type: "hybrid",
         application: "commercial",
-        image: "images/inverter-2.jpg",
+        image: "inverter/2.png",
         specs: ["10KW Power", "Hybrid Technology", "Battery Compatible", "Grid Tie"],
         badge: "Best Seller",
         description: "Advanced hybrid inverter with battery backup capability"
@@ -28,7 +28,7 @@ const inverterProducts = [
         power: "300W",
         type: "micro",
         application: "residential",
-        image: "images/inverter-3.jpg",
+        image: "inverter/3.png",
         specs: ["300W Power", "Micro Inverter", "Panel Level", "High Performance"],
         badge: "Premium",
         description: "Panel-level micro inverter for maximum energy harvest"
@@ -39,7 +39,7 @@ const inverterProducts = [
         power: "20KW",
         type: "string",
         application: "industrial",
-        image: "images/inverter-4.jpg",
+        image: "inverter/4.png",
         specs: ["20KW Power", "Industrial Grade", "Three Phase", "Heavy Duty"],
         badge: "",
         description: "Industrial grade string inverter for large-scale installations"
@@ -50,7 +50,7 @@ const inverterProducts = [
         power: "3KW",
         type: "hybrid",
         application: "residential",
-        image: "images/inverter-5.jpg",
+        image: "inverter/5.png",
         specs: ["3KW Power", "Hybrid System", "MPPT Technology", "Smart Control"],
         badge: "New",
         description: "Compact hybrid inverter with advanced MPPT technology"
@@ -61,7 +61,7 @@ const inverterProducts = [
         power: "50KW",
         type: "string",
         application: "industrial",
-        image: "images/inverter-6.jpg",
+        image: "inverter/6.png",
         specs: ["50KW Power", "Commercial Grade", "High Voltage", "Monitoring"],
         badge: "",
         description: "High-power string inverter for commercial solar projects"

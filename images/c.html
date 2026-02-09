@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="fixed-logo-bg">
+    <img src="logoo.png" alt="Solarica Background">
+</div>
+
+<section class="modern-companies">
+    <div class="intro-header">
+        <span class="meta-tag">Solarica Group of Companies</span>
+        <h1 class="main-title">EVERYDAY ENERGY — <span class="reimagined">REIMAGINED</span></h1>
+        <p class="main-desc">One Group, Complete Solutions: From manufacturing to installation, we manage the entire solar lifecycle.</p>
+    </div>
+
+    <div class="feature-section left-layout" id="energy">
+        <div class="feature-content">
+            <h2 class="comp-title">Solarica Energy India Pvt. Ltd.</h2>
+            <p>
+        Leading the renewable energy revolution in India with cutting-edge solar solutions. We specialize in large-scale solar installations, advanced energy storage systems, and grid integration technologies that power sustainable communities across the nation.
+      </p>
+      <p>
+        With a strong engineering foundation and state-of-the-art manufacturing capabilities, Solarica delivers reliable solar energy infrastructure for government projects, commercial establishments, industrial facilities, and rural electrification programs. Our expertise spans project design, EPC services, turnkey execution, and long-term operations & maintenance, ensuring maximum energy output and long-term performance stability. </p>
+		<p>We also offer tailored solutions such as hybrid solar systems, smart lighting technologies, remote monitoring, and AI-driven energy optimization tools that help organizations reduce energy costs and enhance system efficiency. Our commitment to innovation, quality, and customer satisfaction allows us to support India’s growing demand for clean, affordable, and scalable energy alternatives.
+      </p>
+            <a href="https://www.solarica.in/" target="_blank" class="luxury-btn">VISIT SITE ↗</a>
+        </div>
+        <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1600&auto=format&fit=crop" alt="Solar Facility">
+        </div>
+    </div>
+
+    <div class="feature-section right-layout" id="systems">
+        <div class="feature-content">
+            <h2 class="comp-title">Solarica System Pvt. Ltd.</h2>
+             <p>
+        Solarica system Pvt Ltd delivers advanced solar systems integration and next-generation smart technology solutions designed for maximum efficiency and long-term reliability. We design and implement comprehensive solar infrastructure for residential, commercial, and industrial applications, supported by intelligent monitoring, automated control systems, and real-time performance analytics.
+      </p>
+	  <p>
+		Our expertise includes hybrid solar solutions, on-grid and off-grid system design, energy storage integration, solar power management platforms, and AI-driven energy optimization. With a focus on scalability, precision engineering, and high-efficiency components, we ensure every installation delivers stable, cost-effective, and sustainable power output.
+	  </p>
+	  <p>
+		Committed to transforming energy consumption, SYSTEMS PVT LTD empowers customers with future-ready solar technologies that reduce operational costs, increase energy independence, and support a cleaner, greener environment.
+	  </p>
+            <a href="https://www.solaricasystems.in/" target="_blank" class="luxury-btn">EXPLORE ↗</a>
+        </div>
+        <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5?q=80&w=1600&auto=format&fit=crop" alt="Smart Solar">
+        </div>
+    </div>
+
+    <div class="feature-section left-layout" id="industries">
+        <div class="feature-content">
+            <h2 class="comp-title">Solarica Industries Pvt. Ltd.</h2>
+            <p>
+        Industrial-scale solar manufacturing and production excellence. We operate state-of-the-art manufacturing facilities producing high-quality solar panels, inverters, and advanced energy storage solutions with rigorous quality control and internationally recognized certifications.
+      </p>
+	  <p>
+		With fully automated production lines, precision engineering, and world-class R&D capabilities, Solarica Industries ensures superior product performance, durability, and efficiency. Our manufacturing processes follow global benchmarks, including IEC, ISO, and BIS standards, ensuring reliability for large-scale commercial projects, government tenders, and international exports.
+	  </p>
+	  <p>
+		We specialize in high-efficiency mono-PERC and bifacial solar modules, smart power electronics, industrial-grade lithium battery systems, and custom-built solar components for OEMs. Through continuous innovation and sustainable manufacturing practices, we provide scalable energy solutions that support India’s clean-energy goals and global sustainability commitments.
+	  </p>
+            <a href="https://www.solaricaindustries.in/" target="_blank" class="luxury-btn">MANUFACTURING ↗</a>
+        </div>
+        <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1600&auto=format&fit=crop" alt="Manufacturing">
+        </div>
+    </div>
+</section>
+
+<style>
+/* CSS Reset & Variable Setup */
+:root {
+    --primary-cyan: #4facfe;
+    --solar-green: #2ecc71;
+    --deep-navy: #060b13;
+}
+
+body {
+    background: var(--deep-navy);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* FIXED LOGO WATERMARK */
+.fixed-logo-bg {
+    position: fixed;
+	
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    opacity: 0.6; /* Subtle watermark effect */
+    z-index: -1;
+    pointer-events: none;
+}
+
+.fixed-logo-bg img { width: 100%; height: 100vh; }
+
+/* INTRO HEADER */
+.intro-header {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.meta-tag { color: var(--primary-cyan); letter-spacing: 5px; text-transform: uppercase; font-size: 14px; margin-bottom: 20px; }
+.main-title { font-size: clamp(40px, 8vw, 80px); font-weight: 900; line-height: 1; margin: 0; }
+.reimagined { 
+    background: linear-gradient(90deg, var(--solar-green), var(--primary-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main-desc { max-width: 600px; color: #94a3b8; margin-top: 30px; font-size: 18px; }
+
+/* FEATURE SECTIONS (Left/Right Style) */
+.feature-section {
+    display: flex;
+    align-items: center;
+    padding: 150px 10%;
+    min-height: 80vh;
+}
+
+.right-layout { flex-direction: row-reverse; }
+
+.feature-content { flex: 1; padding: 40px; z-index: 2; }
+.feature-image { flex: 1.2; position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+.feature-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.comp-title { font-size: 42px; margin-bottom: 20px; color: var(--solar-green); }
+.feature-content p { font-size: 18px; line-height: 1.8; color: #cbd5e1; margin-bottom: 40px; }
+
+.luxury-btn {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid var(--primary-cyan);
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.luxury-btn:hover { background: var(--primary-cyan); color: #000; box-shadow: 0 0 20px var(--primary-cyan); }
+
+@media (max-width: 960px) {
+    .feature-section { flex-direction: column !important; padding: 60px 5%; text-align: center; }
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// 1. Initial Title Reveal
+gsap.from(".main-title", { opacity: 0, y: 100, duration: 1.5, ease: "power4.out" });
+
+// 2. Parallax Effect for the Watermark Logo
+gsap.to(".fixed-logo-bg", {
+    y: -100,
+    scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true
+    }
+});
+
+// 3. Left/Right Reveal for Sections
+const sections = gsap.utils.toArray('.feature-section');
+sections.forEach((section) => {
+    const content = section.querySelector('.feature-content');
+    const img = section.querySelector('.feature-image');
+    
+    gsap.from(content, {
+        x: section.classList.contains('left-layout') ? -100 : 100,
+        opacity: 0,
+        duration: 1.2,
+        scrollTrigger: {
+            trigger: section,
+            start: "top 70%",
+        }
+    });
+
+    gsap.from(img, {
+        x: section.classList.contains('left-layout') ? 100 : -100,
+        opacity: 0,
+        scale: 0.8,
+        duration: 1.2,
+        scrollTrigger: {
+            trigger: section,
+            start: "top 70%",
+        }
+    });
+});
+</script>
+</body>
+</html>

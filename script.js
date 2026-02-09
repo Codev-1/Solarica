@@ -66,6 +66,13 @@ window.addEventListener('scroll', function() {
   });
 })();
 
+
+
+
+
+
+
+
 // ==================== PAGE INITIALIZATION ====================
 // Runs when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -102,71 +109,326 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ==================== MOBILE NAVIGATION ====================
   // Handles mobile menu toggle functionality
-  const nav = document.getElementById('site-nav');
-  const navToggle = document.getElementById('nav-toggle');
-  const toggleNav = () => {
-    if (!nav || !navToggle) return;
-    const isOpen = nav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
+  // const nav = document.getElementById('site-nav');
+  // const navToggle = document.getElementById('nav-toggle');
+  // const toggleNav = () => {
+  //   if (!nav || !navToggle) return;
+  //   const isOpen = nav.classList.toggle('open');
+  //   navToggle.setAttribute('aria-expanded', String(isOpen));
     
-    // Close all dropdowns when nav is closed
-    if (!isOpen) {
-      const dropdowns = nav.querySelectorAll('.dropdown');
-      dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
-    }
-  };
-  if (navToggle) navToggle.addEventListener('click', toggleNav);
+  //   // Close all dropdowns when nav is closed
+  //   if (!isOpen) {
+  //     const dropdowns = nav.querySelectorAll('.dropdown');
+  //     dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+  //   }
+  // };
+  // if (navToggle) navToggle.addEventListener('click', toggleNav);
   
   // ==================== DROPDOWN MENUS ====================
   // Handles dropdown menu behavior for mobile and desktop
-  const dropdowns = document.querySelectorAll('.dropdown > a');
-  dropdowns.forEach(dropdownLink => {
-    dropdownLink.addEventListener('click', (e) => {
-      // Only handle dropdown toggle on mobile
-      if (window.innerWidth <= 960) {
-        e.preventDefault();
-        e.stopPropagation(); // Prevent event bubbling
+// ==================== FINAL SIDEBAR & NAV LOGIC ====================
+// document.addEventListener("click", function(e) {
+//     // 1. Target the "Products" Main Link
+//     const megaTrigger = e.target.closest('.mega-trigger');
+//     if (megaTrigger && window.innerWidth <= 960) {
+//         e.preventDefault();
+//         e.stopPropagation();
+//         const parentLi = megaTrigger.closest('.mega-dropdown');
+//         parentLi.classList.toggle('open');
+//         return;
+//     }
+
+//     // 2. Target the "Company Name" Headings
+//     const nestedTrigger = e.target.closest('.nested-trigger');
+//     if (nestedTrigger && window.innerWidth <= 960) {
+//         e.preventDefault();
+//         e.stopPropagation();
+//         const parentCol = nestedTrigger.closest('.nested-dropdown');
         
-        const dropdown = dropdownLink.parentElement;
-        const isActive = dropdown.classList.contains('active');
+//         // Close other companies to maintain a clean accordion effect
+//         document.querySelectorAll('.nested-dropdown').forEach(col => {
+//             if (col !== parentCol) col.classList.remove('active');
+//         });
+
+//         // Toggle the active class to show/hide products
+//         parentCol.classList.toggle('active');
+//     }
+// });
+
         
-        // Close all other dropdowns
-        const allDropdowns = document.querySelectorAll('.dropdown');
-        allDropdowns.forEach(d => {
-          if (d !== dropdown) {
-            d.classList.remove('active');
-          }
-        });
+  // ==================== MOBILE MEGA MENU (ACCORDION STYLE) ====================
+// document.addEventListener("click", function (e) {
+
+//   // ---------- PRODUCTS (LEVEL 1) ----------
+//   const megaTrigger = e.target.closest(".mega-trigger");
+//   if (megaTrigger && window.innerWidth <= 960) {
+//     e.preventDefault();
+//     e.stopPropagation();
+
+//     const megaItem = megaTrigger.closest(".mega-dropdown");
+//     const isOpen = megaItem.classList.contains("open");
+
+//     // Close all mega dropdowns
+//     document.querySelectorAll(".mega-dropdown").forEach(d => {
+//       d.classList.remove("open");
+//     });
+
+//     // Toggle current
+//     if (!isOpen) megaItem.classList.add("open");
+//     return;
+//   }
+
+//   // ---------- COMPANY HEADERS (LEVEL 2) ----------
+//   const companyTrigger = e.target.closest(".nested-trigger");
+//   if (companyTrigger && window.innerWidth <= 960) {
+//     e.preventDefault();
+//     e.stopPropagation();
+
+//     const currentCompany = companyTrigger.closest(".nested-dropdown");
+//     const isActive = currentCompany.classList.contains("active");
+
+//     // Close all companies
+//     document.querySelectorAll(".nested-dropdown").forEach(col => {
+//       col.classList.remove("active");
+//     });
+
+//     // Open clicked company
+//     if (!isActive) currentCompany.classList.add("active");
+//     return;
+//   }
+
+//   // ---------- CLICK OUTSIDE CLOSE ----------
+//   if (window.innerWidth <= 960) {
+//     if (!e.target.closest(".mega-dropdown")) {
+//       document.querySelectorAll(".mega-dropdown").forEach(d => d.classList.remove("open"));
+//       document.querySelectorAll(".nested-dropdown").forEach(c => c.classList.remove("active"));
+//     }
+//   }
+// });
+     
+// ==================== MOBILE NAV DROPDOWNS ====================
+// document.addEventListener('click', function (e) {
+
+//   if (window.innerWidth > 960) return;
+
+//   // -------- LEVEL 1 DROPDOWNS (Products, Projects, About) --------
+//   const dropdownLink = e.target.closest('.dropdown > a');
+//   if (dropdownLink) {
+//     e.preventDefault();
+//     e.stopPropagation();
+
+//     const dropdown = dropdownLink.parentElement;
+//     const isActive = dropdown.classList.contains('active');
+
+//     // Close all level-1 dropdowns
+//     document.querySelectorAll('.nav .dropdown').forEach(d => {
+//       d.classList.remove('active');
+//     });
+
+//     // Open clicked
+//     if (!isActive) dropdown.classList.add('active');
+//     return;
+//   }
+
+//   // -------- LEVEL 2 (COMPANIES) --------
+//   const companyTrigger = e.target.closest('.nested-trigger');
+//   if (companyTrigger) {
+//     e.preventDefault();
+//     e.stopPropagation();
+
+//     const company = companyTrigger.closest('.nested-dropdown');
+//     const isActive = company.classList.contains('active');
+
+//     // Close all companies
+//     document.querySelectorAll('.nested-dropdown').forEach(c => {
+//       c.classList.remove('active');
+//     });
+
+//     // Open clicked
+//     if (!isActive) company.classList.add('active');
+//     return;
+//   }
+
+//   // -------- CLICK OUTSIDE CLOSE --------
+//   if (!e.target.closest('.nav')) {
+//     document.querySelectorAll('.dropdown, .nested-dropdown').forEach(el => {
+//       el.classList.remove('active');
+//     });
+//   }
+
+// });
+
+// ================= MOBILE DROPDOWN CONTROLLER =================
+// document.addEventListener('click', function (e) {
+
+//   if (window.innerWidth > 960) return;
+
+//   /* LEVEL 1: Products / Projects / About */
+//   const level1Link = e.target.closest('.dropdown > a');
+//   if (level1Link) {
+//     e.preventDefault();
+
+//     const parent = level1Link.parentElement;
+
+//     document.querySelectorAll('.dropdown').forEach(d => {
+//       if (d !== parent) d.classList.remove('active');
+//     });
+
+//     parent.classList.toggle('active');
+//     return;
+//   }
+
+//   /* LEVEL 2: Companies inside Products */
+//   const companyTrigger = e.target.closest('.nested-trigger');
+//   if (companyTrigger) {
+//     e.preventDefault();
+
+//     const company = companyTrigger.closest('.nested-dropdown');
+
+//     document.querySelectorAll('.nested-dropdown').forEach(c => {
+//       if (c !== company) c.classList.remove('active');
+//     });
+
+//     company.classList.toggle('active');
+//     return;
+//   }
+
+// });
+
+	// document.addEventListener('DOMContentLoaded', () => {
+
+			const nav = document.getElementById('site-nav');
+			const navToggle = document.getElementById('nav-toggle');
+
+			const megaDropdown = document.querySelector('.mega-dropdown');
+			const megaTrigger = document.querySelector('.mega-trigger');
+			const megaMenu = document.querySelector('.mega-menu');
+			const companies = document.querySelectorAll('.mega-col');
+			const dropdowns = document.querySelectorAll('.dropdown:not(.mega-dropdown)');
+
+			/* ===== NAV TOGGLE ===== */
+			navToggle.addEventListener('click', () => {
+				nav.classList.toggle('open');
+			});
+
+			/* ===== MOBILE MENU HANDLER ===== */
+			nav.addEventListener('click', (e) => {
+				if (window.innerWidth > 960) return;
+
+				/* ===== PRODUCTS ===== */
+				const product = e.target.closest('.mega-trigger');
+				if (product) {
+					e.preventDefault();
+
+					const productLi = product.closest('.mega-dropdown');
+					const isOpen = productLi.classList.contains('active');
+
+					// close other normal dropdowns
+					dropdowns.forEach(d => d.classList.remove('active'));
+
+					if (isOpen) {
+						// ✅ FULL CLOSE (this was missing)
+						productLi.classList.remove('active');
+						companies.forEach(c => c.classList.remove('active'));
+						return;
+					}
+
+					// open products
+					productLi.classList.add('active');
+					return;
+				}
+
+
+				/* ===== COMPANY ACCORDION ===== */
+				const companyHeader = e.target.closest('.mobile-company-trigger');
+				if (companyHeader) {
+					e.preventDefault();
+					e.stopPropagation();
+
+					const col = companyHeader.closest('.mega-col');
+
+					companies.forEach(c => {
+						if (c !== col) c.classList.remove('active');
+					});
+
+					col.classList.toggle('active');
+					return;
+				}
+
+				/* ===== PROJECTS / ABOUT ===== */
+				const normal = e.target.closest('.dropdown > a:not(.mega-trigger)');
+				if (normal) {
+					e.preventDefault();
+
+					const parent = normal.parentElement;
+
+					// close others
+					dropdowns.forEach(d => {
+						if (d !== parent) d.classList.remove('active');
+					});
+
+					// close products if open
+					megaDropdown.classList.remove('active');
+					companies.forEach(c => c.classList.remove('active'));
+
+					parent.classList.toggle('active');
+					return;
+				}
+			});
+
+		// });
+
+
+
+
+  // const dropdowns = document.querySelectorAll('.dropdown > a');
+  // dropdowns.forEach(dropdownLink => {
+  //   dropdownLink.addEventListener('click', (e) => {
+  //     // Only handle dropdown toggle on mobile
+  //     if (window.innerWidth <= 960) {
+  //       e.preventDefault();
+  //       e.stopPropagation(); // Prevent event bubbling
         
-        // Toggle current dropdown
-        dropdown.classList.toggle('active');
-      }
-    });
-  });
-  // Close nav when clicking a link (but not dropdown headers)
-  if (nav) nav.addEventListener('click', (e) => {
-    const a = e.target.closest('a');
-    if (a && nav.classList.contains('open')) {
-      // Don't close nav if it's a dropdown header on mobile
-      const isDropdownHeader = a.parentElement.classList.contains('dropdown');
-      const isMobile = window.innerWidth <= 960;
+  //       const dropdown = dropdownLink.parentElement;
+  //       const isActive = dropdown.classList.contains('active');
+        
+  //       // Close all other dropdowns
+  //       const allDropdowns = document.querySelectorAll('.dropdown');
+  //       allDropdowns.forEach(d => {
+  //         if (d !== dropdown) {
+  //           d.classList.remove('active');
+  //         }
+  //       });
+        
+  //       // Toggle current dropdown
+  //       dropdown.classList.toggle('active');
+  //     }
+  //   });
+  // });
+  // // Close nav when clicking a link (but not dropdown headers)
+  // if (nav) nav.addEventListener('click', (e) => {
+  //   const a = e.target.closest('a');
+  //   if (a && nav.classList.contains('open')) {
+  //     // Don't close nav if it's a dropdown header on mobile
+  //     const isDropdownHeader = a.parentElement.classList.contains('dropdown');
+  //     const isMobile = window.innerWidth <= 960;
       
-      if (!isDropdownHeader || !isMobile) {
-        nav.classList.remove('open');
-        if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
-      }
-    }
-  });
+  //     if (!isDropdownHeader || !isMobile) {
+  //       nav.classList.remove('open');
+  //       if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+  //     }
+  //   }
+  // });
   // Click outside to close
-  document.addEventListener('click', (e) => {
-    if (!nav || !navToggle) return;
-    const withinNav = e.target.closest('#site-nav');
-    const onToggle = e.target.closest('#nav-toggle');
-    if (!withinNav && !onToggle && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
+  // document.addEventListener('click', (e) => {
+  //   if (!nav || !navToggle) return;
+  //   const withinNav = e.target.closest('#site-nav');
+  //   const onToggle = e.target.closest('#nav-toggle');
+  //   if (!withinNav && !onToggle && nav.classList.contains('open')) {
+  //     nav.classList.remove('open');
+  //     navToggle.setAttribute('aria-expanded', 'false');
+  //   }
+  // });
   // Search overlay behavior (open/close)
   const searchBtn = document.querySelector('.search-icon');
   const overlay = document.getElementById('searchOverlay');
@@ -330,85 +592,104 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Bottom Right Corner Button with Sliding Options
-document.addEventListener('DOMContentLoaded', () => {
-  const cornerBtn = document.getElementById('cornerBtn');
-  const scrollTopBtn = document.getElementById('scrollTop');
+// document.addEventListener('DOMContentLoaded', () => {
+//   const cornerBtn = document.getElementById('cornerBtn');
+//   const scrollTopBtn = document.getElementById('scrollTop');
   
-  // Main corner button functionality
-  if (cornerBtn) {
-    cornerBtn.addEventListener('click', () => {
-      // On all pages, just scroll to top (no back functionality)
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
+//   // Main corner button functionality
+//   if (cornerBtn) {
+//     cornerBtn.addEventListener('click', () => {
+//       // On all pages, just scroll to top (no back functionality)
+//       window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth'
+//       });
+//     });
+//   }
   
   // Scroll to top functionality for the sliding option
-  if (scrollTopBtn) {
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
+  // if (scrollTopBtn) {
+  //   scrollTopBtn.addEventListener('click', () => {
+  //     window.scrollTo({
+  //       top: 0,
+  //       behavior: 'smooth'
+  //     });
+  //   });
+  // }
   
   // Handle WhatsApp click with fallback options
-  const whatsappBtn = document.querySelector('.corner-option.whatsapp');
-  if (whatsappBtn) {
-    whatsappBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      
-      const phoneNumber = '918956189167';
-      const message = 'Hello, I would like to inquire about your solar products.';
-      
-      // Try different WhatsApp URL formats for better compatibility
-      const whatsappUrls = [
-        `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`,
-        `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
-        `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
-      ];
-      
-      // Try to open WhatsApp
-      let opened = false;
-      for (let url of whatsappUrls) {
-        try {
-          window.open(url, '_blank', 'noopener,noreferrer');
-          opened = true;
-          break;
-        } catch (error) {
-          console.log('Failed to open:', url);
-        }
-      }
-      
-      // If all methods fail, show the phone number
-      if (!opened) {
-        alert(`Please contact us on WhatsApp: +91 ${phoneNumber.substring(2)}`);
-      }
-      
-      // Add click animation
-      whatsappBtn.style.transform = 'scale(0.95)';
-      setTimeout(() => {
-        whatsappBtn.style.transform = '';
-      }, 150);
-    });
-  }
+
   
-  // Add click animations for other corner options
-  const otherOptions = document.querySelectorAll('.corner-option:not(.whatsapp)');
-  otherOptions.forEach(option => {
-    option.addEventListener('click', (e) => {
-      // Add a subtle click animation
-      const target = e.currentTarget;
-      target.style.transform = 'scale(0.95)';
-      setTimeout(() => {
-        target.style.transform = '';
-      }, 150);
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   const waTrigger = document.getElementById('waTrigger');
+//   const waCard = document.getElementById('waDeptCard');
+//   const phoneNumber = '918956189167';
+
+//   if (!waTrigger || !waCard) return;
+
+//   waTrigger.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     waCard.classList.toggle('show');
+//   });
+
+//   document.querySelectorAll('.wa-dept-item').forEach(item => {
+//     item.addEventListener('click', function (e) {
+//       e.stopPropagation();
+//       const msg = this.dataset.msg;
+//       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(msg)}`;
+//       waCard.classList.remove('show');
+//       window.open(url, '_blank');
+//     });
+//   });
+
+//   document.addEventListener('click', () => {
+//     waCard.classList.remove('show');
+//   });
+// });
+
+// ==================== WHATSAPP MULTI-OPTION FLOATING BUTTON ====================
+document.addEventListener('DOMContentLoaded', () => {
+  const waTrigger = document.getElementById('waTrigger');
+  const waCard = document.getElementById('waDeptCard');
+
+  if (!waTrigger || !waCard) return; // page-safe
+
+  // Toggle WhatsApp options
+  waTrigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    waCard.classList.toggle('show');
+  });
+
+  // Handle department click
+  waCard.querySelectorAll('.wa-dept-item').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      const phone = item.dataset.phone;
+      const msg = item.dataset.msg || 'Hello, I would like to connect.';
+
+      if (!phone) return;
+
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+      waCard.classList.remove('show');
+      window.open(url, '_blank');
     });
   });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#waDeptCard') && !e.target.closest('#waTrigger')) {
+      waCard.classList.remove('show');
+    }
+  });
 });
+
+
+
 
 // ==================== ACHIEVEMENTS COUNTER ====================
 // Animates the achievement numbers on scroll
@@ -517,3 +798,108 @@ document.addEventListener('DOMContentLoaded', function() {
     // Small delay to ensure all elements are loaded
     setTimeout(initializeUniversalViewToggle, 100);
 });
+
+
+// ==================== GLOBAL FOOTER & CTA INJECTION ====================
+/**
+// ==================== GLOBAL FOOTER & CTA INJECTION ====================
+/**
+ * Verifies that the global-footer-placeholder exists, fetches the footer.html,
+ * injects it, and then runs the initialization for all footer-based features.
+ */
+async function injectGlobalFooter() {
+    const footerWrapper = document.getElementById('global-footer-placeholder');
+    if (!footerWrapper) return; // Exit if the placeholder isn't on this page
+
+    try {
+        const response = await fetch('footer.html');
+        if (!response.ok) throw new Error('Footer file missing or path incorrect');
+        const html = await response.text();
+        
+        // Inject the HTML into the DOM
+        footerWrapper.innerHTML = html;
+
+        // NOW that the HTML exists, initialize the features
+        initGlobalFooterFeatures();
+    } catch (err) {
+        console.error("Global footer load error:", err);
+    }
+}
+
+/**
+ * Initializes listeners for elements that were JUST added to the DOM via fetch.
+ */
+function initGlobalFooterFeatures() {
+    // 1. Update Copyright Year
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+    // 2. Initialize Achievements Counter (Checking if present on the page)
+    initAchievementsCounter();
+}
+
+// ==================== ACHIEVEMENTS COUNTER ====================
+// function initAchievementsCounter() {
+//     const achievementNumbers = document.querySelectorAll('.achievement-number');
+//     if (achievementNumbers.length === 0) return;
+
+//     const observer = new IntersectionObserver((entries) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 const target = parseInt(entry.getAttribute('data-target'));
+//                 animateCounter(entry.target, target);
+//                 observer.unobserve(entry.target);
+//             }
+//         });
+//     }, { threshold: 0.5 });
+
+//     achievementNumbers.forEach(number => observer.observe(number));
+// }
+
+// function animateCounter(element, target) {
+//     let current = 0;
+//     const duration = 2000;
+//     const stepTime = 20;
+//     const increment = target / (duration / stepTime);
+
+//     const timer = setInterval(() => {
+//         current += increment;
+//         if (current >= target) {
+//             element.textContent = target;
+//             clearInterval(timer);
+//         } else {
+//             element.textContent = Math.floor(current);
+//         }
+//     }, stepTime);
+// }
+
+
+//product on click stays
+document.addEventListener('DOMContentLoaded', () => {
+  const productToggle = document.querySelector('.mega-dropdown > a');
+  const megaDropdown = document.querySelector('.mega-dropdown');
+
+  // Toggle Products on click
+  productToggle.addEventListener('click', (e) => {
+    // desktop only
+    if (window.innerWidth >= 961) {
+      e.preventDefault();
+      megaDropdown.classList.toggle('active');
+    }
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (
+      window.innerWidth >= 961 &&
+      !megaDropdown.contains(e.target)
+    ) {
+      megaDropdown.classList.remove('active');
+    }
+  });
+});
+
+// Single entry point for the injection process
+document.addEventListener('DOMContentLoaded', injectGlobalFooter);

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+    
+</head>
+<body>
+	<section class="companies-section">
+    <div class="container">
+        <div class="company-row reveal">
+            <div class="company-image">
+                <img src="images/energy-facility.jpg" alt="Solarica Energy India Facility">
+            </div>
+            <div class="company-info">
+                <div class="company-header-top">
+                    <img src="images/logoo.png" alt="Logo" class="mini-logo">
+                    <h3 class="company-name">Solarica Energy India Pvt. Ltd.</h3>
+                </div>
+                <p class="company-description">
+                    Leading the renewable energy revolution in India with cutting-edge solar solutions. We specialize in large-scale solar installations, advanced energy storage systems, and grid integration technologies that power sustainable communities across the nation.
+                    <br><br>
+                    With a strong engineering foundation and state-of-the-art manufacturing capabilities, Solarica delivers reliable solar energy infrastructure for government projects, commercial establishments, and rural electrification programs.
+                </p>
+                <div class="company-meta">
+                    <a href="https://www.solarica.in/" target="_blank" class="btn-visit">Visit Website ↗</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="company-row reverse reveal">
+            <div class="company-image">
+                <img src="images/smart-systems.jpg" alt="Solarica Smart Systems">
+            </div>
+            <div class="company-info">
+                <div class="company-header-top">
+                    <img src="images/logoo.png" alt="Logo" class="mini-logo">
+                    <h3 class="company-name">Solarica System Pvt. Ltd.</h3>
+                </div>
+                <p class="company-description">
+                    Solarica System Pvt Ltd delivers advanced solar systems integration and next-generation smart technology solutions designed for maximum efficiency. Our expertise includes hybrid solar solutions, energy storage integration, and AI-driven energy optimization.
+                    <br><br>
+                    We empower customers with future-ready solar technologies that reduce operational costs, increase energy independence, and support a cleaner environment.
+                </p>
+                <div class="company-meta">
+                    <a href="https://www.solaricasystems.in/" target="_blank" class="btn-visit">Explore Systems ↗</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="company-row reveal">
+            <div class="company-image">
+                <img src="images/manufacturing-line.jpg" alt="Solarica Manufacturing">
+            </div>
+            <div class="company-info">
+                <div class="company-header-top">
+                    <img src="images/logoo.png" alt="Logo" class="mini-logo">
+                    <h3 class="company-name">Solarica Industries Pvt. Ltd.</h3>
+                </div>
+                <p class="company-description">
+                    Industrial-scale solar manufacturing and production excellence. We operate state-of-the-art facilities producing high-quality solar panels and inverters with rigorous quality control and internationally recognized certifications like IEC, ISO, and BIS.
+                    <br><br>
+                    We specialize in high-efficiency mono-PERC and bifacial solar modules, industrial-grade lithium battery systems, and custom-built components for OEMs.
+                </p>
+                <div class="company-meta">
+                    <a href="https://www.solaricaindustries.in/" target="_blank" class="btn-visit">Industrial Solutions ↗</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="company-row reverse reveal">
+            <div class="company-image">
+                <img src="images/fabrication.jpg" alt="Solarica Fabtech Fabrication">
+            </div>
+            <div class="company-info">
+                <div class="company-header-top">
+                    <img src="images/logoo.png" alt="Logo" class="mini-logo">
+                    <h3 class="company-name">Solarica Fabtech Pvt. Ltd.</h3>
+                </div>
+                <p class="company-description">
+                    Industrial-grade solar structure fabrication and precision engineering. We design high-strength mounting structures and load-bearing solar hardware using automated cutting, welding, and surface-treatment systems.
+                    <br><br>
+                    Built to withstand extreme climatic conditions, our structures follow global structural design norms for rooftop and ground-mounted installations.
+                </p>
+                <div class="company-meta">
+                    <span class="coming-soon">Structure Catalog Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="company-row reveal">
+            <div class="company-image">
+                <img src="images/ev-mobility.jpg" alt="Solarica Electric Mobility">
+            </div>
+            <div class="company-info">
+                <div class="company-header-top">
+                    <img src="images/logoo.png" alt="Logo" class="mini-logo">
+                    <h3 class="company-name">Solarica Greenwheels Pvt. Ltd.</h3>
+                </div>
+                <p class="company-description">
+                    Future-ready electric mobility and green transport innovation. Integrating smart engineering and advanced battery technology to reduce carbon emissions through sustainable personal and industrial mobility.
+                    <br><br>
+                    We specialize in electric two-wheelers, e-cargo vehicles, and solar-assisted charging solutions that advance India’s transition toward clean transportation.
+                </p>
+                <div class="company-meta">
+                    <span class="coming-soon">EV Launching Soon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+	.companies-section {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.company-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+}
+
+.company-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.company-image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 20px;
+    height: 400px;
+}
+
+.company-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.company-row:hover .company-image img {
+    transform: scale(1.05);
+}
+
+.company-info {
+    flex: 1;
+}
+
+.company-header-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.mini-logo {
+    height: 40px;
+    width: auto;
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0;
+}
+
+.company-description {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn-visit {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-visit:hover {
+    background: #16a34a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(34, 197, 94, 0.2);
+}
+
+.coming-soon {
+    font-size: 14px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Scroll Animation Classes */
+.reveal {
+    opacity: 1;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .company-row, .company-row.reverse {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+    .company-image {
+        width: 100%;
+        height: 250px;
+    }
+}
+</style>
+		
+<script>
+		function initCompanyAnimations() {
+    const rows = document.querySelectorAll('.company-row');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, { 
+        threshold: 0.1 
+    });
+    
+    rows.forEach(row => observer.observe(row));
+}
+</script>
+
+</body>
+</html>

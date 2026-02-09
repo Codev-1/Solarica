@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial Solar Projects | Solarica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      color:#0b2540;
+      background:#ffffff;
+      line-height:1.6;
+    }
+    a{color:#0b72bf;text-decoration:none}
+    .container{max-width:1200px;margin:auto;padding:0 20px}
+
+    /* HERO */
+    .hero{
+      position:relative;
+      min-height:70vh;
+      display:flex;
+      align-items:center;
+      color:#fff;
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.7)),
+        url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=2000&auto=format&fit=crop')
+        center/cover no-repeat;
+    }
+    .hero h1{font-size:3rem;line-height:1.1;margin:0 0 14px}
+    .hero p{max-width:620px;color:#e9f2ff}
+    .hero .btn{
+      display:inline-block;margin-top:20px;
+      padding:14px 28px;border-radius:999px;
+      background:#0b72bf;color:#fff;font-weight:600
+    }
+
+    /* SECTIONS */
+    section{padding:70px 0}
+    .section-title{
+      text-align:center;margin-bottom:60px
+    }
+    .section-title h2 { 
+      font-family: 'Syne', sans-serif; 
+      font-size: 2.5rem; 
+      margin: 0 0 15px; 
+      text-transform: uppercase;
+    }
+    .section-title p{color:#4b6b86;max-width:700px;margin:auto}
+
+    /* GRID */
+    .grid{display:grid;gap:28px}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .card{
+      background:#fff;border-radius:16px;padding:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,.06)
+    }
+    .card img{width:100%;border-radius:12px;margin-bottom:14px}
+
+    /* LIST */
+    .feature-list li{margin:8px 0}
+
+    /* PROCESS */
+    /* .steps{counter-reset:step}
+    .step{
+      position:relative;padding-left:60px;margin-bottom:26px
+    }
+    .step::before{
+      counter-increment:step;content:counter(step);
+      position:absolute;left:0;top:0;
+      width:40px;height:40px;border-radius:50%;
+      background:#eaf5ff;color:#0b72bf;
+      display:grid;place-items:center;font-weight:700
+    } */
+
+    /* CTA */
+    .cta{
+      background:linear-gradient(135deg,#0b72bf,#0a4f8a);
+      color:#fff;text-align:center;padding:70px 20px
+    }
+    .cta .btn{background:#fff;color:#0b72bf}
+
+    @media(max-width:768px){
+      .hero h1{font-size:2.1rem}
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Commercial Solar Power Projects</h1>
+    <p>
+      Solarica designs and delivers high-performance commercial solar power systems
+      for factories, warehouses, offices, hospitals, hotels, and large enterprises.
+      Reduce electricity costs, meet sustainability goals, and gain long-term energy independence.
+    </p>
+    <a href="#models" class="btn">Explore Project Models</a>
+  </div>
+</section>
+
+<!-- TYPES -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Types of Commercial Solar Projects</h2>
+      <p>We work across all major commercial and utility solar project categories.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1584277261846-c6a1672ed979?q=80&w=1200&auto=format&fit=crop" alt="">
+        <h3>Rooftop Solar</h3>
+        <p>Ideal for factories, warehouses, malls, hospitals and offices—utilizing unused roof space.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1592833159155-1a3b0c3e7f7a?q=80&w=1200&auto=format&fit=crop" alt="">
+        <h3>Ground-Mounted Solar</h3>
+        <p>Large installations on open land, often part of solar parks and industrial campuses.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1624397640148-949b1732bb04?q=80&w=1200&auto=format&fit=crop" alt="">
+        <h3>Floating Solar</h3>
+        <p>Projects on reservoirs and water bodies to save land and improve efficiency.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?q=80&w=1200&auto=format&fit=crop" alt="">
+        <h3>Hybrid Systems</h3>
+        <p>Solar combined with battery storage or wind for uninterrupted power supply.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section style="background:#f6faff">
+  <div class="container">
+    <div class="section-title">
+      <h2>Benefits for Businesses</h2>
+      <p>Commercial solar is a strategic investment for long-term growth.</p>
+    </div>
+
+    <ul class="feature-list">
+      <li><strong>Cost Savings:</strong> Hedge against rising electricity costs, faster ROI.</li>
+      <li><strong>Sustainability:</strong> Meet green goals and boost brand image.</li>
+      <li><strong>Energy Independence:</strong> Reduce reliance on grid power.</li>
+      <li><strong>RPO Compliance:</strong> Meet Renewable Purchase Obligation targets.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- MODELS -->
+<section id="models">
+  <div class="container">
+    <div class="section-title">
+      <h2>Project Models</h2>
+      <p>Flexible commercial solar project execution models.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>CAPEX Model</h3>
+        <p>Business invests upfront and owns the solar plant. Maximum long-term savings.</p>
+      </div>
+      <div class="card">
+        <h3>PPA / OPEX</h3>
+        <p>Third-party investor installs and operates the system. Pay-as-you-go power.</p>
+      </div>
+      <div class="card">
+        <h3>Lease / Loan Financing</h3>
+        <p>Flexible financing options to minimize upfront burden.</p>
+      </div>
+      <div class="card">
+        <h3>Scale</h3>
+        <p>From a few kW rooftop systems to 500MW+ solar parks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="roadmap-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="hero-tag">How We Work</span>
+      <h2 class="syne-heading">Your Journey to Solar Power</h2>
+      <p class="section-subtitle">Our comprehensive EPC (Engineering, Procurement, and Construction) process ensures a smooth transition from your first audit to long-term energy independence.</p>
+    </div>
+
+    <div class="roadmap-journey">
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">01</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Survey & Smart Audit</h4>
+          <p>We visit your site to analyze your roof or land and study your current electricity usage to find the perfect solar fit.</p>
+        </div>
+      </div>
+
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">02</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Custom Engineering</h4>
+          <p>Our experts design a system using precision layouts and high-efficiency components to ensure you get the maximum energy output.</p>
+        </div>
+      </div>
+
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">03</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Approvals & Subsidy</h4>
+          <p>We handle all the paperwork with government bodies and DISCOMs to secure your permits and available subsidies like PM-KUSUM.</p>
+        </div>
+      </div>
+
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">04</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Professional Installation</h4>
+          <p>Our certified teams set up your solar panels and inverters quickly using world-class safety and quality standards.</p>
+        </div>
+      </div>
+
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">05</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Grid Synchronization</h4>
+          <p>We test the entire system and connect it to the grid, officially turning your facility into a clean energy power plant.</p>
+        </div>
+      </div>
+
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">06</span>
+        </div>
+        <div class="step-content">
+          <h4>AI-Driven Monitoring</h4>
+          <p>We use real-time AI tools to track your energy generation 24/7, ensuring your system always performs at its best.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Modern Roadmap Styling */
+.roadmap-section { padding: 100px 10%; background: #ffffff; }
+.section-header { margin-bottom: 80px; text-align: left; }
+.syne-heading { font-family: 'Syne', sans-serif; font-size: 3.5rem; color: #060b13; line-height: 1; margin: 15px 0; }
+.section-subtitle { color: #5a6c7d; font-size: 1.15rem; max-width: 700px; }
+
+.roadmap-journey {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 60px 40px;
+}
+
+.journey-item { display: flex; gap: 25px; }
+
+.step-meta { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+
+.step-number {
+  width: 50px; height: 50px;
+  background: #f0fdf4;
+  color: #2ecc71; /* Solarica Green */
+  border: 2px solid #2ecc71;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  font-weight: 800; font-size: 1.2rem;
+  font-family: 'Syne', sans-serif;
+  transition: 0.3s;
+}
+
+.step-line { width: 2px; flex-grow: 1; background: #edf2f7; margin-top: 15px; border-radius: 2px; }
+
+.journey-item:hover .step-number { background: #2ecc71; color: #fff; transform: scale(1.1); }
+
+.step-content h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  color: #060b13;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.step-content p { color: #4a5568; line-height: 1.7; font-size: 1rem; }
+
+@media (max-width: 768px) {
+  .syne-heading { font-size: 2.5rem; }
+  .roadmap-journey { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Power Your Business with Solarica</h2>
+  <p>Get a free commercial solar feasibility report today.</p>
+  <a href="#contact" class="btn">Request Consultation</a>
+</section>
+
+</body>
+</html>

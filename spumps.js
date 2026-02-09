@@ -6,7 +6,7 @@ const pumpProducts = [
         power: "3HP",
         type: "submersible",
         application: "agriculture",
-        image: "images/pump-1.jpg",
+        image: "spump/1.png",
         specs: ["3HP Motor", "Submersible", "Agriculture Use", "High Efficiency"],
         badge: "Popular",
         description: "High-efficiency solar submersible pump for agricultural irrigation"
@@ -17,7 +17,7 @@ const pumpProducts = [
         power: "5HP",
         type: "surface",
         application: "domestic",
-        image: "images/pump-2.jpg",
+        image: "spump/2.png",
         specs: ["5HP Motor", "Surface Mount", "Domestic Use", "Easy Maintenance"],
         badge: "Best Seller",
         description: "Reliable surface pump for domestic water supply needs"
@@ -28,7 +28,7 @@ const pumpProducts = [
         power: "7HP",
         type: "borewell",
         application: "industrial",
-        image: "images/pump-3.jpg",
+        image: "spump/3.png",
         specs: ["7HP Motor", "Borewell", "Industrial Grade", "Heavy Duty"],
         badge: "Premium",
         description: "Heavy-duty borewell pump for industrial applications"
@@ -39,7 +39,7 @@ const pumpProducts = [
         power: "2HP",
         type: "surface",
         application: "domestic",
-        image: "images/pump-4.jpg",
+        image: "spump/4.png",
         specs: ["2HP Motor", "Centrifugal", "Compact Design", "Energy Efficient"],
         badge: "",
         description: "Compact centrifugal pump for residential water supply"
@@ -50,7 +50,7 @@ const pumpProducts = [
         power: "10HP",
         type: "submersible",
         application: "agriculture",
-        image: "images/pump-5.jpg",
+        image: "spump/5.png",
         specs: ["10HP Motor", "Deep Well", "High Flow Rate", "Durable"],
         badge: "New",
         description: "High-capacity deep well pump for large-scale irrigation"
@@ -61,7 +61,7 @@ const pumpProducts = [
         power: "1HP",
         type: "surface",
         application: "domestic",
-        image: "images/pump-6.jpg",
+        image: "spump/6.png",
         specs: ["1HP Motor", "Pool Circulation", "Silent Operation", "Weatherproof"],
         badge: "",
         description: "Specialized pump for swimming pool water circulation"

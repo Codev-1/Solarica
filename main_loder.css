@@ -40,7 +40,7 @@ body {
 
 .logo-box {
     margin-top: -50px;
-    background: rgba(233, 232, 232, 0.874); /* light transparent */
+    background: rgb(254, 252, 252); /* light transparent */
     padding: 25px 40px;
     border-radius: 25px;
     backdrop-filter: blur(12px); /* strong glass blur */

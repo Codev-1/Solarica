@@ -3636,7 +3636,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     position: relative;
-    background-image: url('images/back.png');
+    /* background-image: url('images/promise.png'); */
     background-size: 70%;
     background-position: center top;
     background-repeat: no-repeat;
@@ -3656,7 +3656,7 @@
 /* Timeline (Left) - Fixed */
 .timeline {
     position: sticky;
-    top: 120px;
+    top: 70px;
     height: fit-content;
     background: transparent;
     padding: 2rem 1rem;

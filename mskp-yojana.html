@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mukhyamantri Saur Krushi Pump Yojana</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<style>
+:root{
+  --primary:#0b7a3b;
+  --accent:#f6c343;
+  --bg:#f4fbf6;
+  --card:#ffffff;
+  --text:#083224;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Saira',sans-serif;background:var(--bg);color:var(--text)}
+
+#hero{
+  position:relative;height:85vh;display:flex;align-items:center;justify-content:center;
+  background:url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+  color:#fff;
+}
+#hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.75));
+}
+#hero .content{
+  position:relative;z-index:2;text-align:center;max-width:820px;padding:0 20px;
+}
+#hero h1{font-size:3rem;line-height:1.15;margin-bottom:16px}
+#hero p{font-size:1.15rem;color:#eaf5ee}
+
+.section{
+  max-width:1250px;margin:60px auto;background:#fff;
+  padding:50px 24px;border-radius:22px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08)
+}
+.container{max-width:1100px;margin:auto}
+h2{font-size:1.9rem;color:var(--primary);margin-bottom:10px}
+.lead{color:#245b3e;line-height:1.65;margin-bottom:18px}
+
+.grid{display:grid;grid-template-columns:1fr 360px;gap:26px}
+.card{
+  background:var(--card);border-radius:16px;padding:22px;
+  box-shadow:0 10px 26px rgba(0,0,0,.06)
+}
+
+.notice{
+  background:#f9fff6;border-left:6px solid var(--accent);
+  padding:14px;border-radius:10px;margin-bottom:16px
+}
+
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{padding:11px;border:1px solid #e5f2ea}
+th{background:#f0faf4;color:#0a3a26}
+
+.btn{
+  background:var(--primary);color:#fff;border:none;
+  padding:12px 20px;border-radius:999px;font-weight:600;
+  cursor:pointer;box-shadow:0 10px 24px rgba(11,122,59,.25);
+  transition:.3s
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{
+  background:#fff;color:var(--primary);
+  border:2px solid var(--primary);box-shadow:none
+}
+
+.accordion .head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px;border-radius:12px;background:#f3fbf6;
+  cursor:pointer;margin-bottom:6px;font-weight:600
+}
+.accordion .body{
+  max-height:0;overflow:hidden;transition:max-height .4s ease;
+  background:#fff;border-radius:0 0 12px 12px;padding:0 14px
+}
+.accordion .inner{padding:12px 0;color:#1f4d36}
+
+@media(max-width:900px){
+  .grid{grid-template-columns:1fr}
+  #hero h1{font-size:2.1rem}
+}
+</style>
+</head>
+
+<body>
+
+<section id="hero">
+  <div class="content">
+    <h1>Mukhyamantri Saur Krushi Pump Yojana</h1>
+    <p>Empowering farmers with solar-powered irrigation – saving electricity, reducing cost, and ensuring sustainable agriculture.</p>
+  </div>
+</section>
+
+<section class="section" id="scheme">
+  <div class="container">
+    <h2>About the Scheme</h2>
+    <p class="lead">
+      Mukhyamantri Saur Krushi Pump Yojana aims to provide solar-powered irrigation pumps to farmers,
+      enabling reliable daytime water supply without electricity bills.
+    </p>
+
+    <div class="grid">
+      <main class="card">
+        <div class="notice">
+          <strong>Important:</strong> Eligible farmers can receive solar pumps with heavy government subsidy.
+        </div>
+
+        <h3>Subsidy Structure</h3>
+        <table>
+          <tr><th>Pump Type</th><th>Capacity</th><th>Subsidy</th></tr>
+          <tr><td>DC Solar Pump</td><td>3 HP</td><td>Up to 90%</td></tr>
+          <tr><td>DC Solar Pump</td><td>5 HP</td><td>Up to 85%</td></tr>
+          <tr><td>AC Solar Pump</td><td>7.5 HP</td><td>Up to 80%</td></tr>
+        </table>
+
+        <h3 style="margin-top:18px">Application Process</h3>
+        <ol style="margin-left:18px;line-height:1.7">
+          <li>Visit official portal</li>
+          <li>Register with Aadhaar & land records</li>
+          <li>Select pump capacity</li>
+          <li>Upload documents</li>
+          <li>Track status online</li>
+        </ol>
+
+        <div class="accordion">
+          <div class="item">
+            <div class="head">Eligibility</div>
+            <div class="body"><div class="inner">
+              Farmers with valid land records, electricity connection, and irrigation requirement.
+            </div></div>
+          </div>
+
+          <div class="item">
+            <div class="head">Benefits</div>
+            <div class="body"><div class="inner">
+              Zero electricity bill, day-time irrigation, eco-friendly farming, long-term savings.
+            </div></div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;display:flex;gap:12px">
+          <button class="btn" onclick="openPortal()">Open Portal</button>
+          <button class="btn ghost" onclick="scrollTopSmooth()">Back to Top</button>
+        </div>
+      </main>
+
+      <aside class="card">
+        <h3>Latest Updates</h3>
+        <p>• New beneficiary list released</p>
+        <p>• 5HP pump quota increased</p>
+        <p>• Installation drive started</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from("#hero .content",{y:60,opacity:0,duration:1.2,ease:"power3.out"});
+gsap.from(".section",{scrollTrigger:".section",y:80,opacity:0,duration:1,ease:"power3.out"});
+
+document.querySelectorAll(".head").forEach(h=>{
+  h.addEventListener("click",()=>{
+    const b=h.nextElementSibling;
+    const open=b.style.maxHeight;
+    document.querySelectorAll(".body").forEach(x=>x.style.maxHeight=null);
+    if(!open) b.style.maxHeight=b.scrollHeight+"px";
+  });
+});
+
+function openPortal(){
+  window.open("https://mahadbt.maharashtra.gov.in","_blank");
+}
+function scrollTopSmooth(){
+  gsap.to(window,{scrollTo:0,duration:1});
+}
+</script>
+
+</body>
+</html>

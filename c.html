@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<section class="group-showcase">
+
+  <div class="logo-watermark"></div>
+
+  <!-- SOLARICA ENERGY -->
+  <article class="group-block left">
+    <h2 class="group-title energy-title">Solarica Energy India Pvt. Ltd.</h2>
+    <div class="group-media" style="background-image:url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="group-content">
+      <p>Leading the renewable energy revolution in India with cutting-edge solar solutions. We specialize in large-scale solar installations, advanced energy storage systems, and grid integration technologies that power sustainable communities across the nation.</p>
+      <p>With a strong engineering foundation and state-of-the-art manufacturing capabilities, Solarica delivers reliable solar energy infrastructure for government projects, commercial establishments, industrial facilities, and rural electrification programs.</p>
+      <p>We also offer tailored solutions such as hybrid solar systems, smart lighting technologies, remote monitoring, and AI-driven energy optimization tools.</p>
+      <a href="https://www.solarica.in/" target="_blank">Visit Website</a>
+    </div>
+  </article>
+
+  <!-- SOLARICA SYSTEMS -->
+  <article class="group-block right">
+    <h2 class="group-title systems-title">Solarica Systems Pvt. Ltd.</h2>
+    <div class="group-media" style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="group-content">
+      <p>Solarica system Pvt Ltd delivers advanced solar systems integration and next-generation smart technology solutions.</p>
+      <p>Our expertise includes hybrid solar solutions, on-grid and off-grid system design, energy storage integration, and AI-driven energy optimization.</p>
+      <a href="https://www.solaricasystems.in/" target="_blank">Visit Website</a>
+    </div>
+  </article>
+
+  <!-- SOLARICA INDUSTRIES -->
+  <article class="group-block left">
+    <h2 class="group-title industries-title">Solarica Industries Pvt. Ltd.</h2>
+    <div class="group-media" style="background-image:url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="group-content">
+      <p>Industrial-scale solar manufacturing and production excellence.</p>
+      <p>With fully automated production lines and world-class R&D.</p>
+      <a href="https://www.solaricaindustries.in/" target="_blank">Visit Website</a>
+    </div>
+  </article>
+
+  <!-- SOLARICA FABTECH -->
+  <article class="group-block right">
+    <h2 class="group-title fabtech-title">Solarica Fabtech Pvt. Ltd.</h2>
+    <div class="group-media" style="background-image:url('https://images.unsplash.com/photo-1593642634367-d91a135587b5?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="group-content">
+      <p>Industrial-grade solar structure fabrication and precision engineering excellence.</p>
+      <a href="#">Coming Soon</a>
+    </div>
+  </article>
+
+  <!-- SOLARICA GREENWHEELS -->
+  <article class="group-block left">
+    <h2 class="group-title greenwheels-title">Solarica Greenwheels Pvt. Ltd.</h2>
+    <div class="group-media" style="background-image:url('https://images.unsplash.com/photo-1619767886558-efdc7b9c7c6b?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="group-content">
+      <p>Future-ready electric mobility and green transport innovation.</p>
+      <a href="#">Coming Soon</a>
+    </div>
+  </article>
+
+</section>
+
+<style>
+.group-showcase{
+  position:relative;
+  padding:120px 0;
+  background:#ebebeb;
+  font-family:'Poppins',sans-serif;
+}
+
+.logo-watermark{
+  position:fixed;
+  inset:0;
+  background:url('images/logoo.png') center/480px no-repeat;
+  opacity:.15;
+  pointer-events:none;
+}
+
+.group-block{
+  position:relative;
+  max-width:1200px;
+  margin:0 auto 180px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+  padding-top:70px;
+}
+
+.group-block.right .group-media{ order:2; }
+.group-block.right .group-content{ order:1; }
+
+.group-media{
+  height:420px;
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 40px 80px rgba(0,0,0,.25);
+}
+
+/* Centered titles */
+.group-title{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:100%;
+  text-align:center;
+  font-size:38px;
+  font-weight:900;
+  color:#111;
+  margin:0;
+}
+
+.group-title::after{
+  content:'';
+  display:block;
+  width:0;
+  height:4px;
+  background:currentColor;
+  margin:10px auto 0;
+  transition:.35s;
+  border-radius:4px;
+}
+
+.group-block:hover .group-title::after{ width:70px; }
+
+.energy-title{ --brand:#f26522; }
+.systems-title{ --brand:#2563eb; }
+.industries-title{ --brand:#1e293b; }
+.fabtech-title{ --brand:#a855f7; }
+.greenwheels-title{ --brand:#22c55e; }
+
+.group-block:hover .group-title{ color:var(--brand); }
+
+.group-content p{ max-width:520px; line-height:1.7; }
+
+@media(max-width:900px){
+  .group-block{ grid-template-columns:1fr; padding:0 24px; }
+  .group-title{ position:static; transform:none; margin-bottom:16px; }
+}
+</style>
+
+</body>
+</html>

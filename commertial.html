@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Solar Excellence | Solarica Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --solarica-green: #25d366;
+            --solarica-navy: #060b13;
+            --text-dark: #1a1a1a;
+            --text-gray: #4a5568;
+            --bg-light: #ffffff;
+            --border-soft: #edf2f7;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+
+        /* --- CINEMATIC HERO --- */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(rgba(6, 11, 19, 0.75), rgba(6, 11, 19, 0.75)), 
+                        url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat fixed;
+            text-align: center;
+            color: #fff;
+        }
+        .hero-content { z-index: 2; max-width: 1000px; padding: 0 20px; }
+        .hero-tag { color: var(--solarica-green); font-weight: 700; letter-spacing: 5px; text-transform: uppercase; font-size: 14px; margin-bottom: 20px; display: block; }
+        .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(40px, 7vw, 90px); line-height: 0.9; margin-bottom: 30px; }
+        .hero p { font-size: clamp(16px, 2vw, 20px); color: #cbd5e1; max-width: 700px; margin: 0 auto; }
+
+        /* --- FEATURE LAYOUT (Alternating) --- */
+        .section-padding { padding: 120px 10%;   }
+        .feature-row { display: flex; align-items: center; gap: 80px; margin-bottom: 120px; }
+        .feature-row.reverse { flex-direction: row-reverse; }
+        
+        .feature-img { flex: 1.2; border-radius: 40px; overflow: hidden; height: 500px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+        .feature-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
+        .feature-row:hover .feature-img img { transform: scale(1.05); }
+
+        .feature-text { flex: 1; }
+        .feature-text h2 { font-family: 'Syne', sans-serif; font-size: 3rem; line-height: 1; margin-bottom: 25px; color: var(--solarica-navy); }
+
+        /* --- INVESTMENT CARDS (Glassmorphism) --- */
+        .investment-section { background: var(--solarica-navy); padding: 100px 10%; color: #fff; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 60px; }
+        
+        .aspect-card { 
+            padding: 50px; 
+            background: var(--glass); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 30px; 
+            backdrop-filter: blur(10px);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+        .aspect-card:hover { border-color: var(--solarica-green); transform: translateY(-15px); background: rgba(37, 211, 102, 0.05); }
+        .aspect-card h3 { font-family: 'Syne', sans-serif; font-size: 1.8rem; margin-bottom: 20px; color: var(--solarica-green); }
+
+        /* --- BENEFITS STRIP --- */
+        .benefit-item { border-bottom: 1px solid rgba(0,0,0,0.4); padding: 40px 0; display: flex; gap: 30px; align-items: flex-start; }
+        .benefit-num { font-family: 'Inter',sans-serif; color: var(--solarica-green); font-weight: 800; font-size: 2rem; opacity: 0.7; }
+        .benefit-content h4 { font-family: 'Syne', sans-serif; font-size: 1.5rem; margin-bottom: 10px; }
+
+        /* --- PREMIUM CTA --- */
+        .cta-wrap { padding: 100px 10%; text-align: center; }
+        .cta-box { background: var(--solarica-green); padding: 80px 40px; border-radius: 50px; color: #fff; }
+        .cta-btn { 
+            display: inline-block; padding: 22px 55px; background: var(--solarica-navy); color: #fff; 
+            text-decoration: none; border-radius: 100px; font-weight: 800; margin-top: 40px; 
+            text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; 
+        }
+        .cta-btn:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+
+        @media (max-width: 991px) {
+            .feature-row, .feature-row.reverse { flex-direction: column; text-align: center; gap: 40px; }
+            .feature-img { height: 350px; width: 100%; }
+            .feature-text h2 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+ <!-- Top Bar Section - Contact and Social Links -->
+    <div class="top-bar" role="region" aria-label="Contact and social bar">
+        <div class="container topbar-inner">
+            <div class="topbar-left">
+                <span>Email:</span>
+                <a href="mailto:eresh@solarica" aria-label="Email eresh at solarica">solaricaindia@gmail.com</a>
+                <span class="topbar-sep">|</span>
+                <span>Phone:</span>
+                <a href="tel:+918956189167" aria-label="Call 8956189167">8530214079</a>
+            </div>
+            <div class="topbar-right">
+                <span style="font-size:13px;opacity:.85">Follow us:</span>
+                <div class="topbar-social" aria-label="Social links">
+                    <a href="#" class="icon" aria-label="YouTube" title="YouTube">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a4 4 0 0 0-2.8-2.8C18.9 3 12 3 12 3s-6.9 0-8.7.4A4 4 0 0 0 .5 6.2 41.6 41.6 0 0 0 0 12a41.6 41.6 0 0 0 .5 5.8 4 4 0 0 0 2.8 2.8C5.1 21 12 21 12 21s6.9 0 8.7-.4a4 4 0 0 0 2.8-2.8A41.6 41.6 0 0 0 24 12a41.6 41.6 0 0 0-.5-5.8ZM9.6 15.5v-7l6 3.5-6 3.5Z"/></svg>
+                    </a>
+                    <a href="#" class="icon" aria-label="Instagram" title="Instagram">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm5.75-3.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>
+                    </a>
+                    <a href="#" class="icon" aria-label="Facebook" title="Facebook">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.7V12h2.7V9.6c0-2.7 1.6-4.1 4-4.1 1.2 0 2.4.2 2.4.2v2.7h-1.3c-1.3 0-1.8.8-1.8 1.7V12h3l-.5 2.9h-2.5v7A10 10 0 0 0 22 12Z"/></svg>
+                    </a>
+                    <a href="#" class="icon" aria-label="Twitter" title="Twitter">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 0 0 1.88-2.35 8.59 8.59 0 0 1-2.72 1.04 4.26 4.26 0 0 0-7.26 3.88A12.1 12.1 0 0 1 3.15 4.9a4.26 4.26 0 0 0 1.32 5.68c-.65 0-1.26-.2-1.8-.5v.05a4.26 4.26 0 0 0 3.42 4.17c-.31.08-.64.12-.98.12-.24 0-.48-.02-.71-.07a4.27 4.27 0 0 0 3.98 2.96A8.55 8.55 0 0 1 2 19.54a12.06 12.06 0 0 0 6.55 1.92c7.86 0 12.16-6.51 12.16-12.16l-.01-.55A8.69 8.69 0 0 0 24 6.5c-.8.36-1.65.6-2.54.7Z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header Section - Navigation and Logo -->
+    <header class="site-header">
+		<div class="container header-inner">
+			<a class="logo" href="#"><img src="images/logoo.png" alt="Solarica Logo"
+					style="height: 60px; width: auto;"></a>
+			<nav class="nav" id="site-nav" aria-label="Primary">
+				<button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"
+					aria-expanded="false">☰</button>
+				<ul class="nav-list">
+					<li><a href="home.html">Home</a></li>
+					<li class="dropdown mega-dropdown">
+						<a href="javascript:void(0)" class="mega-trigger">Products <i
+								class="fa fa-chevron-down"></i></a>
+
+						<div class="mega-menu">
+							<div class="mega-menu-inner">
+								<div class="mega-col">
+									<h4 class="energy-title mobile-company-trigger">Solarica Energy India <br>Pvt. Ltd.
+										<span class="mobile-arrow">+</span>
+									</h4>
+									<!-- <a href="https://www.solarica.in/" class="visit-link">VISIT SITE ↗</a> -->
+									<ul>
+										<li><a href="slights.html">Solar Street Lights</a></li>
+										<li><a href="spumps.html">Solar Water Pumps</a></li>
+										<li><a href="sheater.html">Solar Water Heater</a></li>
+										<li><a href="sglights.html">Solar Garden Lights</a></li>
+										<li><a href="solardec.html">Solar Decorative Lights</a></li>
+										<li><a href="solarflood.html">Solar Flood Lights</a></li>
+										<li><a href="sinverter.html">Solar Inverters</a></li>
+										<li><a href="spanel.html">Solar Panels</a></li>
+										<li><a href="aclights.html">AC Lights</a></li>
+										<li><a href="homelights.html">Home Lights</a></li>
+									</ul>
+								</div>
+
+								<div class="mega-col">
+									<h4 class="systems-title mobile-company-trigger">
+										Solarica Systems Pvt. Ltd.
+										<span class="mobile-arrow">+</span>
+									</h4>
+
+									<!-- <a href="https://www.solaricasystems.in/" class="visit-link">VISIT SITE ↗</a> -->
+									<ul>
+
+										<li><a href="yojana.html">PM Surya Ghar Yojana</a></li>
+										<li><a href="kusum.html">KUSUM Yojana</a></li>
+										<li><a href="mskp.html">Saur Krushi
+												Pump Yojana</a></li>
+										<!-- <li><a href="ongrid.html">Residential Wellfare Association</a></li> -->
+										<li><a href="commertial.html">Commercial</a></li>
+										<li><a href="industrial.html">Industrial</a></li>
+										<li><a href="power.html">Power Projects</a></li>
+									</ul>
+								</div>
+
+								<div class="mega-col">
+									<h4 class="fabtech-title mobile-company-trigger">
+										Solarica Fabtech Pvt. Ltd.
+										<span class="mobile-arrow">+</span>
+									</h4>
+
+									<!-- <a href="https://www.solaricaindustries.in/" class="visit-link">VISIT SITE ↗</a> -->
+									<ul>
+										<li><a href="light-accessories.html">Light Accessories</a></li>
+										<li><a href="poles.html">Poles</a></li>
+										<li><a href="control.html">Control Panels</a></li>
+										<li><a href="home-products.html">Solar Home Products</a></li>
+										<li><a href="solar-structure.html">Solar Structures</a></li>
+										<li><a href="industrial-works.html">Industrial Works</a></li>
+										<!-- <li><a href="solar-fabrication.html">Other Solar Fabrication Works</a></li> -->
+									</ul>
+								</div>
+
+
+								<!-- <div class="mega-col">
+        <h4 class="industries-title">Solarica Industries<br>Pvt. Ltd.</h4>
+        <a href="https://www.solaricaindustries.in/" class="visit-link">VISIT SITE ↗</a>
+        <ul>
+          <li><a href="spanel.html">Solar Panels</a></li>
+          <li><a href="sinverter.html">Solar Inverter</a></li>
+          <li><a href="batteries.html">Industrial Batteries</a></li>
+          <li><a href="highbay.html">High Bay Lights</a></li>
+        </ul>
+      </div> -->
+
+								<div class="mega-col">
+									<h4 class="greenwheels-title mobile-company-trigger">
+										Solarica Greenwheels Pvt. Ltd.
+										<span class="mobile-arrow">+</span>
+									</h4>
+
+									<!-- <a href="https://www.solaricaindustries.in/" class="visit-link">VISIT SITE ↗</a> -->
+									<ul>
+										<li><a href="charging-station.html">Charging Stations</a></li>
+										<li><a href="ev-chargers.html">EV Chargers</a></li>
+										<li><a href="ev-batteries.html">EV Batteries</a></li>
+										<li><a href="amc.html">AMC Services</a></li>
+
+									</ul>
+								</div>
+
+
+							</div>
+						</div>
+					</li>
+					<li><a href="finance.html">Finance</a></li>
+					<li class="dropdown"><a href="#projects">Projects</a>
+						<ul class="dropdown-menu">
+							<li><a href="#project-1">Sample Project 1</a></li>
+							<li><a href="#project-2">Sample Project 2</a></li>
+							<li><a href="#project-3">Sample Project 3</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#about">About Us</a>
+						<ul class="dropdown-menu">
+							<li><a href="we.html">We Solarica</a></li>
+							<li><a href="ourjourney.html">Our Journey</a></li>
+							<li><a href="company.html">Our Companies</a></li>
+							<li><a href="dir.html">Board of Directors</a></li>
+							<li><a href="awards.html">Awards and Certifications</a></li>
+						</ul>
+					</li>
+					<li><a href="careers.html">Careers</a></li>
+				</ul>
+			</nav>
+			<div class="header-actions">
+				<a class="btn btn-contact" href="contact.html">Contact</a>
+				<span class="separator">|</span>
+				<button class="search-icon" aria-label="Search">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+			</div>
+		</div>
+	</header>
+    
+    <!-- Search Overlay Section -->
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog" aria-label="Site search">
+        <div class="container search-inner">
+            <input id="searchInput" class="search-input" type="text" placeholder="Type what you're looking for" aria-label="Search input" />
+            <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">Solarica Group</span>
+            <h1>INDUSTRIAL ENERGY <br>REIMAGINED</h1>
+            <p>We deliver high-efficiency solar PV systems for enterprise properties—scaling from factory rooftops to massive 500MW+ solar parks.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+    <div class="feature-row">
+        <div class="feature-img">
+            <img src="fabtech/industrial/2.jpg" alt="Rooftop Solar Facility">
+        </div>
+        <div class="feature-text">
+            <span class="hero-tag" style="font-size: 12px; margin-bottom: 10px;">01 / Rooftop Efficiency</span>
+            <h2>Smart Rooftop Infrastructure</h2>
+            <p>Perfectly optimized for factories, warehouses, and commercial complexes. Solarica utilizes every square meter of available roof space to maximize your energy output and minimize grid dependency. Our rooftop solutions focus on fast ROI for industries and commercial establishments.</p>
+        </div>
+    </div>
+
+    <div class="feature-row reverse">
+        <div class="feature-img">
+            <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=1974&auto=format&fit=crop" alt="Utility Solar Park">
+        </div>
+        <div class="feature-text">
+            <span class="hero-tag" style="font-size: 12px; margin-bottom: 10px;">02 / Utility Scale</span>
+            <h2>Ground-Mounted Solar Parks</h2>
+            <p>Specialized large-scale installations often integrated into 500MW+ solar parks. These projects utilize shared government infrastructure to provide reliable, utility-scale power for major commercial operations. Solarica delivers these turnkey EPC services with maximum energy output in mind.</p>
+        </div>
+    </div>
+
+    <div class="feature-row">
+        <div class="feature-img">
+            <img src="images/1.jpeg" alt="Floating Solar Array">
+        </div>
+        <div class="feature-text">
+            <span class="hero-tag" style="font-size: 12px; margin-bottom: 10px;">03 / Water-Based Innovation</span>
+            <h2>Floating Solar Systems</h2>
+            <p>Solarica implements advanced projects on reservoirs and water bodies to save valuable land space while improving panel efficiency through natural water cooling. These water-based solar installations are ideal for dams and canals, offering a sustainable future for land-constrained regions.</p>
+        </div>
+    </div>
+
+    <div class="feature-row reverse">
+        <div class="feature-img">
+            <img src="images/2.webp" alt="Hybrid Solar Storage">
+        </div>
+        <div class="feature-text">
+            <span class="hero-tag" style="font-size: 12px; margin-bottom: 10px;">04 / Energy Resilience</span>
+            <h2>Hybrid & Storage Systems</h2>
+            <p>Solar combined with advanced battery storage or wind power ensures an uninterrupted power supply for mission-critical operations. Solarica specializes in AI-driven energy optimization tools that manage these hybrid systems to reduce operational costs and increase energy independence.</p>
+        </div>
+    </div>
+</section>
+
+ <section class="section-padding" style="margin-top: -110px;">
+        <div style="margin-bottom: 60px;">
+            <span class="hero-tag">Strategic Value</span>
+            <h2 style="font-family: 'Syne', sans-serif; font-size: 3rem;">How Solar Empowers Your Business</h2>
+			<p style="color: #5a6c7d; max-width: 600px; font-size: 1.1rem; margin-top: 20px;">Transitioning to solar is more than an energy choice—it is a strategic move for long-term fiscal stability and brand leadership.</p>
+        </div>
+        
+        <div class="benefit-item">
+            <span class="benefit-num">01</span>
+            <div class="benefit-content">
+                <h4>Cost Savings & Fiscal Hedge</h4>
+				<p>Protect your enterprise against rising electricity costs by locking in your energy rates. Solarica focuses on delivering systems that provide a significantly faster return on investment (ROI) for industrial and commercial facilities.</p>            </div>
+        </div>
+        <div class="benefit-item">
+            <span class="benefit-num">02</span>
+            <span class="benefit-content">
+                <h4>Sustainability & Brand Equity</h4>
+                <p>Meet corporate green goals and elevate your brand image as a carbon-neutral organization. Powering your operations with renewable energy demonstrates environmental leadership to clients and investors alike.</p>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <span class="benefit-num">03</span>
+            <div class="benefit-content">
+                <h4>Energy Independence</h4>
+                <p>Reduce reliance on grid power and protect your business from energy market volatility. Solarica’s AI-driven optimization tools ensure maximum energy output and long-term performance stability.</p>
+            </div>
+        </div>
+
+		 <div class="benefit-item">
+            <span class="benefit-num">04</span>
+            <div class="benefit-content">
+                <h4>RPO & Government Compliance</h4>
+                <p>Seamlessly meet Renewable Purchase Obligation (RPO) targets mandated by latest government policies. Our turnkey execution ensures your infrastructure adheres to global benchmarks like ISO and BIS.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="investment-section">
+    <div class="section-header">
+        <span class="hero-tag">Flexible Financing</span>
+        <h2 class="syne-heading">Investment Models</h2>
+        <p class="section-subtitle">Choose the financial path that best fits your business cash flow and long-term energy goals.</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="aspect-card">
+            <div class="model-badge">Most Popular for ROI</div>
+            <h3>CAPEX</h3>
+            <span class="simple-label">Self-Owned System</span>
+            <p>Your business pays for the entire solar plant upfront. You own the asset from day one, allowing you to claim 100% of the tax benefits and maximize your long-term savings.</p>
+            <ul class="model-features">
+                <li>Zero monthly power bills</li>
+                <li>Full asset ownership</li>
+                <li>Highest total savings</li>
+            </ul>
+        </div>
+
+        <div class="aspect-card">
+            <div class="model-badge">Zero Investment</div>
+            <h3>PPA / OPEX</h3>
+            <span class="simple-label">Pay-As-You-Go</span>
+            <p>A third-party investor pays for, installs, and maintains the system. You simply buy the solar electricity it produces at a rate lower than the government grid.</p>
+            <ul class="model-features">
+                <li>No upfront cost</li>
+                <li>Zero maintenance hassle</li>
+                <li>Immediate savings</li>
+            </ul>
+        </div>
+
+        <div class="aspect-card">
+            <div class="model-badge">Flexible Credit</div>
+            <h3>Financing</h3>
+            <span class="simple-label">Lease or Loan</span>
+            <p>Install your solar system using customized bank loans or leasing options. This allows you to pay for the system in easy monthly installments while the energy savings help cover the costs.</p>
+            <ul class="model-features">
+                <li>Preserve your cash flow</li>
+                <li>Low interest options</li>
+                <li>Own it eventually</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Modern Financial Section Styling */
+.investment-section { padding: 100px 10%; background: #ffffff; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.syne-heading { font-family: 'Syne', sans-serif; font-size: 3.5rem; color: #060b13; margin: 10px 0; }
+.section-subtitle { color: #5a6c7d; font-size: 1.1rem; max-width: 1100px; margin: 0 auto; }
+
+.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+
+.aspect-card {
+    background: #ffffff;
+    border: 1px solid #7e8184;
+    padding: 50px 40px;
+    border-radius: 30px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.aspect-card:hover {
+    transform: translateY(-15px);
+    border-color: #17eb65;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.05);
+}
+
+.model-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #d9e4dc;
+    color: #25d366;
+    padding: 5px 15px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.simple-label { color: #25d366; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; margin-bottom: 10px; display: block; }
+.aspect-card h3 { font-family: 'Syne', sans-serif; font-size: 2rem; margin-bottom: 15px; color: #060b13; }
+.aspect-card p { color: #5a6c7d; line-height: 1.7; margin-bottom: 25px; }
+
+.model-features { list-style: none; padding: 0; }
+.model-features li { margin-bottom: 12px; font-weight: 600; color: #060b13; display: flex; align-items: center; }
+.model-features li::before { content: "✓"; color: #25d366; margin-right: 10px; font-weight: 900; }
+</style>
+
+   <section class="roadmap-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="hero-tag">How We Work</span>
+      <h2 class="syne-heading">Your Journey to Solar Power</h2>
+      <p class="section-subtitle">Our comprehensive EPC (Engineering, Procurement, and Construction) process ensures a smooth transition from your first audit to long-term energy independence.</p>
+    </div>
+
+    <div class="roadmap-journey">
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">01</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Survey & Smart Audit</h4>
+          <p>We visit your site to analyze your roof or land and study your current electricity usage to find the perfect solar fit.</p>
+        </div>
+      </div>
+
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">02</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Custom Engineering</h4>
+          <p>Our experts design a system using precision layouts and high-efficiency components to ensure you get the maximum energy output.</p>
+        </div>
+      </div>
+
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">03</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Approvals & Subsidy</h4>
+          <p>We handle all the paperwork with government bodies and DISCOMs to secure your permits and available subsidies like PM-KUSUM.</p>
+        </div>
+      </div>
+
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">04</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Professional Installation</h4>
+          <p>Our certified teams set up your solar panels and inverters quickly using world-class safety and quality standards.</p>
+        </div>
+      </div>
+
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">05</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <h4>Grid Synchronization</h4>
+          <p>We test the entire system and connect it to the grid, officially turning your facility into a clean energy power plant.</p>
+        </div>
+      </div>
+
+      <div class="journey-item">
+        <div class="step-meta">
+          <span class="step-number">06</span>
+        </div>
+        <div class="step-content">
+          <h4>AI-Driven Monitoring</h4>
+          <p>We use real-time AI tools to track your energy generation 24/7, ensuring your system always performs at its best.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Modern Roadmap Styling */
+.roadmap-section { padding: 100px 10%; background: #ffffff; }
+.section-header { margin-bottom: 80px; text-align: left; }
+.syne-heading { font-family:'Inter',sans-serif; font-size: 3.5rem; color: #060b13; line-height: 1; margin: 15px 0; }
+/* .section-subtitle { color: #5a6c7d; font-size: 1.15rem; max-width: 700px; text-align: left; margin-right: 500px; } */
+
+.roadmap-journey {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 60px 40px;
+}
+
+.journey-item { display: flex; gap: 25px; }
+
+.step-meta { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+
+.step-number {
+  width: 50px; height: 50px;
+  background: #f0fdf4;
+  color: #2ecc71; /* Solarica Green */
+  border: 2px solid #2ecc71;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  font-weight: 800; font-size: 1.2rem;
+  font-family:'Inter',sans-serif;
+  transition: 0.3s;
+}
+
+.step-line { width: 2px; flex-grow: 1; background: #adb4bb; margin-top: 15px; border-radius: 2px; }
+
+.journey-item:hover .step-number { background: #2ecc71; color: #fff; transform: scale(1.1); }
+
+.step-content h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  color: #060b13;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.step-content p { color: #4a5568; line-height: 1.7; font-size: 1rem; }
+
+@media (max-width: 768px) {
+  .syne-heading { font-size: 2.5rem; }
+  .roadmap-journey { grid-template-columns: 1fr; }
+}
+</style>
+
+
+
+   
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Parallax
+        gsap.to(".hero-content", {
+            y: 150,
+            opacity: 0,
+            scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
+        });
+
+        // Feature Reveals
+        gsap.utils.toArray('.feature-row').forEach(row => {
+            gsap.from(row, {
+                y: 100,
+                opacity: 0,
+                duration: 1.2,
+                scrollTrigger: { trigger: row, start: "top 80%" }
+            });
+        });
+    </script>
+
+<!-- Bottom Right Corner Button Section - Contact Options -->
+    <div class="corner-btn-container">
+        <div class="corner-options">
+            <a href="#" class="corner-option whatsapp" id="waTrigger" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                </svg>
+    </svg>
+</a>
+
+            
+            <a href="mailto:eresh@solarica.in" class="corner-option email" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+            </a>
+            
+            <button class="corner-option scroll-top" id="scrollTop" aria-label="Scroll to top">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 15l-6-6-6 6"/>
+                </svg>
+            </button>
+        </div>
+        
+        <button class="corner-btn" id="cornerBtn" aria-label="Back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+        </button>
+
+       <div class="wa-dept-card" id="waDeptCard">
+  <div class="wa-dept-item" data-phone="9665389150" data-msg="Hello, I would like to connect with the Solarica Director.">
+    Director
+  </div>
+  <div class="wa-dept-item" data-phone="9272177947" data-msg="Hello, I would like to connect with the Solarica Director.">
+    Director
+  </div>
+  <div class="wa-dept-item" data-phone="8956759167" data-msg="Hello, I would like to connect with Solarica Sales team.">
+    Sales
+  </div>
+  <div class="wa-dept-item" data-phone="9021370907" data-msg="Hello, I would like to connect with a Solarica Executive.">
+    Executive
+  </div>
+</div>
+
+
+    </div>
+
+<script src="script.js"></script>
+ <div id="global-footer-placeholder"></div>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Power Projects | Solarica Group</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+:root {
+    --primary: #2ecc71; /* Solarica Green */
+    --accent: #4facfe; /* Modern Blue */
+    --dark-navy: #060b13; /* Premium Background */
+    --text-main: #ffffff;
+    --text-dim: #94a3b8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--dark-navy);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- CINEMATIC HERO --- */
+.hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(6, 11, 19, 0.7), rgba(6, 11, 19, 0.7)), 
+                url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+    text-align: center;
+}
+
+.hero-content { z-index: 2; max-width: 1000px; padding: 0 20px; }
+.hero-tag { color: var(--primary); text-transform: uppercase; letter-spacing: 5px; font-weight: 700; margin-bottom: 20px; display: block; }
+.hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(40px, 8vw, 90px); line-height: 0.9; margin-bottom: 30px; }
+.hero h1 span { background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { font-size: 1.25rem; color: var(--text-dim); max-width: 700px; margin: 0 auto; }
+
+/* --- ALTERNATING FEATURE SECTIONS --- */
+.section { padding: 120px 0; }
+.container { max-width: 1300px; margin: 0 auto; padding: 0 30px; }
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 120px;
+    opacity: 0; /* Handled by GSAP */
+    transform: translateY(50px);
+}
+
+.feature-row.reverse { flex-direction: row-reverse; }
+.feature-text { flex: 1; }
+
+.feature-image {
+    flex: 1.2;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.feature-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+.feature-row:hover .feature-image img { transform: scale(1.05); }
+
+.section h2 { font-family: 'Syne', sans-serif; font-size: clamp(32px, 5vw, 60px); line-height: 1; margin-bottom: 25px; color: var(--primary); }
+.section p.lead { font-size: 1.15rem; color: var(--text-dim); margin-bottom: 40px; }
+
+/* --- GLASS BENEFIT CARDS --- */
+.benefit-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.benefit-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.benefit-card:hover { background: rgba(46, 204, 113, 0.1); border-color: var(--primary); }
+.benefit-card h4 { font-family: 'Syne', sans-serif; font-size: 1.25rem; margin-bottom: 10px; }
+
+/* --- CTA SECTION --- */
+.cta-section { background: #0a0f18; padding: 100px 30px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+.btn-luxury {
+    display: inline-block;
+    padding: 20px 50px;
+    background: var(--primary);
+    color: var(--dark-navy);
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 100px;
+    margin-top: 30px;
+    transition: 0.4s;
+}
+.btn-luxury:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(46, 204, 113, 0.3); }
+
+@media (max-width: 991px) {
+    .feature-row, .feature-row.reverse { flex-direction: column; text-align: center; gap: 40px; }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-tag">Mission Solarica</span>
+        <h1>Powering Your <span>Future</span></h1>
+        <p>Expert in engineering, EPC execution, and turnkey solar project development across all sectors.</p>
+    </div>
+</section>
+
+
+
+<section class="section">
+    <div class="container">
+        
+        <div class="feature-row" id="ground-mounted">
+            <div class="feature-text">
+                <span class="hero-tag" style="font-size: 14px;">01 / Utility Scale</span>
+                <h2>Ground Mounted <br>Solutions</h2>
+                <p class="lead">
+                    Specialized in industrial-scale solar manufacturing and production excellence. We design MW-level power plants for large land parcels and government solar parks.
+                </p>
+                <div class="benefit-list">
+                    <div class="benefit-card">
+                        <h4>Turnkey EPC</h4>
+                        <p>End-to-end services including survey, precision design, and grid integration.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4>High Yield</h4>
+                        <p>Optimized layouts using mono-PERC and bifacial solar modules for maximum output.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-image">
+                <img src="https://images.unsplash.com/photo-1548337138-e87d889cc369?q=80&w=2000&auto=format&fit=crop" alt="Ground solar plant">
+            </div>
+        </div>
+
+        <div class="feature-row reverse" id="rooftop">
+            <div class="feature-text">
+                <span class="hero-tag" style="font-size: 14px;">02 / Institutional</span>
+                <h2>Smart Rooftop <br>Innovations</h2>
+                <p class="lead">
+                    Delivering advanced systems integration and next-generation smart technology. Focused on fast ROI for hospitals, hotels, and commercial factories.
+                </p>
+                <div class="benefit-list">
+                    <div class="benefit-card">
+                        <h4>Subsidy Experts</h4>
+                        <p>Providing guidance for PM-KUSUM and central government rooftop subsidy schemes.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4>AI Monitoring</h4>
+                        <p>Integrated with AI-driven energy optimization tools and real-time performance analytics.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-image">
+                <img src="https://images.unsplash.com/photo-1594818379496-da1e345b0ded?q=80&w=2000&auto=format&fit=crop" alt="Rooftop solar panels">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <span class="hero-tag">Ready to Transition?</span>
+        <h2>Consult with Solarica</h2>
+        <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto;">From conceptual design to commissioning — we power your industrial and commercial future with clean, scalable energy.</p>
+        <a href="contact.html" class="btn-luxury">Request Consultation</a>
+    </div>
+</section>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero Animation
+    gsap.from(".hero-content", {
+        y: 100,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power4.out"
+    });
+
+    // Feature Row Reveals
+    gsap.utils.toArray('.feature-row').forEach(row => {
+        gsap.to(row, {
+            scrollTrigger: {
+                trigger: row,
+                start: "top 80%",
+            },
+            y: 0,
+            opacity: 1,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

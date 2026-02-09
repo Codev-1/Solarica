@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial Solar Projects | Solarica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #0b72bf;
+      --primary-dark: #0a4f8a;
+      --secondary: #2ecc71;
+      --navy: #0b2540;
+      --text-gray: #4b6b86;
+      --light-bg: #f6faff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--navy);
+      background: #ffffff;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; transition: 0.3s; }
+    .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+
+    /* --- NEW CINEMATIC HERO --- */
+    .hero {
+      position: relative;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+      background: #000;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(rgba(11, 37, 64, 0.7), rgba(11, 37, 64, 0.5)),
+                  url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      animation: zoomEffect 20s infinite alternate;
+    }
+
+    @keyframes zoomEffect {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+
+    .hero-content { position: relative; z-index: 2; max-width: 800px; }
+    .hero h1 { 
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem); 
+      line-height: 1; 
+      margin: 0 0 20px; 
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .hero p { font-size: 1.2rem; color: #e9f2ff; margin-bottom: 30px; border-left: 4px solid var(--secondary); padding-left: 20px; }
+    
+    .btn {
+      display: inline-block;
+      padding: 16px 35px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 20px rgba(11, 114, 191, 0.3); }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); }
+
+    /* --- SECTION STYLING --- */
+    section { padding: 100px 0; }
+    .section-title { text-align: center; margin-bottom: 60px; }
+    .section-title h2 { 
+      font-family: 'Syne', sans-serif; 
+      font-size: 2.5rem; 
+      margin: 0 0 15px; 
+      text-transform: uppercase;
+    }
+    .section-title p { color: var(--text-gray); max-width: 700px; margin: auto; font-size: 1.1rem; }
+
+    /* --- GRID & CARDS --- */
+    .grid { display: grid; gap: 30px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+      border: 1px solid #f0f4f8;
+      transition: 0.4s;
+    }
+    .card:hover { transform: translateY(-10px); border-color: var(--secondary); }
+    .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 20px; }
+    .card h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--navy); }
+
+    /* --- STEPS --- */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+    .step { position: relative; padding-left: 70px; }
+    .step::before {
+      counter-increment: step; content: counter(step);
+      position: absolute; left: 0; top: 0;
+      width: 50px; height: 50px; border-radius: 15px;
+      background: var(--light-bg); color: var(--primary);
+      display: grid; place-items: center; font-weight: 800; font-size: 1.2rem;
+      border: 2px solid #e1eefc;
+    }
+
+    /* --- NEW PROFESSIONAL FOOTER --- */
+    footer {
+      background: #061626;
+      color: #fff;
+      padding: 80px 0 30px;
+      font-size: 0.95rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+    .footer-col h4 { 
+      font-family: 'Syne', sans-serif; 
+      text-transform: uppercase; 
+      margin-bottom: 25px; 
+      color: var(--secondary); 
+      letter-spacing: 1px;
+    }
+    .footer-col ul { list-style: none; padding: 0; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a { color: #b0c4d9; }
+    .footer-col ul li a:hover { color: #fff; padding-left: 5px; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 30px;
+      text-align: center;
+      color: #7f94a6;
+    }
+
+    @media(max-width: 960px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width: 600px) {
+      .hero-bg { background-position: 70% center; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <span style="color: var(--secondary); font-weight: 800; letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 15px;">Industrial Solutions</span>
+    <h1>Energizing the <br>Future Business</h1>
+    <p>
+      Solarica designs and delivers high-performance commercial solar power systems
+      for factories, warehouses, and large enterprises. Gain long-term energy independence with India's leading EPC experts.
+    </p>
+    <a href="#models" class="btn btn-primary">Explore Project Models</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Types of Commercial Projects</h2>
+      <p>We work across all major commercial and utility solar project categories to maximize your ROI.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1613665813446-82a78c4458e7?q=80&w=2070&auto=format&fit=crop" alt="Rooftop Solar">
+        <h3>Rooftop Solar</h3>
+        <p>Ideal for factories and commercial buildings—utilizing unused roof space for zero-bill energy.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1548337138-e87d889cc369?q=80&w=2000&auto=format&fit=crop" alt="Ground Mounted">
+        <h3>Ground-Mounted Solar</h3>
+        <p>Utility-scale installations for industrial campuses and massive solar parks.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?q=80&w=2070&auto=format&fit=crop" alt="Floating Solar">
+        <h3>Floating Solar</h3>
+        <p>Innovative water-based arrays for reservoirs to save valuable land space.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=1974&auto=format&fit=crop" alt="Hybrid Solar">
+        <h3>Hybrid Systems</h3>
+        <p>Solar combined with advanced battery storage for 24/7 mission-critical operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--light-bg)">
+  <div class="container">
+    <div class="section-title">
+      <h2>Strategic Advantages</h2>
+      <p>Commercial solar is the most effective hedge against rising industrial electricity costs.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card" style="padding: 40px; text-align: center;">
+        <h4 style="color:var(--primary)">01. Cost Savings</h4>
+        <p>Lock in your energy rates for 25+ years and achieve rapid ROI.</p>
+      </div>
+      <div class="card" style="padding: 40px; text-align: center;">
+        <h4 style="color:var(--primary)">02. Sustainability</h4>
+        <p>Meet ESG/Green goals and significantly boost your corporate brand image.</p>
+      </div>
+      <div class="card" style="padding: 40px; text-align: center;">
+        <h4 style="color:var(--primary)">03. Independence</h4>
+        <p>Minimize grid reliance and protect your facility from power volatility.</p>
+      </div>
+      <div class="card" style="padding: 40px; text-align: center;">
+        <h4 style="color:var(--primary)">04. Compliance</h4>
+        <p>Effortlessly meet Renewable Purchase Obligation (RPO) government targets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="models">
+  <div class="container">
+    <div class="section-title">
+      <h2>Execution Models</h2>
+      <p>Flexible financial solutions tailored to your organization's cash flow.</p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>CAPEX Model</h3>
+        <p>Own the asset from Day 1. Business invests upfront for maximum long-term financial yield.</p>
+      </div>
+      <div class="card">
+        <h3>PPA / OPEX</h3>
+        <p>Zero upfront cost. We install, you only pay for the power you consume (Pay-as-you-go).</p>
+      </div>
+      <div class="card">
+        <h3>Lease Financing</h3>
+        <p>Flexible financing through partners to minimize your initial capital burden.</p>
+      </div>
+      <div class="card">
+        <h3>Utility Scale</h3>
+        <p>Customized EPC for massive installations ranging from 1MW to 500MW+ solar parks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--light-bg)">
+  <div class="container">
+    <div class="section-title">
+      <h2>Execution Roadmap</h2>
+      <p>Our end-to-end EPC process ensures seamless delivery and grid-synchronization.</p>
+    </div>
+
+    <div class="grid grid-2" style="counter-reset: step;">
+      <div class="step"><strong>Survey & Audit</strong><br>Detailed site analysis and energy load auditing.</div>
+      <div class="step"><strong>Engineering</strong><br>Customized system design for maximum solar yield.</div>
+      <div class="step"><strong>Approvals</strong><br>Managing DISCOM and government net-metering liaison.</div>
+      <div class="step"><strong>Installation</strong><br>Fast execution with certified high-efficiency components.</div>
+      <div class="step"><strong>Commissioning</strong><br>Final testing and grid-tie synchronization.</div>
+      <div class="step"><strong>Remote Monitoring</strong><br>Real-time AI-driven performance tracking.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4 style="color: #fff; font-size: 1.5rem;">Solarica Group</h4>
+        <p style="color: #b0c4d9; margin-top: 15px;">
+          Leading the renewable energy revolution in India with cutting-edge solar EPC, manufacturing, and smart energy optimization tools.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#">Utility Scale</a></li>
+          <li><a href="#">Industrial Rooftop</a></li>
+          <li><a href="#">Hybrid Storage</a></li>
+          <li><a href="#">Floating Solar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Projects</a></li>
+          <li><a href="#">R&D Excellence</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p style="color: #b0c4d9;">Pune, India<br>
+        Email: sales@solarica.in<br>
+        Phone: +91 95611 17666</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Solarica Group. All Rights Reserved. Transforming India's Energy Landscape.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

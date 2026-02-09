@@ -28,7 +28,7 @@ const panelProducts = [
         wattage: "500W",
         technology: "bifacial",
         application: "utility",
-        image: "images/panel-3.jpg",
+        image: "panel/s1.jpg",
         specs: ["500W Power", "Bifacial Technology", "24% Efficiency", "Dual Sided"],
         badge: "Premium",
         description: "Advanced bifacial solar panel for utility-scale installations"
@@ -39,7 +39,7 @@ const panelProducts = [
         wattage: "300W",
         technology: "monocrystalline",
         application: "residential",
-        image: "images/panel-4.jpg",
+        image: "panel/s2.jpg",
         specs: ["300W Power", "Compact Size", "20% Efficiency", "Residential Grade"],
         badge: "",
         description: "Compact monocrystalline panel perfect for small rooftops"
@@ -50,7 +50,7 @@ const panelProducts = [
         wattage: "600W",
         technology: "monocrystalline",
         application: "commercial",
-        image: "images/panel-5.jpg",
+        image: "panel/s3.jpg",
         specs: ["600W Power", "High Efficiency", "23% Efficiency", "Commercial Grade"],
         badge: "New",
         description: "High-power solar panel for large commercial installations"
@@ -61,7 +61,7 @@ const panelProducts = [
         wattage: "200W",
         technology: "monocrystalline",
         application: "residential",
-        image: "images/panel-6.jpg",
+        image: "panel/s4.jpg",
         specs: ["200W Power", "Flexible Design", "Lightweight", "Easy Install"],
         badge: "",
         description: "Flexible solar panel for curved surfaces and mobile applications"

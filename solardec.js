@@ -6,7 +6,7 @@ const decorativeProducts = [
         power: "12W",
         type: "string",
         installation: "hanging",
-        image: "images/decorative-light-1.jpg",
+        image: "decorativelights/l1.jpg",
         specs: ["12W LED", "10M Length", "50 LEDs", "Warm White"],
         badge: "Popular",
         description: "Beautiful string lights for outdoor decoration and ambiance"
@@ -17,7 +17,7 @@ const decorativeProducts = [
         power: "8W",
         type: "fairy",
         installation: "flexible",
-        image: "images/decorative-light-2.jpg",
+        image: "decorativelights/l2.jpg",
         specs: ["8W LED", "20M Length", "200 LEDs", "Multi-Color"],
         badge: "New",
         description: "Flexible fairy lights with multiple color options"
@@ -28,7 +28,7 @@ const decorativeProducts = [
         power: "15W",
         type: "curtain",
         installation: "draping",
-        image: "images/decorative-light-3.jpg",
+        image: "decorativelights/scurt.jpg",
         specs: ["15W LED", "Curtain Style", "300 LEDs", "Waterproof"],
         badge: "",
         description: "Elegant curtain lights for special occasions and decoration"
@@ -39,7 +39,7 @@ const decorativeProducts = [
         power: "10W",
         type: "net",
         installation: "draping",
-        image: "images/decorative-light-4.jpg",
+        image: "decorativelights/snet.jpg",
         specs: ["10W LED", "Net Design", "150 LEDs", "Easy Install"],
         badge: "",
         description: "Net-style lights perfect for covering large areas"
@@ -50,7 +50,7 @@ const decorativeProducts = [
         power: "18W",
         type: "icicle",
         installation: "hanging",
-        image: "images/decorative-light-5.jpg",
+        image: "decorativelights/icicle.jpg",
         specs: ["18W LED", "Icicle Effect", "Cool White", "Weather Resistant"],
         badge: "",
         description: "Beautiful icicle effect lights for winter decoration"
@@ -61,7 +61,7 @@ const decorativeProducts = [
         power: "25W",
         type: "motif",
         installation: "wall-mount",
-        image: "images/decorative-light-6.jpg",
+        image: "decorativelights/motif.jpg",
         specs: ["25W LED", "Custom Motifs", "RGB Colors", "Remote Control"],
         badge: "Premium",
         description: "Custom motif lights with remote control and RGB colors"

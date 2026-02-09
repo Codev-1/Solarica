@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Power Projects | Solarica</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#0b5ed7;
+  --dark:#0a2540;
+  --muted:#5b728a;
+  --bg:#f5f9ff;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Saira",sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+}
+
+/* Hero */
+.hero{
+  position:relative;
+  height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:url("images/solar-hero.jpg") center/cover no-repeat;
+  color:#fff;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.75));
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  max-width:900px;
+  padding:0 20px;
+}
+.hero h1{
+  font-size:3rem;
+  font-weight:700;
+  margin-bottom:16px;
+}
+.hero p{
+  font-size:1.15rem;
+  color:#e9f2ff;
+}
+
+/* Sections */
+.section{
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 20px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.card{
+  background:var(--card);
+  border-radius:18px;
+  padding:28px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+.section h2{
+  font-size:2rem;
+  margin-bottom:12px;
+}
+.section p{
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* Image blocks */
+.project-image{
+  width:100%;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 26px rgba(0,0,0,.12);
+}
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Features */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+.feature{
+  background:#ffffff;
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+.feature h4{
+  color:var(--primary);
+  margin-bottom:6px;
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#0b5ed7,#1f8cff);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+  margin-top:80px;
+}
+.cta h2{
+  font-size:2.2rem;
+  margin-bottom:12px;
+}
+.cta p{
+  color:#eaf3ff;
+  margin-bottom:20px;
+}
+.cta a{
+  display:inline-block;
+  background:#fff;
+  color:#0b5ed7;
+  padding:12px 28px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .grid{grid-template-columns:1fr}
+  .hero h1{font-size:2.2rem}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Solar Power Projects</h1>
+    <p>
+      We deliver end-to-end solar EPC solutions for Government and Private sectors,
+      helping industries, hospitals, hotels and enterprises achieve energy independence.
+    </p>
+  </div>
+</section>
+
+<!-- Ground Mounted -->
+<section class="section">
+  <div class="grid">
+    <div>
+      <h2>Ground Mounted Solar Projects</h2>
+      <p>
+        We design and execute large-scale ground-mounted solar power plants for
+        Government bodies, industrial campuses, and utility-scale projects.
+        Our expertise ensures maximum generation, structural durability, and
+        long-term performance.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <h4>Utility Scale</h4>
+          <p>MW level solar power plants for large land parcels.</p>
+        </div>
+        <div class="feature">
+          <h4>High Efficiency</h4>
+          <p>Optimized layouts for maximum solar yield.</p>
+        </div>
+        <div class="feature">
+          <h4>Turnkey EPC</h4>
+          <p>Survey, design, supply, installation & commissioning.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-image">
+      <img src="images/ground-mounted.jpg" alt="Ground Mounted Solar Power Plant">
+    </div>
+  </div>
+</section>
+
+<!-- Rooftop -->
+<section class="section">
+  <div class="grid">
+    <div class="project-image">
+      <img src="images/rooftop-solar.jpg" alt="Rooftop Solar Power Plant">
+    </div>
+
+    <div>
+      <h2>Rooftop Solar Projects<br><small style="color:#0b5ed7;">(Subsidy & Non-Subsidy)</small></h2>
+      <p>
+        We execute rooftop solar power projects under EPC, RESCO, and CAPEX models
+        for Government institutions, industries, hospitals, hotels, and commercial buildings.
+        Our solutions reduce electricity bills and ensure fast ROI.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <h4>Residential & Commercial</h4>
+          <p>Homes, societies, offices & factories.</p>
+        </div>
+        <div class="feature">
+          <h4>Subsidy Support</h4>
+          <p>Complete guidance for government subsidy schemes.</p>
+        </div>
+        <div class="feature">
+          <h4>Net Metering</h4>
+          <p>Grid-connected systems with export benefits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="section" style="margin-top:80px;">
+  <div class="card" style="background:linear-gradient(180deg,#0a1a2a,#0e243d); color:#ffffff;">
+    <h2 style="color:#ffffff; margin-bottom:18px;">Types of Solar Projects We Deliver</h2>
+    <p style="color:#cfe3ff; max-width:800px; line-height:1.7; margin-bottom:30px;">
+      At <strong>Solarica</strong>, we design, engineer and execute solar power projects across every major segment of the industry.  
+      From mega solar parks to rooftop systems for homes, our expertise covers the complete spectrum of solar deployment in India.
+    </p>
+
+    <ul style="list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px;">
+      <li style="background:#132f52; padding:18px; border-radius:14px;">
+        <h4 style="color:#4fb4ff; margin-bottom:6px;">Utility-Scale Projects</h4>
+        <p style="color:#e2efff; line-height:1.6;">
+          Large solar farms and mega solar parks feeding power directly to the grid.  
+          Ideal for government tenders, IPPs and large developers.  
+          <br><em>Solarica undertakes full EPC for MW-scale ground-mounted plants.</em>
+        </p>
+      </li>
+
+      <li style="background:#132f52; padding:18px; border-radius:14px;">
+        <h4 style="color:#4fb4ff; margin-bottom:6px;">Commercial & Industrial (C&I)</h4>
+        <p style="color:#e2efff; line-height:1.6;">
+          Rooftop and ground-mounted systems for factories, hospitals, hotels, warehouses and institutions.  
+          <br><em>We deliver EPC, CAPEX and RESCO models for enterprises.</em>
+        </p>
+      </li>
+
+      <li style="background:#132f52; padding:18px; border-radius:14px;">
+        <h4 style="color:#4fb4ff; margin-bottom:6px;">Residential Solar</h4>
+        <p style="color:#e2efff; line-height:1.6;">
+          Rooftop solar for individual homes and housing societies, aligned with government schemes such as  
+          <strong>PM Surya Ghar: Muft Bijli Yojana</strong>.  
+          <br><em>Solarica provides subsidy guidance, installation & net-metering support.</em>
+        </p>
+      </li>
+
+      <li style="background:#132f52; padding:18px; border-radius:14px;">
+        <h4 style="color:#4fb4ff; margin-bottom:6px;">Floating Solar</h4>
+        <p style="color:#e2efff; line-height:1.6;">
+          Solar plants installed on water bodies like dams, reservoirs and canals, saving land and improving efficiency.  
+          <br><em>We offer design & execution for water-based solar projects.</em>
+        </p>
+      </li>
+
+      <li style="background:#132f52; padding:18px; border-radius:14px;">
+        <h4 style="color:#4fb4ff; margin-bottom:6px;">Hybrid Solar Systems</h4>
+        <p style="color:#e2efff; line-height:1.6;">
+          Integrated systems combining solar with batteries, diesel or wind power for uninterrupted energy.  
+          <br><em>Ideal for remote areas, industries and mission-critical operations.</em>
+        </p>
+      </li>
+    </ul>
+
+    <div style="margin-top:28px; color:#cfe3ff; font-size:1rem;">
+      <strong>Solarica</strong> works across all these solar project categories—delivering reliable, efficient and future-ready
+      energy solutions for Government bodies, industries, institutions and homeowners.
+    </div>
+  </div>
+</section>
+
+
+</section>
+
+
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Start Your Solar Project with Solarica</h2>
+  <p>From concept to commissioning – we power your future with clean energy.</p>
+  <a href="contact.html">Request a Consultation</a>
+</section>
+
+</body>
+</html>

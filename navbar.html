@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	 <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="#"><img src="images/logoo.png" alt="Solarica Logo" style="height: 60px; width: auto;"></a>
+            <nav class="nav" id="site-nav" aria-label="Primary">
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+    <li class="dropdown mega-dropdown">
+  <a href="#products">Products <i class="fa fa-chevron-down"></i></a>
+  <div class="mega-menu">
+    <div class="mega-menu-inner">
+      <div class="mega-col">
+        <h4 class="energy-title">Solarica Energy India</h4>
+        <a href="https://www.solarica.in/" class="visit-link">VISIT SITE ↗</a>
+        <ul>
+          <li><a href="slights.html">Solar Street Lights</a></li>
+          <li><a href="sheater.html">Solar Water Heater</a></li>
+          <li><a href="sglights.html">Solar Garden Lights</a></li>
+          <li><a href="homelights.html">Home Lights</a></li>
+        </ul>
+      </div>
+
+      <div class="mega-col">
+        <h4 class="systems-title">Solarica Systems</h4>
+        <a href="https://www.solaricasystems.in/" class="visit-link">VISIT SITE ↗</a>
+        <ul>
+          <li><a href="spumps.html">Solar Water Pumps</a></li>
+          <li><a href="rooftop.html">Rooftop Solar</a></li>
+          <li><a href="ongrid.html">On-Grid Systems</a></li>
+          <li><a href="offgrid.html">Off-Grid Systems</a></li>
+        </ul>
+      </div>
+
+      <div class="mega-col">
+        <h4 class="industries-title">Solarica Industries</h4>
+        <a href="https://www.solaricaindustries.in/" class="visit-link">VISIT SITE ↗</a>
+        <ul>
+          <li><a href="spanel.html">Solar Panels</a></li>
+          <li><a href="sinverter.html">Solar Inverter</a></li>
+          <li><a href="batteries.html">Industrial Batteries</a></li>
+          <li><a href="highbay.html">High Bay Lights</a></li>
+        </ul>
+      </div>
+
+      <div class="mega-col">
+        <h4 class="greenwheels-title">Solarica Greenwheels</h4>
+        <a href="https://www.solaricaindustries.in/" class="visit-link">VISIT SITE ↗</a>
+        <ul>
+          <li><a href="evchargers.html">EV Chargers</a></li>
+          <li><a href="carports.html">Solar Carports</a></li>
+          <li><a href="cycles.html">Electric Cycles</a></li>
+          <li><a href="stations.html">Charging Stations</a></li>
+        </ul>
+      </div>
+
+      <div class="mega-col">
+        <h4 class="fabtech-title">Solarica Fabtech</h4>
+        <a href="https://www.solaricaindustries.in/" class="visit-link">VISIT SITE ↗</a>
+        <ul>
+          <li><a href="mounting.html">Mounting Structures</a></li>
+          <li><a href="poles.html">High Mast Poles</a></li>
+          <li><a href="module.html">Module Mounting</a></li>
+          <li><a href="galvanized.html">Galvanized Structures</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</li>  
+            <li><a href="finance.html">Finance</a></li>
+                    <li class="dropdown"><a href="#projects">Projects</a>
+  <ul class="dropdown-menu">
+    <li><a href="#project-1">Sample Project 1</a></li>
+    <li><a href="#project-2">Sample Project 2</a></li>
+    <li><a href="#project-3">Sample Project 3</a></li>
+  </ul>
+</li>
+                    <li class="dropdown"><a href="#about">About Us</a>
+  <ul class="dropdown-menu">
+    <li><a href="we.html">We Solarica</a></li>
+    <li><a href="ourjourney.html">Our Journey</a></li>
+    <li><a href="company.html">Our Companies</a></li>
+    <li><a href="dir.html">Board of Directors</a></li>
+    <li><a href="awards.html">Awards and Certifications</a></li>
+  </ul>
+</li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a class="btn btn-contact" href="contact.html">Contact</a>
+                <span class="separator">|</span>
+                <button class="search-icon" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+	<style>
+				/* Mega Menu Positioning */
+.mega-dropdown {
+    position: static !important; /* Required for full-width */
+}
+
+.mega-menu {
+   display: none;
+    position: absolute;
+    /* This calculation centers the menu perfectly relative to the screen width */
+    left: 60%;
+    transform: translateX(-50%);
+    width: 80vw; /* Sets width to 95% of the viewport width to cover all columns */
+    
+    top: 200%;
+    background: white;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    border-radius: 40px; /* Large rounded corners from image reference */
+    padding: 50px 40px;
+    z-index: 1100;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+	padding-top: 1%;
+	padding-bottom: 5%;
+}
+
+.mega-dropdown:hover .mega-menu {
+    display: block;
+    
+}
+
+.mega-menu-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Column Styling */
+.mega-col {
+    flex: 1;
+    min-width: 0; /* Prevents overflow */
+    padding: 0 10px;
+}
+
+.mega-col h4 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 5px;
+	white-space: nowrap;
+}
+
+.visit-link {
+    font-size: 11px;
+    font-weight: 700;
+    color: #999 !important;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Column Header Colors */
+.energy-title { color: #f26522; }      /* Orange */
+.systems-title { color: #2563eb; }     /* Blue */
+.industries-title { color: #1e293b; }  /* Dark Navy */
+.greenwheels-title { color: #22c55e; } /* Green */
+.fabtech-title { color: #a855f7; }     /* Purple */
+
+/* List Styling */
+.mega-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-col ul li {
+    margin-bottom: 10px;
+}
+
+.mega-col ul li a {
+    color: #444 !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.mega-col ul li a:hover {
+    color: #2563eb !important;
+    padding-left: 5px;
+}
+
+/* Responsive fix */
+@media (max-width: 1100px) {
+    .mega-menu-inner { flex-wrap: wrap; }
+    .mega-col { flex: 0 0 45%; margin-bottom: 30px; }
+}
+
+
+
+
+		.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #1976d2;
+    min-width: 220px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border-radius: 0;
+    z-index: 1002;
+    padding: 16px 0;
+    margin: 0;
+    list-style: none;
+}
+.dropdown-menu li {
+    width: 100%;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 12px 28px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+.dropdown-menu a:hover {
+    background: none !important;
+    color: #003366 !important;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.site-header {
+    position: fixed;
+    top: var(--topbar-h); left: 0; right: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,0));
+    transition: background 0.3s ease;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--topbar-h);
+    background: rgb(209, 209, 210);
+    color: rgb(0, 0, 0);
+    z-index: 1001;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.topbar-left, .topbar-right { display: flex; align-items: center; gap: 14px; }
+.topbar-left a, .topbar-right a { color: #000000; text-decoration: none; font-weight: 600; font-size: 13px; opacity: .95; }
+.topbar-left a:hover, .topbar-right a:hover { opacity: 1; }
+.topbar-sep { opacity: .5; color: #e9fff6; font-size: 12px; }
+.topbar-social { display: flex; align-items: center; gap: 10px; }
+.topbar-social .icon { display: inline-flex; width: 18px; height: 18px; color: #000000; }
+.topbar-social .icon:hover { color: #0b1254; }
+
+.site-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.site-header.scrolled .btn-contact {
+    background: var(--green-600);
+    color: white;
+    border-color: var(--green-600);
+}
+
+.site-header.scrolled .btn-contact:hover {
+    background: var(--green-700);
+    border-color: var(--green-700);
+}
+
+.site-header.scrolled .nav-list a {
+    color: #000000;
+}
+
+.site-header.scrolled .nav-list a:hover {
+    color: #2563eb;
+}
+
+.site-header.scrolled .search-icon {
+    color: #000000;
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+.logo {
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: .5px;
+    color: var(--text-100);
+    text-decoration: none;
+}
+
+.nav { position: relative; }
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    font-size: 24px;
+    color: var(--text-100);
+}
+.nav-list {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #1976d2;
+    min-width: 220px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border-radius: 0;
+    z-index: 1002;
+    padding: 16px 0;
+    margin: 0;
+    list-style: none;
+}
+.dropdown-menu li {
+    width: 100%;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 12px 28px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+.dropdown-menu a:hover {
+    background: none !important;
+    color: #003366 !important;
+}
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.nav-list a {
+    color: var(--text-100);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color .2s ease;
+}
+.nav-list a:hover { color: #e9fff6; }
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn-primary {
+    background: var(--green-600);
+    color: white;
+    box-shadow: var(--shadow);
+}
+.btn-primary:hover { background: var(--green-700); }
+
+.btn-contact {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-100);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-weight: 600;
+}
+
+.btn-contact:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.separator {
+    color: var(--text-100);
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+.search-icon {
+    background: transparent;
+    border: 0;
+    color: var(--text-100);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color .2s ease, color .2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e9fff6;
+}
+	</style>
+
+
+<div class="corner-btn-container">
+    <div class="corner-options">
+        <a href="javascript:void(0)" class="corner-option whatsapp" id="waTrigger" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+        </a>
+        
+        <div class="wa-dept-card" id="waDeptCard">
+            <div class="wa-dept-header">Select Department</div>
+            <div class="wa-dept-list">
+                <button class="wa-dept-item" data-msg="I would like to contact the Accounting department.">1. Accounting</button>
+                <button class="wa-dept-item" data-msg="I would like to contact the HR department regarding careers.">2. HR</button>
+                <button class="wa-dept-item" data-msg="I would like to contact the Marketing department for an inquiry.">3. Marketing</button>
+            </div>
+        </div>
+
+        <a href="mailto:eresh@solarica.in" class="corner-option email" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+            </svg>
+        </a>
+        
+        <button class="corner-option scroll-top" id="scrollTop" aria-label="Scroll to top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 15l-6-6-6 6"/>
+            </svg>
+        </button>
+    </div>
+    
+    <button class="corner-btn" id="cornerBtn" aria-label="Back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+    </button>
+</div>
+
+<style>
+/* Base Button Colors (Existing) */
+.corner-option.whatsapp { background: #25D366; color: white; }
+.corner-option.email { background: #EA4335; color: white; }
+.corner-option.scroll-top { background: #1976D2; color: white; }
+
+/* NEW MENU STYLES */
+.corner-options { position: relative; }
+
+.wa-dept-card {
+    position: absolute;
+    bottom: 55px; /* Sits above the WhatsApp button */
+    right: 50px;
+    background: white;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border: 1px solid #eee;
+    display: none; /* Hidden initially */
+    flex-direction: column;
+    z-index: 1005;
+    overflow: hidden;
+}
+
+.wa-dept-card.show { display: flex; }
+
+.wa-dept-header {
+    background: #f8f9fa;
+    padding: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+}
+
+.wa-dept-item {
+    background: white;
+    border: none;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.wa-dept-item:hover {
+    background: #f0fdf4;
+    color: #25D366;
+    padding-left: 20px;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const waTrigger = document.getElementById('waTrigger');
+    const waCard = document.getElementById('waDeptCard');
+    const phoneNumber = '918956189167';
+
+    // 1. Toggle Menu when WhatsApp button is clicked
+    if (waTrigger) {
+        waTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation(); // Prevents immediate closing
+            waCard.classList.toggle('show');
+        });
+    }
+
+    // 2. Handle Department Selection & Redirect
+    const deptItems = document.querySelectorAll('.wa-dept-item');
+    deptItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const message = this.getAttribute('data-msg');
+            const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            waCard.classList.remove('show'); // Close menu
+            window.open(waUrl, '_blank'); // Redirect to WhatsApp
+        });
+    });
+
+    // 3. Close menu if user clicks anywhere else on the page
+    document.addEventListener('click', function() {
+        if (waCard) waCard.classList.remove('show');
+    });
+
+    // 4. Existing Scroll Top Functionality
+    const scrollTop = document.getElementById('scrollTop');
+    if (scrollTop) {
+        scrollTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+});
+</script>
+
+
+</body>
+</html>

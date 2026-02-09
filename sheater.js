@@ -6,7 +6,7 @@ const heaterProducts = [
         capacity: "200L",
         type: "flat-plate",
         installation: "rooftop",
-        image: "images/heater-1.jpg",
+        image: "heater/1.jpg",
         specs: ["200 Liter Capacity", "Flat Plate Collector", "Rooftop Installation", "High Efficiency"],
         badge: "Popular",
         description: "High-efficiency solar water heater for residential use with 200L capacity"
@@ -17,7 +17,7 @@ const heaterProducts = [
         capacity: "300L",
         type: "evacuated-tube",
         installation: "rooftop",
-        image: "images/heater-2.jpg",
+        image: "heater/2.jpg",
         specs: ["300 Liter Capacity", "Evacuated Tube", "Premium Quality", "Weather Resistant"],
         badge: "Best Seller",
         description: "Premium evacuated tube solar water heater for large families"
@@ -28,7 +28,7 @@ const heaterProducts = [
         capacity: "500L",
         type: "flat-plate",
         installation: "ground-mount",
-        image: "images/heater-3.jpg",
+        image: "heater/3.jpg",
         specs: ["500 Liter Capacity", "Commercial Grade", "Ground Mount", "Heavy Duty"],
         badge: "Premium",
         description: "Commercial grade solar water heater for hotels and institutions"
@@ -39,7 +39,7 @@ const heaterProducts = [
         capacity: "150L",
         type: "thermosiphon",
         installation: "wall-mount",
-        image: "images/heater-4.jpg",
+        image: "heater/6.jpg",
         specs: ["150 Liter Capacity", "Thermosiphon", "Compact Design", "Easy Installation"],
         badge: "",
         description: "Compact thermosiphon solar water heater for small homes"
@@ -50,7 +50,7 @@ const heaterProducts = [
         capacity: "400L",
         type: "evacuated-tube",
         installation: "rooftop",
-        image: "images/heater-5.jpg",
+        image: "heater/5.jpg",
         specs: ["400 Liter Capacity", "Evacuated Tube", "High Performance", "Long Lasting"],
         badge: "New",
         description: "High-performance evacuated tube heater for medium-sized buildings"
@@ -61,7 +61,7 @@ const heaterProducts = [
         capacity: "100L",
         type: "flat-plate",
         installation: "rooftop",
-        image: "images/heater-6.jpg",
+        image: "heater/4.jpg",
         specs: ["100 Liter Capacity", "Flat Plate", "Budget Friendly", "Reliable"],
         badge: "",
         description: "Budget-friendly solar water heater for small families"

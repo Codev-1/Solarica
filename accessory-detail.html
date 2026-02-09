@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Accessory Detail</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{margin:0;font-family:Poppins,Arial;background:#f6f7fb}
+.wrap{max-width:1000px;margin:auto;padding:40px 20px}
+.top{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+img{width:100%;border-radius:12px;background:#fff;padding:20px}
+h1{margin-top:0}
+table{width:100%;border-collapse:collapse}
+td{padding:10px;border-bottom:1px solid #eee}
+.back{margin-bottom:20px;display:inline-block}
+@media(max-width:768px){.top{grid-template-columns:1fr}}
+
+</style>
+
+<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="products.css">
+</head>
+
+<body>
+<div class="wrap">
+  <a class="back" href="light-accessories.html">← Back</a>
+
+  <div class="top">
+    <img id="img">
+    <div>
+      <h1 id="title"></h1>
+      <p id="desc"></p>
+
+      <h3>Specifications</h3>
+      <table id="specs"></table>
+
+      <h3>Pricing</h3>
+      <table id="price"></table>
+    </div>
+  </div>
+</div>
+
+<script>
+const data = {
+  201: {
+    title:"Single Arm Bracket",
+    image:"accessories/arm1.png",
+    description:"Single arm mounting bracket for street lights.",
+    specifications:{
+      "Material":"GI Steel",
+      "Finish":"Powder Coated",
+      "Length":"450 mm",
+      "Usage":"Street Light Mounting"
+    },
+    pricing:{
+      "Base Price":"₹650",
+      "Warranty":"1 Year"
+    }
+  },
+  202: {
+    title:"Double Arm Bracket",
+    image:"accessories/arm2.png",
+    description:"Double arm bracket for wide road lighting.",
+    specifications:{
+      "Material":"MS Steel",
+      "Finish":"Powder Coated",
+      "Length":"2 × 450 mm",
+      "Usage":"Dual Light Mounting"
+    },
+    pricing:{
+      "Base Price":"₹1,200",
+      "Warranty":"1 Year"
+    }
+  },
+  203: {
+    title:"Pole Base Plate",
+    image:"accessories/baseplate.png",
+    description:"Base plate for pole foundation mounting.",
+    specifications:{
+      "Material":"Mild Steel",
+      "Thickness":"12 mm",
+      "Holes":"4 Bolt Holes",
+      "Usage":"Pole Mounting"
+    },
+    pricing:{
+      "Base Price":"₹1,800",
+      "Warranty":"1 Year"
+    }
+  }
+};
+
+const id = new URLSearchParams(location.search).get("id");
+const p = data[id];
+
+if(!p){
+  document.body.innerHTML="<h2 style='text-align:center'>Product Not Found</h2>";
+}else{
+  document.getElementById("img").src=p.image;
+  document.getElementById("title").textContent=p.title;
+  document.getElementById("desc").textContent=p.description;
+
+  document.getElementById("specs").innerHTML =
+    Object.entries(p.specifications).map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join("");
+
+  document.getElementById("price").innerHTML =
+    Object.entries(p.pricing).map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join("");
+}
+</script>
+</body>
+</html>

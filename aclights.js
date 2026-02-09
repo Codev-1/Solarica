@@ -6,7 +6,7 @@ const aclightProducts = [
         power: "9W",
         type: "led",
         application: "indoor",
-        image: "images/aclight-1.jpg",
+        image: "AClights/1.png",
         specs: ["9W LED", "Cool White", "Energy Efficient", "Long Life"],
         badge: "Popular",
         description: "Energy-efficient LED bulb for home and office use"
@@ -17,7 +17,7 @@ const aclightProducts = [
         power: "20W",
         type: "cfl",
         application: "indoor",
-        image: "images/aclight-2.jpg",
+        image: "AClights/2.png",
         specs: ["20W CFL", "Warm White", "Compact Design", "Budget Friendly"],
         badge: "Best Seller",
         description: "Compact fluorescent lamp for general lighting"
@@ -28,7 +28,7 @@ const aclightProducts = [
         power: "18W",
         type: "tube",
         application: "commercial",
-        image: "images/aclight-3.jpg",
+        image: "AClights/3.png",
         specs: ["18W LED Tube", "4 Feet", "Commercial Grade", "Flicker Free"],
         badge: "Premium",
         description: "LED tube light for commercial and industrial applications"
@@ -39,7 +39,7 @@ const aclightProducts = [
         power: "30W",
         type: "led",
         application: "outdoor",
-        image: "images/aclight-4.jpg",
+        image: "AClights/4.png",
         specs: ["30W LED", "Waterproof", "Outdoor Use", "Motion Sensor"],
         badge: "",
         description: "Waterproof LED light for outdoor applications"
@@ -50,7 +50,7 @@ const aclightProducts = [
         power: "12W",
         type: "led",
         application: "indoor",
-        image: "images/aclight-5.jpg",
+        image: "AClights/5.png",
         specs: ["12W Smart LED", "WiFi Control", "Color Changing", "App Control"],
         badge: "New",
         description: "Smart LED bulb with WiFi control and color changing"
@@ -61,7 +61,7 @@ const aclightProducts = [
         power: "50W",
         type: "led",
         application: "commercial",
-        image: "images/aclight-6.jpg",
+        image: "AClights/6.png",
         specs: ["50W High Bay", "Industrial Grade", "High Brightness", "Heat Resistant"],
         badge: "",
         description: "High bay LED light for warehouses and factories"

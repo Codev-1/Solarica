@@ -6,7 +6,7 @@ const homelightProducts = [
         power: "24W",
         type: "ceiling",
         room: "living",
-        image: "images/homelight-1.jpg",
+        image: "home/h1.png",
         specs: ["24W LED", "Ceiling Mount", "Warm White", "Dimmable"],
         badge: "Popular",
         description: "Modern LED ceiling light perfect for living rooms"
@@ -17,7 +17,7 @@ const homelightProducts = [
         power: "15W",
         type: "pendant",
         room: "kitchen",
-        image: "images/homelight-2.jpg",
+        image: "home/h2.png",
         specs: ["15W LED", "Pendant Style", "Adjustable Height", "Modern Design"],
         badge: "Best Seller",
         description: "Stylish pendant light ideal for kitchen islands"
@@ -28,7 +28,7 @@ const homelightProducts = [
         power: "12W",
         type: "wall",
         room: "bedroom",
-        image: "images/homelight-3.jpg",
+        image: "home/h3.png",
         specs: ["12W LED", "Wall Mount", "Soft Light", "Touch Control"],
         badge: "Premium",
         description: "Elegant wall sconce for bedroom ambient lighting"
@@ -39,7 +39,7 @@ const homelightProducts = [
         power: "8W",
         type: "table",
         room: "bedroom",
-        image: "images/homelight-4.jpg",
+        image: "home/h4.png",
         specs: ["8W LED", "Table Lamp", "Portable", "USB Charging"],
         badge: "",
         description: "Portable LED table lamp with USB charging"
@@ -50,7 +50,7 @@ const homelightProducts = [
         power: "18W",
         type: "ceiling",
         room: "bathroom",
-        image: "images/homelight-5.jpg",
+        image: "home/h5.png",
         specs: ["18W LED", "Waterproof", "IP65 Rating", "Cool White"],
         badge: "New",
         description: "Waterproof ceiling light designed for bathrooms"
@@ -61,7 +61,7 @@ const homelightProducts = [
         power: "36W",
         type: "ceiling",
         room: "living",
-        image: "images/homelight-6.jpg",
+        image: "home/h6.png",
         specs: ["36W LED", "Chandelier", "Crystal Design", "Remote Control"],
         badge: "",
         description: "Luxury LED chandelier for elegant living spaces"
