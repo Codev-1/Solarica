@@ -126,8 +126,7 @@
 			<a class="logo" href="#"><img src="images/logoo.png" alt="Solarica Logo"
 					style="height: 60px; width: auto;"></a>
 			<nav class="nav" id="site-nav" aria-label="Primary">
-				<button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"
-					aria-expanded="false">☰</button>
+				<div class="mobile-sidebar">
 				<ul class="nav-list">
 					<li><a href="home.html">Home</a></li>
 					<li class="dropdown mega-dropdown">
@@ -226,13 +225,13 @@
 						</div>
 					</li>
 					<li><a href="finance.html">Finance</a></li>
-					<li class="dropdown"><a href="#projects">Projects</a>
+					<!-- <li class="dropdown"><a href="#projects">Projects</a>
 						<ul class="dropdown-menu">
 							<li><a href="#project-1">Sample Project 1</a></li>
 							<li><a href="#project-2">Sample Project 2</a></li>
 							<li><a href="#project-3">Sample Project 3</a></li>
 						</ul>
-					</li>
+					</li> -->
 					<li class="dropdown"><a href="#about">About Us</a>
 						<ul class="dropdown-menu">
 							<li><a href="we.html">We Solarica</a></li>
@@ -243,8 +242,16 @@
 						</ul>
 					</li>
 					<li><a href="careers.html">Careers</a></li>
+                    <li class="mobile-only">
+  <a href="contact.html" class="mobile-contact-link">Contact Us</a>
+</li>
 				</ul>
+                </div>
 			</nav>
+
+            <div class="nav-overlay" id="nav-overlay"></div>
+
+
 			<div class="header-actions">
 				<a class="btn btn-contact" href="contact.html">Contact</a>
 				<span class="separator">|</span>
@@ -255,17 +262,27 @@
 							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 					</svg>
 				</button>
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
 			</div>
 		</div>
 	</header>
     
     <!-- Search Overlay Section -->
-    <div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog" aria-label="Site search">
-        <div class="container search-inner">
-            <input id="searchInput" class="search-input" type="text" placeholder="Type what you're looking for" aria-label="Search input" />
-            <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog">
+    <div class="container search-inner">
+        <div class="search-input-wrapper">
+            <input id="searchInput" class="search-input" type="text" placeholder="Search for products (e.g., Street Lights, Pumps)..." />
+            <button class="search-close" id="searchClose">&times;</button>
         </div>
+        <div id="searchResults" class="search-results-dropdown"></div>
     </div>
+</div>
 
     <header class="hero">
         <div class="hero-content">

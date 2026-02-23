@@ -2,8 +2,64 @@
 
 /* Header Override for Products Page */
 .site-header {
-    background: #1565c0 !important;
+    background: white !important;
 }
+
+.nav-list a {
+			color: black !important;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 18px;
+			transition: color .2s ease;
+		}
+
+        .search-icon {
+			background: transparent;
+			border: 0;
+			color: black;
+			cursor: pointer;
+			padding: 8px;
+			border-radius: 50%;
+			transition: background-color .2s ease, color .2s ease;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.search-icon:hover {
+			background: rgba(59, 59, 59, 0.1);
+			color: black;
+		}
+
+        .btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			padding: 12px 18px;
+			border-radius: 6px;
+			text-decoration: none;
+			font-weight: 700;
+			cursor: pointer;
+		}
+
+		.btn-contact {
+			background: rgba(13, 13, 13, 0.1);
+			color: black;
+			border: 2px solid rgba(0, 0, 0, 0.5);
+			white-space: nowrap;
+			border-radius: 6px;
+			padding: 12px 20px;
+			font-weight: 600;
+		}
+
+        .btn-contact:hover {
+			background: rgba(0, 0, 0, 0.842);
+            color: white;
+			border-color: rgba(0, 0, 0, 0.5);
+		}
+
+        
 
 /* Page Header */
 .page-header {
@@ -627,4 +683,22 @@
     .product-actions {
         flex-direction: column;
     }
+}
+
+
+
+
+@media (max-width: 960px) {
+
+            .btn-contact {
+    display: none;
+  }
+            .nav-list a {
+			color: white !important;
+            }
+
+            .site-header {
+    background: transparent !important;
+}   
+
 }

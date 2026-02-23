@@ -65,8 +65,7 @@
 			<a class="logo" href="#"><img src="images/logoo.png" alt="Solarica Logo"
 					style="height: 60px; width: auto;"></a>
 			<nav class="nav" id="site-nav" aria-label="Primary">
-				<button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"
-					aria-expanded="false">☰</button>
+				<div class="mobile-sidebar">
 				<ul class="nav-list">
 					<li><a href="home.html">Home</a></li>
 					<li class="dropdown mega-dropdown">
@@ -165,13 +164,13 @@
 						</div>
 					</li>
 					<li><a href="finance.html">Finance</a></li>
-					<li class="dropdown"><a href="#projects">Projects</a>
+					<!-- <li class="dropdown"><a href="#projects">Projects</a>
 						<ul class="dropdown-menu">
 							<li><a href="#project-1">Sample Project 1</a></li>
 							<li><a href="#project-2">Sample Project 2</a></li>
 							<li><a href="#project-3">Sample Project 3</a></li>
 						</ul>
-					</li>
+					</li> -->
 					<li class="dropdown"><a href="#about">About Us</a>
 						<ul class="dropdown-menu">
 							<li><a href="we.html">We Solarica</a></li>
@@ -182,8 +181,16 @@
 						</ul>
 					</li>
 					<li><a href="careers.html">Careers</a></li>
+                    <li class="mobile-only">
+  <a href="contact.html" class="mobile-contact-link">Contact Us</a>
+</li>
 				</ul>
+                </div>
 			</nav>
+
+            <div class="nav-overlay" id="nav-overlay"></div>
+
+
 			<div class="header-actions">
 				<a class="btn btn-contact" href="contact.html">Contact</a>
 				<span class="separator">|</span>
@@ -194,17 +201,27 @@
 							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 					</svg>
 				</button>
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
 			</div>
 		</div>
 	</header>
     
     <!-- Search Overlay Section -->
-    <div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog" aria-label="Site search">
-        <div class="container search-inner">
-            <input id="searchInput" class="search-input" type="text" placeholder="Type what you're looking for" aria-label="Search input" />
-            <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog">
+    <div class="container search-inner">
+        <div class="search-input-wrapper">
+            <input id="searchInput" class="search-input" type="text" placeholder="Search for products (e.g., Street Lights, Pumps)..." />
+            <button class="search-close" id="searchClose">&times;</button>
         </div>
+        <div id="searchResults" class="search-results-dropdown"></div>
     </div>
+</div>
 
 
     <!-- Hero Section -->
@@ -235,46 +252,31 @@
             <!-- Form -->
             <div style="flex:1; min-width:280px; max-width:600px;">
                 <form id="whatsappForm" style="text-align:left;">
+    <div style="margin-bottom:20px;">
+        <label>Full Name</label>
+        <input type="text" id="name" name="name" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
+    </div>
 
-                    <!-- Full Name -->
-                    <div style="margin-bottom:20px;">
-                        <label style="font-weight:600; color:#333; display:block; margin-bottom:8px;">
-                            Full Name
-                        </label>
-                        <input type="text" id="name" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
-                    </div>
+    <div style="margin-bottom:20px;">
+        <label>Mobile Number</label>
+        <input type="text" id="mobile" name="mobile" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
+    </div>
 
-                    <!-- Mobile Number -->
-                    <div style="margin-bottom:20px;">
-                        <label style="font-weight:600; color:#333; display:block; margin-bottom:8px;">
-                            Mobile Number
-                        </label>
-                        <input type="text" id="mobile" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
-                    </div>
+    <div style="margin-bottom:20px;">
+        <label>Email</label>
+        <input type="email" id="email" name="email" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
+    </div>
 
-                    <!-- Email -->
-                    <div style="margin-bottom:20px;">
-                        <label style="font-weight:600; color:#333; display:block; margin-bottom:8px;">
-                            Email
-                        </label>
-                        <input type="email" id="email" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
-                    </div>
+    <div style="margin-bottom:20px;">
+        <label>Address</label>
+        <input type="text" id="address" name="address" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
+    </div>
 
-                    <!-- Address -->
-                    <div style="margin-bottom:20px;">
-                        <label style="font-weight:600; color:#333; display:block; margin-bottom:8px;">
-                            Address
-                        </label>
-                        <input type="text" id="address" required style="width:100%; padding:12px; border:1px solid #ccc; border-radius:6px;">
-                    </div>
-
-                    <!-- Submit -->
-                    <button type="submit" style="width:100%; padding:14px; 
-                   background:#405482; color:#fff; font-size:1.2rem; font-weight:600; 
-                   border:none; border-radius:6px; cursor:pointer; transition:all 0.3s ease;">
-                        Submit
-                    </button>
-                </form>
+    <button type="submit" id="submitBtn" style="width:100%; padding:14px; background:#405482; color:#fff; font-size:1.2rem; font-weight:600; border:none; border-radius:6px; cursor:pointer;">
+        Submit
+    </button>
+    <p id="sheetSuccess" style="display:none; color:green; margin-top:10px; text-align:center; font-weight:600;">✅ Enquiry sent to Sheet and WhatsApp!</p>
+</form>
             </div>
         </div>
     </div>
@@ -282,6 +284,54 @@
 
 
 <script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx0f_t-jtzoySslCjtOj8bCFWL4P8xQXbFt9RxSqv_poIpsT8oaRYunauQufwjUI6IvzA/exec'; // Replace with your deployment URL
+const form = document.getElementById("whatsappForm");
+const successMsg = document.getElementById("sheetSuccess");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const submitBtn = document.getElementById("submitBtn");
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Processing...";
+
+    // 1. Send data to Google Sheets
+    const formData = new FormData(form);
+formData.append('formDataName', 'Finance Page'); // This line adds the source
+fetch(scriptURL, { method: 'POST', body: formData })
+    .then(response => {
+        // 2. Data is saved, now trigger WhatsApp
+        let name = document.getElementById("name").value;
+        let mobile = document.getElementById("mobile").value;
+        let address = document.getElementById("address").value;
+        let email = document.getElementById("email").value;
+
+        let message =
+            "*Balance Sheet Enquiry*\n\n" +
+            "*Full Name:* " + name + "\n" +
+            "*Mobile:* " + mobile + "\n" +
+            "*Address:* " + address + "\n" +
+            "*Email:* " + email + "\n";
+
+        let whatsappURL = "https://wa.me/+918530214079?text=" + encodeURIComponent(message);
+
+        successMsg.style.display = "block";
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Submit";
+        
+        window.open(whatsappURL, "_blank");
+        form.reset();
+    })
+    .catch(error => {
+        alert("❌ Error connecting to Sheet. Check your connection.");
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Submit";
+    });
+});
+</script>
+
+
+
+<!-- <script>
 // WhatsApp submit
 document.getElementById("whatsappForm").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -302,7 +352,7 @@ document.getElementById("whatsappForm").addEventListener("submit", function(e) {
 
     window.open(whatsappURL, "_blank");
 });
-</script>
+</script> -->
 
 
 

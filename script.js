@@ -297,161 +297,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// document.addEventListener('DOMContentLoaded', () => {
 
-			const nav = document.getElementById('site-nav');
-			const navToggle = document.getElementById('nav-toggle');
+			// ==================== FIXED SEARCH OVERLAY LOGIC ====================
+// C. SEARCH LOGIC (Renamed to avoid collisions)
+    const sBtn = document.querySelector('.search-icon');
+    const sOverlay = document.getElementById('searchOverlay');
+    const sInput = document.getElementById('searchInput');
+    const sResults = document.getElementById('searchResults');
+    const sClose = document.getElementById('searchClose');
 
-			const megaDropdown = document.querySelector('.mega-dropdown');
-			const megaTrigger = document.querySelector('.mega-trigger');
-			const megaMenu = document.querySelector('.mega-menu');
-			const companies = document.querySelectorAll('.mega-col');
-			const dropdowns = document.querySelectorAll('.dropdown:not(.mega-dropdown)');
+    if (sBtn && sOverlay) {
+        sBtn.addEventListener('click', () => {
+            sOverlay.classList.add('open');
+            setTimeout(() => sInput && sInput.focus(), 100);
+        });
+    }
 
-			/* ===== NAV TOGGLE ===== */
-			navToggle.addEventListener('click', () => {
-				nav.classList.toggle('open');
-			});
+    if (sClose) {
+        sClose.addEventListener('click', () => {
+            sOverlay.classList.remove('open');
+            if (sInput) sInput.value = "";
+            if (sResults) { sResults.style.display = 'none'; sResults.innerHTML = ""; }
+        });
+    }
 
-			/* ===== MOBILE MENU HANDLER ===== */
-			nav.addEventListener('click', (e) => {
-				if (window.innerWidth > 960) return;
+    if (sInput && sResults) {
+        sInput.addEventListener('input', () => {
+            const query = sInput.value.toLowerCase().trim();
+            sResults.innerHTML = ''; 
+            if (query.length < 2) { sResults.style.display = 'none'; return; }
 
-				/* ===== PRODUCTS ===== */
-				const product = e.target.closest('.mega-trigger');
-				if (product) {
-					e.preventDefault();
-
-					const productLi = product.closest('.mega-dropdown');
-					const isOpen = productLi.classList.contains('active');
-
-					// close other normal dropdowns
-					dropdowns.forEach(d => d.classList.remove('active'));
-
-					if (isOpen) {
-						// ✅ FULL CLOSE (this was missing)
-						productLi.classList.remove('active');
-						companies.forEach(c => c.classList.remove('active'));
-						return;
-					}
-
-					// open products
-					productLi.classList.add('active');
-					return;
-				}
-
-
-				/* ===== COMPANY ACCORDION ===== */
-				const companyHeader = e.target.closest('.mobile-company-trigger');
-				if (companyHeader) {
-					e.preventDefault();
-					e.stopPropagation();
-
-					const col = companyHeader.closest('.mega-col');
-
-					companies.forEach(c => {
-						if (c !== col) c.classList.remove('active');
-					});
-
-					col.classList.toggle('active');
-					return;
-				}
-
-				/* ===== PROJECTS / ABOUT ===== */
-				const normal = e.target.closest('.dropdown > a:not(.mega-trigger)');
-				if (normal) {
-					e.preventDefault();
-
-					const parent = normal.parentElement;
-
-					// close others
-					dropdowns.forEach(d => {
-						if (d !== parent) d.classList.remove('active');
-					});
-
-					// close products if open
-					megaDropdown.classList.remove('active');
-					companies.forEach(c => c.classList.remove('active'));
-
-					parent.classList.toggle('active');
-					return;
-				}
-			});
-
-		// });
-
-
-
-
-  // const dropdowns = document.querySelectorAll('.dropdown > a');
-  // dropdowns.forEach(dropdownLink => {
-  //   dropdownLink.addEventListener('click', (e) => {
-  //     // Only handle dropdown toggle on mobile
-  //     if (window.innerWidth <= 960) {
-  //       e.preventDefault();
-  //       e.stopPropagation(); // Prevent event bubbling
-        
-  //       const dropdown = dropdownLink.parentElement;
-  //       const isActive = dropdown.classList.contains('active');
-        
-  //       // Close all other dropdowns
-  //       const allDropdowns = document.querySelectorAll('.dropdown');
-  //       allDropdowns.forEach(d => {
-  //         if (d !== dropdown) {
-  //           d.classList.remove('active');
-  //         }
-  //       });
-        
-  //       // Toggle current dropdown
-  //       dropdown.classList.toggle('active');
-  //     }
-  //   });
-  // });
-  // // Close nav when clicking a link (but not dropdown headers)
-  // if (nav) nav.addEventListener('click', (e) => {
-  //   const a = e.target.closest('a');
-  //   if (a && nav.classList.contains('open')) {
-  //     // Don't close nav if it's a dropdown header on mobile
-  //     const isDropdownHeader = a.parentElement.classList.contains('dropdown');
-  //     const isMobile = window.innerWidth <= 960;
-      
-  //     if (!isDropdownHeader || !isMobile) {
-  //       nav.classList.remove('open');
-  //       if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
-  //     }
-  //   }
-  // });
-  // Click outside to close
-  // document.addEventListener('click', (e) => {
-  //   if (!nav || !navToggle) return;
-  //   const withinNav = e.target.closest('#site-nav');
-  //   const onToggle = e.target.closest('#nav-toggle');
-  //   if (!withinNav && !onToggle && nav.classList.contains('open')) {
-  //     nav.classList.remove('open');
-  //     navToggle.setAttribute('aria-expanded', 'false');
-  //   }
-  // });
-  // Search overlay behavior (open/close)
-  const searchBtn = document.querySelector('.search-icon');
-  const overlay = document.getElementById('searchOverlay');
-  const searchInput = document.getElementById('searchInput');
-  const searchClose = document.getElementById('searchClose');
-  const openOverlay = () => {
-    if (!overlay) return;
-    overlay.classList.add('open');
-    overlay.setAttribute('aria-hidden', 'false');
-    setTimeout(() => searchInput && searchInput.focus(), 50);
-  };
-  const closeOverlay = () => {
-    if (!overlay) return;
-    overlay.classList.remove('open');
-    overlay.setAttribute('aria-hidden', 'true');
-  };
-  if (searchBtn) searchBtn.addEventListener('click', openOverlay);
-  if (searchClose) searchClose.addEventListener('click', closeOverlay);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeOverlay(); });
-  if (overlay) overlay.addEventListener('click', (e) => {
-    const inner = e.target.closest('.search-inner');
-    if (!inner) closeOverlay();
-  });
+            const products = document.querySelectorAll('.mega-menu ul li a');
+            let found = 0;
+            products.forEach(link => {
+                if (link.textContent.toLowerCase().includes(query)) {
+                    found++;
+                    const highlighted = link.textContent.replace(new RegExp(`(${query})`, 'gi'), '<mark>$1</mark>');
+                    const item = document.createElement('a');
+                    item.href = link.href;
+                    item.className = 'live-search-item';
+                    item.innerHTML = `<span>Product:</span> ${highlighted}`;
+                    sResults.appendChild(item);
+                }
+            });
+            sResults.style.display = found > 0 ? 'block' : 'none';
+        });
+    }
 
   const promos = document.querySelectorAll('.promo-grid .promo-item');
   promos.forEach(el => el.classList.add('reveal'));
@@ -589,6 +479,110 @@ document.addEventListener('DOMContentLoaded', () => {
       idx = next;
     }, 5000);
   }
+
+
+  // ================= MOBILE NAV TOGGLE =================
+const nav = document.getElementById('site-nav');
+const navToggle = document.getElementById('nav-toggle');
+const navOverlay = document.querySelector('.nav-overlay');
+
+if (nav && navToggle) {
+
+  navToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+
+    const isOpen = nav.classList.toggle('open');
+    document.body.classList.toggle('menu-open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close when clicking overlay
+  if (navOverlay) {
+    navOverlay.addEventListener('click', () => {
+      nav.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    });
+  }
+
+  // Close when clicking outside
+  document.addEventListener('click', function (e) {
+    if (
+      window.innerWidth <= 960 &&
+      nav.classList.contains('open') &&
+      !nav.contains(e.target) &&
+      !navToggle.contains(e.target)
+    ) {
+      nav.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    }
+  });
+}
+
+
+// ================= MOBILE DROPDOWN FIX =================
+document.addEventListener('click', function (e) {
+
+  // Only mobile
+  if (window.innerWidth > 960) return;
+
+  // Level 1 dropdowns (Products, About, etc.)
+  const dropdownLink = e.target.closest('.dropdown > a');
+
+  if (dropdownLink) {
+    e.preventDefault();
+
+    const dropdown = dropdownLink.parentElement;
+    const isActive = dropdown.classList.contains('active');
+
+    // Close all other dropdowns
+    document.querySelectorAll('.nav .dropdown').forEach(d => {
+      d.classList.remove('active');
+    });
+
+    // Toggle current
+    if (!isActive) {
+      dropdown.classList.add('active');
+    }
+
+    return;
+  }
+
+});
+
+
+// ================= MOBILE PRODUCTS (COMPANY ACCORDION) =================
+document.addEventListener('click', function (e) {
+
+  if (window.innerWidth > 960) return;
+
+  const companyHeader = e.target.closest('.mobile-company-trigger');
+
+  if (companyHeader) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const currentCol = companyHeader.closest('.mega-col');
+    const isActive = currentCol.classList.contains('active');
+
+    // Close all companies first
+    document.querySelectorAll('.mega-col').forEach(col => {
+      col.classList.remove('active');
+    });
+
+    // Open clicked one
+    if (!isActive) {
+      currentCol.classList.add('active');
+    }
+
+    return;
+  }
+
+});
+
+
+
+
+
 });
 
 // Bottom Right Corner Button with Sliding Options
@@ -903,3 +897,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Single entry point for the injection process
 document.addEventListener('DOMContentLoaded', injectGlobalFooter);
+
+
+    // ==================== SEARCH FUNCTIONALITY ====================
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        
+        // Find all product links in the mega menu to search through
+        const links = document.querySelectorAll('.mega-menu ul li a');
+        
+        links.forEach(link => {
+            const text = link.textContent.toLowerCase();
+            const parentLi = link.parentElement;
+
+            if (query === "") {
+                // Reset styling if search is empty
+                link.style.color = "";
+                link.style.fontWeight = "";
+                parentLi.style.display = "block";
+            } else if (text.includes(query)) {
+                // Highlight matches
+                link.style.color = "#f16136"; // Solarica Orange
+                link.style.fontWeight = "700";
+                parentLi.style.display = "block";
+                
+                // Optional: Force open the parent company accordion on mobile
+                const companyCol = link.closest('.mega-col');
+                if (companyCol && window.innerWidth <= 960) {
+                    companyCol.classList.add('active');
+                }
+            } else {
+                // Hide non-matching items
+                parentLi.style.display = "none";
+            }
+        });
+    });
+}
+
+
+
+
+

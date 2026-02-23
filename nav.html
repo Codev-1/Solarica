@@ -142,12 +142,15 @@
     </header>
     
     <!-- Search Overlay Section -->
-    <div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog" aria-label="Site search">
-        <div class="container search-inner">
-            <input id="searchInput" class="search-input" type="text" placeholder="Type what you're looking for" aria-label="Search input" />
-            <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog">
+    <div class="container search-inner">
+        <div class="search-input-wrapper">
+            <input id="searchInput" class="search-input" type="text" placeholder="Search for products (e.g., Street Lights, Pumps)..." />
+            <button class="search-close" id="searchClose">&times;</button>
         </div>
+        <div id="searchResults" class="search-results-dropdown"></div>
     </div>
+</div>
 
 
 

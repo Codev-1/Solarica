@@ -51,8 +51,7 @@
 			<a class="logo" href="#"><img src="images/logoo.png" alt="Solarica Logo"
 					style="height: 60px; width: auto;"></a>
 			<nav class="nav" id="site-nav" aria-label="Primary">
-				<button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"
-					aria-expanded="false">☰</button>
+				<div class="mobile-sidebar">
 				<ul class="nav-list">
 					<li><a href="home.html">Home</a></li>
 					<li class="dropdown mega-dropdown">
@@ -151,13 +150,13 @@
 						</div>
 					</li>
 					<li><a href="finance.html">Finance</a></li>
-					<li class="dropdown"><a href="#projects">Projects</a>
+					<!-- <li class="dropdown"><a href="#projects">Projects</a>
 						<ul class="dropdown-menu">
 							<li><a href="#project-1">Sample Project 1</a></li>
 							<li><a href="#project-2">Sample Project 2</a></li>
 							<li><a href="#project-3">Sample Project 3</a></li>
 						</ul>
-					</li>
+					</li> -->
 					<li class="dropdown"><a href="#about">About Us</a>
 						<ul class="dropdown-menu">
 							<li><a href="we.html">We Solarica</a></li>
@@ -168,8 +167,16 @@
 						</ul>
 					</li>
 					<li><a href="careers.html">Careers</a></li>
+                    <li class="mobile-only">
+  <a href="contact.html" class="mobile-contact-link">Contact Us</a>
+</li>
 				</ul>
+                </div>
 			</nav>
+
+            <div class="nav-overlay" id="nav-overlay"></div>
+
+
 			<div class="header-actions">
 				<a class="btn btn-contact" href="contact.html">Contact</a>
 				<span class="separator">|</span>
@@ -180,17 +187,27 @@
 							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 					</svg>
 				</button>
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
 			</div>
 		</div>
 	</header>
     
     <!-- Search Overlay Section -->
-    <div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog" aria-label="Site search">
-        <div class="container search-inner">
-            <input id="searchInput" class="search-input" type="text" placeholder="Type what you're looking for" aria-label="Search input" />
-            <button class="search-close" id="searchClose" aria-label="Close search">&times;</button>
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true" role="dialog">
+    <div class="container search-inner">
+        <div class="search-input-wrapper">
+            <input id="searchInput" class="search-input" type="text" placeholder="Search for products (e.g., Street Lights, Pumps)..." />
+            <button class="search-close" id="searchClose">&times;</button>
         </div>
+        <div id="searchResults" class="search-results-dropdown"></div>
     </div>
+</div>
 
 
   <!-- Hero Section -->
@@ -235,8 +252,7 @@
 
           <!-- Left Side: Form -->
           <div style="flex:1; font-family: 'Saira', sans-serif; min-width:280px; max-width:600px;">
-            <form id="applicationForm" action="https://formsubmit.co/sales@aquagreentechs.com" method="POST"
-              enctype="multipart/form-data" style="text-align:left;">
+            <form id="applicationForm" action="https://script.google.com/u/0/home/projects/1gZif_ku3w-NHfO5caF20h5leLWIaLq6nxbFQgmwBg3vhKfzk6rpZU-TT/edit" method="POST" style="text-align:left;">
 
               <!-- Hidden Fields for FormSubmit -->
               <input type="hidden" name="_captcha" value="false">
@@ -313,7 +329,7 @@
               <p><strong>2. Initial Screening:</strong> HR reviews your application and contacts shortlisted candidates.
               </p>
               <p><strong>3. Interview Process:</strong> Attend interviews with our team.</p>
-              <p><strong>4. Onboarding:</strong> Selected candidates will officially join Aquagreen Tech.</p>
+              <p><strong>4. Onboarding:</strong> Selected candidates will officially join Solarica Pvt. Ltd.</p>
             </div>
           </div>
         </div>
@@ -321,7 +337,7 @@
     </div>
 
     <!-- Script to handle success -->
-    <script>
+    <!-- <script>
       document.getElementById('applicationForm').addEventListener('submit', function (e) {
         e.preventDefault();
         fetch(this.action, {
@@ -338,7 +354,39 @@
           alert("❌ Network error. Please try again later.");
         });
       });
-    </script>
+    </script> -->
+
+
+    <form id="applicationForm" action="https://script.google.com/macros/s/AKfycbx0f_t-jtzoySslCjtOj8bCFWL4P8xQXbFt9RxSqv_poIpsT8oaRYunauQufwjUI6IvzA/exec" method="POST">
+    </form>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx0f_t-jtzoySslCjtOj8bCFWL4P8xQXbFt9RxSqv_poIpsT8oaRYunauQufwjUI6IvzA/exec'; // Paste your URL here
+  const form = document.getElementById('applicationForm');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    // Show a "Processing" state on the button
+    const submitBtn = form.querySelector('button');
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Sending...";
+
+    const formData = new FormData(form);
+formData.append('formDataName', 'Career Page'); // This line adds the source
+fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => {
+          document.getElementById('successMsg').style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.innerText = "Submit Application";
+          form.reset();
+      })
+      .catch(error => {
+          alert("❌ Error connecting to Excel. Please try again.");
+          submitBtn.disabled = false;
+      });
+  });
+</script>
 
 
   </div>

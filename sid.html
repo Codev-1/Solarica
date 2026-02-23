@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<header class="site-header">
+
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <img src="images/logoo.png" alt="Solarica Logo">
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav" id="site-nav">
+      <ul class="nav-list">
+
+        <li><a href="#">Home</a></li>
+
+        <li class="mega-dropdown">
+          <a href="#" class="mega-trigger">Products</a>
+
+          <div class="mega-menu">
+            <div class="mega-menu-inner">
+
+              <div class="mega-col">
+                <h4>Solarica Energy</h4>
+                <ul>
+                  <li><a href="#">Solar Street Lights</a></li>
+                  <li><a href="#">Solar Water Pumps</a></li>
+                  <li><a href="#">Solar Panels</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-col">
+                <h4>Solarica Systems</h4>
+                <ul>
+                  <li><a href="#">PM Surya Ghar</a></li>
+                  <li><a href="#">Commercial</a></li>
+                  <li><a href="#">Industrial</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-col">
+                <h4>Greenwheels</h4>
+                <ul>
+                  <li><a href="#">EV Chargers</a></li>
+                  <li><a href="#">EV Batteries</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+        <li><a href="#">Finance</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- Right Actions -->
+    <div class="header-actions">
+      <a href="#" class="btn-contact">Contact</a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button class="nav-toggle" id="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile Sidebar -->
+  <div class="mobile-sidebar" id="mobile-sidebar">
+
+    <ul class="mobile-nav">
+
+      <li><a href="#">Home</a></li>
+
+      <li class="mobile-dropdown">
+        <div class="mobile-trigger">Products <span>+</span></div>
+        <ul class="mobile-submenu">
+          <li><a href="#">Solar Street Lights</a></li>
+          <li><a href="#">Solar Water Pumps</a></li>
+          <li><a href="#">Solar Panels</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Finance</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Careers</a></li>
+
+    </ul>
+
+  </div>
+
+</header>
+
+	<style>
+		/* ================= HEADER BASE ================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.logo img {
+  height: 60px;
+}
+
+/* ================= DESKTOP NAV ================= */
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #222;
+}
+
+.nav-list a:hover {
+  color: #22c55e;
+}
+
+/* ================= MEGA MENU ================= */
+
+.mega-dropdown {
+  position: relative;
+}
+
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 800px;
+  background: white;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.mega-dropdown.active .mega-menu {
+  display: block;
+}
+
+.mega-menu-inner {
+  display: flex;
+  gap: 40px;
+}
+
+.mega-col h4 {
+  margin-bottom: 10px;
+}
+
+.mega-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mega-col li {
+  margin-bottom: 8px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-contact {
+  padding: 10px 18px;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* ================= HAMBURGER ================= */
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  transition: 0.3s;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px,5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px,-6px);
+}
+
+/* ================= MOBILE SIDEBAR ================= */
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100vh;
+  background: #0d1b14;
+  padding: 80px 20px;
+  transition: 0.3s;
+  z-index: 1200;
+}
+
+.mobile-sidebar.open {
+  left: 0;
+}
+
+.mobile-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav li {
+  margin-bottom: 20px;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-trigger {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.mobile-submenu {
+  display: none;
+  margin-top: 10px;
+}
+
+.mobile-dropdown.active .mobile-submenu {
+  display: block;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 960px) {
+  .nav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}
+
+	</style>
+
+		<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const navToggle = document.getElementById('nav-toggle');
+  const sidebar = document.getElementById('mobile-sidebar');
+  const megaTrigger = document.querySelector('.mega-trigger');
+  const megaDropdown = document.querySelector('.mega-dropdown');
+
+  // Hamburger
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    sidebar.classList.toggle('open');
+  });
+
+  // Desktop Products click
+  megaTrigger.addEventListener('click', (e) => {
+    if (window.innerWidth > 960) {
+      e.preventDefault();
+      megaDropdown.classList.toggle('active');
+    }
+  });
+
+  // Close mega when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!megaDropdown.contains(e.target)) {
+      megaDropdown.classList.remove('active');
+    }
+  });
+
+  // Mobile Products accordion
+  document.querySelectorAll('.mobile-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      trigger.parentElement.classList.toggle('active');
+    });
+  });
+
+});
+</script>
+
+
+</body>
+</html>

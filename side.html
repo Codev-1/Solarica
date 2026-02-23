@@ -57,9 +57,23 @@
 			<a class="logo" href="#"><img src="images/logoo.png" alt="Solarica Logo"
 					style="height: 60px; width: auto;"></a>
 			<nav class="nav" id="site-nav" aria-label="Primary">
+				<div class="mobile-sidebar">
+
+					 <!-- Sidebar Logo -->
+    <div class="sidebar-logo">
+        <img src="images/logoo.png" alt="Solarica Logo">
+    </div>
+
 				<button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"
 					aria-expanded="false">☰</button>
+
+
 				<ul class="nav-list">
+					<!-- <div class="mobile-sidebar-top">
+    <img src="images/logoo.png" alt="Solarica Logo">
+    <h3>Solarica Energy</h3>
+</div> -->
+
 					<li><a href="#home">Home</a></li>
 					<li class="dropdown mega-dropdown">
 						<a href="javascript:void(0)" class="mega-trigger">Products <i
@@ -174,7 +188,18 @@
 						</ul>
 					</li>
 					<li><a href="careers.html">Careers</a></li>
+
+					<!-- <div class="mobile-sidebar-bottom">
+    <a href="#" class="side-social">Y</a>
+    <a href="#" class="side-social">I</a>
+    <a href="#" class="side-social">F</a>
+    <a href="#" class="side-social">T</a>
+</div> -->
+
+
 				</ul>
+				</div>
+
 			</nav>
 			<div class="header-actions">
 				<a class="btn btn-contact" href="contact.html">Contact</a>
@@ -771,25 +796,97 @@
 
 			/* Mobile nav drawer */
 			.nav-list {
-				position: fixed;
-				left: 10px;
-				top: calc(var(--topbar-h) + 56px);
-				flex-direction: column;
-				gap: 0;
-				background: #0d1b14;
-				border-radius: 12px;
-				overflow: hidden;
-				box-shadow: var(--shadow);
-				min-width: 220px;
-				transform: translateY(-6px) scale(.98);
-				opacity: 0;
-				pointer-events: none;
-				transition: opacity .2s ease, transform .2s ease;
-				overflow-y: auto;  
-    overflow-x: hidden; 
-    max-height: calc(100vh - var(--topbar-h) - 70px);
-    -webkit-overflow-scrolling: touch;
-			}
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 280px;
+    background: linear-gradient(180deg, #0d1b14, #132820);
+    box-shadow: 5px 0 25px rgba(0,0,0,0.4);
+    padding-top: 80px;
+    padding-bottom: 30px;
+    flex-direction: column;
+    gap: 0;
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+    overflow-y: auto;
+    z-index: 1200;
+  }
+
+  .nav.open .nav-list {
+    transform: translateX(0);
+  }
+
+  /* ===== TOP LOGO AREA ===== */
+  .mobile-sidebar-top {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+  }
+
+  .mobile-sidebar-top img {
+    height: 55px;
+    margin-bottom: 8px;
+  }
+
+  .mobile-sidebar-top h3 {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+
+  
+
+
+  /* ===== NAV LINKS ===== */
+  .nav-list li {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-list a {
+    padding: 16px 22px;
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    transition: all 0.25s ease;
+  }
+
+  .nav-list a:hover {
+    background: rgba(255,255,255,0.08);
+    padding-left: 28px;
+  }
+
+  /* ===== BOTTOM SOCIAL ===== */
+  .mobile-sidebar-bottom {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 25px 0 10px;
+  }
+
+  .side-social {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .side-social:hover {
+    background: #22c55e;
+    transform: translateY(-3px);
+  }
 
 			.nav.open .nav-list {
 				opacity: 1;
@@ -1466,6 +1563,7 @@
 
 
 	</style>
+
 
 
 	<!-- <script>
